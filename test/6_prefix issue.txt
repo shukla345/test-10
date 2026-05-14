@@ -1,0 +1,22 @@
+But there is still one subtle issue
+
+Your current prefix evaluation:
+
+dec_input[:, k + 1:] = PAD
+
+still performs ONE forward pass over the entire sequence.
+
+So the transformer can still behave differently from real autoregressive decoding.
+
+True inference should do:
+
+predict next token
+append prediction
+feed prediction back
+repeat
+
+Your current method is:
+
+masked teacher forcing
+
+—not full generation.

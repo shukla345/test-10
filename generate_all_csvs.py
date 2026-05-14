@@ -110,7 +110,7 @@ JOBS = [
 def write_csv(filename: str, gen_fn, upper_bound: int) -> None:
     with open(filename, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["private_key", "address"])
+        #writer.writerow(["private_key", "address"])
         for _ in range(ROWS):
             n = secrets.randbelow(upper_bound - 1) + 1
             writer.writerow([f"{n:064x}", gen_fn(n)])
