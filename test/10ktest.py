@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 BATCH_SIZE = 2048
 
 LR         = 2e-4
-EPOCHS     = 80
+EPOCHS     = 200
 
 EMBED_DIM  = 64
 NUM_HEADS  = 4
