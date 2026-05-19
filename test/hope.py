@@ -20,22 +20,22 @@ import matplotlib.pyplot as plt
 # ────────────────────────────────────────────────────────
 # Config (A100 + 10k rows)
 # ────────────────────────────────────────────────────────
-BATCH_SIZE = 2048
+BATCH_SIZE = 256
 
 LR         = 2e-4
 EPOCHS     = 200
 
-EMBED_DIM  = 64
-NUM_HEADS  = 4
-NUM_LAYERS = 4
-FF_DIM     = 256
+EMBED_DIM  = 16
+NUM_HEADS  = 2
+NUM_LAYERS = 2
+FF_DIM     = 64
 
-DROPOUT    = 0.1
-WD         = 1e-4
+DROPOUT    = 0
+WD         = 0
 
 CLIP_NORM  = 1.0
 
-NUM_WORKERS = 8
+NUM_WORKERS = 2
 
 
 # ────────────────────────────────────────────────────────
@@ -777,7 +777,7 @@ def train_model(
 
     plot_path = (
 
-        "plots/" +
+        "/kaggle/working/plots/" +
 
         os.path.basename(train_file) +
 
@@ -807,12 +807,12 @@ def train_model(
 def main():
 
     os.makedirs(
-        "plots",
+        "/kaggle/working/plots",
         exist_ok=True
     )
 
     train_files = sorted(
-        glob.glob("*_train.csv")
+        glob.glob("/kaggle/input/datasets/classstudents/test38/*_train.csv")
     )
 
     if not train_files:
