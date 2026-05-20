@@ -11,7 +11,7 @@ import math
 # ── Config ───────────────────────────────────────────────
 BATCH_SIZE = 128
 LR         = 1e-3
-EPOCHS     = 40
+EPOCHS     = 1000
 
 EMBED_DIM  = 16
 NUM_HEADS  = 2
@@ -518,7 +518,7 @@ def train_model(
         )
 
     # ================= TRUE ACCURACY PLOT =================
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(24, 10))
 
     plt.plot(
         epochs_axis,
@@ -550,7 +550,7 @@ def train_model(
 
     plt.savefig(
         plot_path,
-        dpi=150
+        dpi=600
     )
 
     plt.close()
