@@ -16,24 +16,24 @@ import matplotlib.pyplot as plt
 # CONFIG
 # =========================================================
 
-BATCH_SIZE = 128
+BATCH_SIZE = 512
 LR = 3e-4
 EPOCHS = 300
 
-EMBED_DIM = 128
-NUM_HEADS = 8
+EMBED_DIM = 64
+NUM_HEADS = 4
 
 ENC_LAYERS = 4
 DEC_LAYERS = 4
 
 FF_MULT = 4
 
-DROPOUT = 0.0
-WD = 0.01
+DROPOUT = 0
+WD = 0
 
-MAX_LEN = 1024
+MAX_LEN = 256
 
-NUM_LATENTS = 8
+NUM_LATENTS = 16
 REASONING_STEPS = 4
 
 CHUNK_SIZE = 8
