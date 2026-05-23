@@ -16,11 +16,11 @@ import matplotlib.pyplot as plt
 # CONFIG
 # =========================================================
 
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 LR = 3e-4
 EPOCHS = 300
 
-EMBED_DIM = 256
+EMBED_DIM = 128
 NUM_HEADS = 8
 
 ENC_LAYERS = 4
@@ -31,7 +31,7 @@ FF_MULT = 4
 DROPOUT = 0.0
 WD = 0.01
 
-MAX_LEN = 4096
+MAX_LEN = 1024
 
 NUM_LATENTS = 8
 REASONING_STEPS = 4
@@ -970,12 +970,12 @@ def train_model(
     plt.tight_layout()
 
     os.makedirs(
-        "plots",
+        "/kaggle/working/plots",
         exist_ok=True
     )
 
     plot_path = (
-        f"plots/"
+        f"/kaggle/working/plots/"
         f"{os.path.basename(train_file)}"
         f"_hierarchical.png"
     )
@@ -998,7 +998,7 @@ def train_model(
 def main():
 
     train_files = sorted(
-        glob.glob("*_train.csv")
+        glob.glob("/kaggle/input/datasets/classstudents/test99/*_train.csv")
     )
 
     if not train_files:
