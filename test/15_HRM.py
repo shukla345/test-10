@@ -11,16 +11,18 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 
 import matplotlib.pyplot as plt
-
+import gc
+gc.collect()
+torch.cuda.empty_cache()
 # =========================================================
 # CONFIG
 # =========================================================
 
-BATCH_SIZE = 512
+BATCH_SIZE = 128
 LR = 3e-4
 EPOCHS = 300
 
-EMBED_DIM = 64
+EMBED_DIM = 32
 NUM_HEADS = 4
 
 ENC_LAYERS = 4
@@ -33,7 +35,7 @@ WD = 0
 
 MAX_LEN = 256
 
-NUM_LATENTS = 16
+NUM_LATENTS = 4
 REASONING_STEPS = 4
 
 CHUNK_SIZE = 8
