@@ -1,8 +1,11 @@
 import glob
 import os
 import math
+import gc
+
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
@@ -10,16 +13,25 @@ import torch.nn.functional as F
 
 from torch.utils.data import Dataset, DataLoader
 
-import matplotlib.pyplot as plt
-import gc
+# =========================================================
+# CLEANUP
+# =========================================================
+
 gc.collect()
-torch.cuda.empty_cache()
+
+if torch.cuda.is_available():
+    torch.cuda.empty_cache()
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
+
 # =========================================================
 # CONFIG
 # =========================================================
 
-BATCH_SIZE = 128
+BATCH_SIZE = 512
+
 LR = 3e-4
+
 EPOCHS = 300
 
 EMBED_DIM = 32
@@ -28,21 +40,27 @@ NUM_HEADS = 4
 ENC_LAYERS = 4
 DEC_LAYERS = 4
 
-FF_MULT = 4
+FF_MULT = 8
 
-DROPOUT = 0
-WD = 0
+DROPOUT = 0.0
+WD = 0.0
 
 MAX_LEN = 256
 
 NUM_LATENTS = 4
 REASONING_STEPS = 4
 
-CHUNK_SIZE = 8
-
 CLIP_NORM = 1.0
 
 WARMUP_STEPS = 1000
+
+EVAL_EVERY = 1
+
+USE_COMPILE = True
+
+NUM_WORKERS = 2
+
+PIN_MEMORY = True
 
 # =========================================================
 # TOKEN IDS
@@ -59,6 +77,8 @@ EOS = 4
 VOCAB_SIZE = 5
 
 # =========================================================
+# DEVICE
+# =========================================================
 
 device = torch.device(
     "cuda"
@@ -67,6 +87,9 @@ device = torch.device(
 )
 
 print(f"Using device: {device}")
+
+if torch.cuda.is_available():
+    print(torch.cuda.get_device_name(0))
 
 # =========================================================
 # DATASET
@@ -205,7 +228,7 @@ class RMSNorm(nn.Module):
         return x * self.scale
 
 # =========================================================
-# ROTARY EMBEDDINGS
+# ROTARY
 # =========================================================
 
 class RotaryEmbedding(nn.Module):
@@ -242,28 +265,31 @@ class RotaryEmbedding(nn.Module):
         )
 
         self.register_buffer(
-            "freqs",
-            emb
+            "cos_cached",
+            emb.cos()[None, None],
+            persistent=False
+        )
+
+        self.register_buffer(
+            "sin_cached",
+            emb.sin()[None, None],
+            persistent=False
         )
 
     def forward(self, x):
 
         seq_len = x.shape[-2]
 
-        freqs = self.freqs[:seq_len]
-
-        cos = freqs.cos()[None, None]
-        sin = freqs.sin()[None, None]
+        cos = self.cos_cached[:, :, :seq_len]
+        sin = self.sin_cached[:, :, :seq_len]
 
         x1 = x[..., ::2]
         x2 = x[..., 1::2]
 
         x_rot = torch.stack(
-            [-x2, x1],
+            (-x2, x1),
             dim=-1
-        )
-
-        x_rot = x_rot.flatten(-2)
+        ).flatten(-2)
 
         return (
             x * cos
@@ -334,31 +360,16 @@ class Attention(nn.Module):
         super().__init__()
 
         self.heads = heads
-        self.head_dim = dim // heads
 
-        self.scale = (
-            self.head_dim ** -0.5
-        )
+        self.head_dim = dim // heads
 
         self.causal = causal
 
         self.norm = RMSNorm(dim)
 
-        self.to_q = nn.Linear(
+        self.to_qkv = nn.Linear(
             dim,
-            dim,
-            bias=False
-        )
-
-        self.to_k = nn.Linear(
-            dim,
-            dim,
-            bias=False
-        )
-
-        self.to_v = nn.Linear(
-            dim,
-            dim,
+            dim * 3,
             bias=False
         )
 
@@ -388,9 +399,19 @@ class Attention(nn.Module):
 
         H = self.heads
 
-        q = self.to_q(x)
-        k = self.to_k(context)
-        v = self.to_v(context)
+        if context is x:
+
+            qkv = self.to_qkv(x)
+
+            q, k, v = qkv.chunk(3, dim=-1)
+
+        else:
+
+            q = self.to_qkv(x)[..., :D]
+
+            kv = self.to_qkv(context)
+
+            _, k, v = kv.chunk(3, dim=-1)
 
         q = q.view(
             B,
@@ -416,6 +437,10 @@ class Attention(nn.Module):
         q = self.rotary(q)
         k = self.rotary(k)
 
+        # =========================================
+        # KV CACHE
+        # =========================================
+
         if kv_cache is not None:
 
             if "k" in kv_cache:
@@ -433,36 +458,19 @@ class Attention(nn.Module):
             kv_cache["k"] = k
             kv_cache["v"] = v
 
-        scores = torch.matmul(
+        # =========================================
+        # FLASH ATTENTION / SDPA
+        # =========================================
+
+        out = F.scaled_dot_product_attention(
             q,
-            k.transpose(-1, -2)
-        ) * self.scale
-
-        if self.causal:
-
-            i = scores.shape[-2]
-            j = scores.shape[-1]
-
-            mask = torch.triu(
-                torch.ones(
-                    i,
-                    j,
-                    device=x.device,
-                    dtype=torch.bool
-                ),
-                diagonal=1
+            k,
+            v,
+            is_causal=(
+                self.causal
+                and
+                kv_cache is None
             )
-
-            scores.masked_fill_(
-                mask,
-                -1e9
-            )
-
-        attn = scores.softmax(dim=-1)
-
-        out = torch.matmul(
-            attn,
-            v
         )
 
         out = out.transpose(
@@ -523,7 +531,7 @@ class TransformerBlock(nn.Module):
         return x
 
 # =========================================================
-# HIERARCHICAL REASONING MODEL
+# MODEL
 # =========================================================
 
 class HierarchicalReasoningModel(nn.Module):
@@ -532,22 +540,23 @@ class HierarchicalReasoningModel(nn.Module):
 
         super().__init__()
 
-        # tied embeddings
         self.token_emb = nn.Embedding(
             VOCAB_SIZE,
             EMBED_DIM
         )
 
         self.encoder = nn.ModuleList([
+
             TransformerBlock(
                 EMBED_DIM,
                 NUM_HEADS,
                 causal=False
             )
+
             for _ in range(ENC_LAYERS)
+
         ])
 
-        # learned latent reasoning tokens
         self.latents = nn.Parameter(
             torch.randn(
                 NUM_LATENTS,
@@ -555,14 +564,12 @@ class HierarchicalReasoningModel(nn.Module):
             )
         )
 
-        # latent cross-attention
         self.latent_attn = Attention(
             EMBED_DIM,
             NUM_HEADS,
             causal=False
         )
 
-        # iterative reasoning
         self.reasoning_blocks = nn.ModuleList([
 
             TransformerBlock(
@@ -603,7 +610,6 @@ class HierarchicalReasoningModel(nn.Module):
             EMBED_DIM
         )
 
-        # tied output head
         self.to_logits = nn.Linear(
             EMBED_DIM,
             VOCAB_SIZE,
@@ -615,7 +621,7 @@ class HierarchicalReasoningModel(nn.Module):
         )
 
     # =====================================================
-    # ENCODER + REASONING
+    # ENCODER
     # =====================================================
 
     def encode_reason(
@@ -637,13 +643,11 @@ class HierarchicalReasoningModel(nn.Module):
             -1
         )
 
-        # attend to encoder
         latents = latents + self.latent_attn(
             latents,
             context=x
         )
 
-        # iterative reasoning
         for block in self.reasoning_blocks:
 
             latents = block(latents)
@@ -656,7 +660,7 @@ class HierarchicalReasoningModel(nn.Module):
         return x, latents
 
     # =====================================================
-    # TRAINING FORWARD
+    # TRAINING
     # =====================================================
 
     def forward(
@@ -688,7 +692,7 @@ class HierarchicalReasoningModel(nn.Module):
         return self.to_logits(x)
 
     # =====================================================
-    # TRUE AUTOREGRESSIVE INFERENCE
+    # FAST INFERENCE
     # =====================================================
 
     @torch.no_grad()
@@ -716,10 +720,11 @@ class HierarchicalReasoningModel(nn.Module):
             for _ in range(len(self.decoder))
         ]
 
-        while generated.size(1) < max_new_tokens:
+        for _ in range(max_new_tokens):
 
+            # ONLY NEW TOKEN
             x = self.token_emb(
-                generated[:, -CHUNK_SIZE:]
+                generated[:, -1:]
             )
 
             for i, block in enumerate(self.decoder):
@@ -782,7 +787,7 @@ def get_lr(step):
     )
 
 # =========================================================
-# TRUE ACCURACY
+# TRUE ACC
 # =========================================================
 
 @torch.no_grad()
@@ -802,10 +807,15 @@ def evaluate_true_accuracy(
 
         tgt_out = tgt_out.to(device)
 
-        preds = model.generate(
-            src,
-            max_new_tokens=tgt_out.size(1)
-        )
+        with torch.autocast(
+            device_type="cuda",
+            dtype=torch.float16
+        ):
+
+            preds = model.generate(
+                src,
+                max_new_tokens=tgt_out.size(1)
+            )
 
         pred_len = preds.size(1)
 
@@ -847,23 +857,40 @@ def train_model(
         train_data,
         batch_size=BATCH_SIZE,
         shuffle=True,
-        collate_fn=collate_fn
+        collate_fn=collate_fn,
+        num_workers=NUM_WORKERS,
+        pin_memory=PIN_MEMORY,
+        persistent_workers=True
     )
 
     test_loader = DataLoader(
         test_data,
         batch_size=BATCH_SIZE,
         shuffle=False,
-        collate_fn=collate_fn
+        collate_fn=collate_fn,
+        num_workers=NUM_WORKERS,
+        pin_memory=PIN_MEMORY,
+        persistent_workers=True
     )
 
     model = HierarchicalReasoningModel().to(device)
+
+    if USE_COMPILE:
+
+        print("torch.compile enabled...")
+
+        model = torch.compile(model)
 
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=LR,
         weight_decay=WD,
-        betas=(0.9, 0.95)
+        betas=(0.9, 0.95),
+        fused=True
+    )
+
+    scaler = torch.amp.GradScaler(
+        "cuda"
     )
 
     step = 1
@@ -884,28 +911,46 @@ def train_model(
 
         for src, tgt_in, tgt_out in train_loader:
 
-            src = src.to(device)
-
-            tgt_in = tgt_in.to(device)
-
-            tgt_out = tgt_out.to(device)
-
-            logits = model(
-                src,
-                tgt_in
+            src = src.to(
+                device,
+                non_blocking=True
             )
 
-            loss = criterion(
-                logits.view(
-                    -1,
-                    VOCAB_SIZE
-                ),
-                tgt_out.view(-1)
+            tgt_in = tgt_in.to(
+                device,
+                non_blocking=True
             )
 
-            optimizer.zero_grad()
+            tgt_out = tgt_out.to(
+                device,
+                non_blocking=True
+            )
 
-            loss.backward()
+            optimizer.zero_grad(
+                set_to_none=True
+            )
+
+            with torch.autocast(
+                device_type="cuda",
+                dtype=torch.float16
+            ):
+
+                logits = model(
+                    src,
+                    tgt_in
+                )
+
+                loss = criterion(
+                    logits.view(
+                        -1,
+                        VOCAB_SIZE
+                    ),
+                    tgt_out.view(-1)
+                )
+
+            scaler.scale(loss).backward()
+
+            scaler.unscale_(optimizer)
 
             torch.nn.utils.clip_grad_norm_(
                 model.parameters(),
@@ -916,7 +961,9 @@ def train_model(
 
                 g['lr'] = get_lr(step)
 
-            optimizer.step()
+            scaler.step(optimizer)
+
+            scaler.update()
 
             total_train += (
                 loss.item() * len(src)
@@ -929,20 +976,42 @@ def train_model(
             len(train_data)
         )
 
-        true_acc = evaluate_true_accuracy(
-            model,
-            test_loader
-        )
+        # =========================================
+        # EVALUATE SOMETIMES
+        # =========================================
+
+        if (
+            epoch % EVAL_EVERY == 0
+            or epoch == 1
+        ):
+
+            true_acc = evaluate_true_accuracy(
+                model,
+                test_loader
+            )
+
+        else:
+
+            true_acc = -1
 
         train_losses.append(avg_train)
         true_accs.append(true_acc)
         epochs_axis.append(epoch)
 
-        print(
-            f"Epoch {epoch:3d} | "
-            f"Train Loss: {avg_train:.4f} | "
-            f"True Test Acc: {true_acc:.4f}"
-        )
+        if true_acc >= 0:
+
+            print(
+                f"Epoch {epoch:3d} | "
+                f"Train Loss: {avg_train:.4f} | "
+                f"True Test Acc: {true_acc:.4f}"
+            )
+
+        else:
+
+            print(
+                f"Epoch {epoch:3d} | "
+                f"Train Loss: {avg_train:.4f}"
+            )
 
     # =====================================================
     # PLOT
@@ -950,9 +1019,22 @@ def train_model(
 
     plt.figure(figsize=(24, 10))
 
+    valid_epochs = [
+        e for e, a in zip(
+            epochs_axis,
+            true_accs
+        )
+        if a >= 0
+    ]
+
+    valid_accs = [
+        a for a in true_accs
+        if a >= 0
+    ]
+
     plt.plot(
-        epochs_axis,
-        true_accs,
+        valid_epochs,
+        valid_accs,
         marker='o'
     )
 
@@ -984,7 +1066,7 @@ def train_model(
 
     plt.savefig(
         plot_path,
-        dpi=600
+        dpi=300
     )
 
     plt.close()
@@ -1000,7 +1082,9 @@ def train_model(
 def main():
 
     train_files = sorted(
-        glob.glob("/kaggle/input/datasets/classstudents/test99/*_train.csv")
+        glob.glob(
+            "/kaggle/input/datasets/classstudents/test99/*_train.csv"
+        )
     )
 
     if not train_files:
@@ -1038,4 +1122,5 @@ def main():
         print("=" * 80)
 
 if __name__ == "__main__":
+
     main()
