@@ -397,7 +397,49 @@ def evaluate_true_inference(model, dataset, BOS, EOS, PAD, max_samples=40):
         pred = [p for p in pred if p != PAD]
         if pred == true: seq_correct += 1
     return seq_correct / samples
+@torch.no_grad()
 
+def evaluate_token_accuracy(model, dataset, BOS, EOS, PAD, max_samples=40):
+    """
+    Returns: float in [0,1] = average fraction of correctly predicted tokens per sequence
+    """
+    model.eval()
+    samples = min(len(dataset), max_samples)
+    src_list, true_list = [], []
+    
+    for i in range(samples):
+        src, true = dataset[i]
+        src_list.append(torch.tensor(src, dtype=torch.long, device=device))
+        true_list.append(true)
+    
+    max_x = max(len(s) for s in src_list)
+    src_tensor = torch.full((samples, max_x), PAD, dtype=torch.long, device=device)
+    for i, s in enumerate(src_list):
+        src_tensor[i, :len(s)] = s
+    
+    pred_tensor = batched_greedy_decode(model, src_tensor, BOS, EOS, max_len=45, PAD=PAD).cpu()
+    
+    seq_token_accs = []
+    for i, true in enumerate(true_list):
+        pred = pred_tensor[i].tolist()
+        # Strip BOS/EOS/PAD (same logic as original)
+        if BOS in pred: pred = pred[pred.index(BOS)+1:]
+        if EOS in pred: pred = pred[:pred.index(EOS)]
+        pred = [p for p in pred if p != PAD]
+        
+        if len(true) == 0:
+            seq_token_accs.append(1.0 if len(pred) == 0 else 0.0)
+            continue
+            
+        # Compare token-by-token up to the length of the ground truth
+        min_len = min(len(pred), len(true))
+        matches = sum(p == t for p, t in zip(pred[:min_len], true[:min_len]))
+        # Normalize by true sequence length (penalizes missing tokens)
+        seq_acc = matches / len(true)
+        seq_token_accs.append(seq_acc)
+    
+    return np.mean(seq_token_accs) if seq_token_accs else 0.0
+    
 # ════════════════════════════════════════════════════════
 # CONFIGURATION AND SPECIFIC PREFIX SYSTEM EVALUATION
 # ════════════════════════════════════════════════════════
@@ -502,16 +544,23 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
                         src, y_in, y_out = [t.to(device) for t in batch_data]
                         loss = criterion(model(src, y_in).view(-1, m_cfg["cfg"]["V"]), y_out.view(-1))
                     run_test += loss.item() * (len(X) if typ == "vector" else len(src))
-
+        
         metrics["epochs"].append(ep)
         metrics["test_loss"].append(run_test / len(test_ds))
         
+        # SINGLE BLOCK: Handle both seq_acc AND token_acc together
         if typ == "seq" and m_cfg["metric"] == "accuracy":
-            acc = evaluate_true_inference(model, test_ds, cfg["BOS"], cfg["EOS"], cfg["PAD"])
-            metrics["seq_acc"].append(acc)
+            # Exact-match accuracy (strict)
+            acc_exact = evaluate_true_inference(model, test_ds, cfg["BOS"], cfg["EOS"], cfg["PAD"])
+            metrics["seq_acc"].append(acc_exact)
+            
+            # Token-avg accuracy (forgiving, partial credit)
+            acc_token = evaluate_token_accuracy(model, test_ds, cfg["BOS"], cfg["EOS"], cfg["PAD"])
+            metrics.setdefault("token_acc", []).append(acc_token)
         else:
+            # Vector models or loss-only seq models: pad with zeros
             metrics["seq_acc"].append(0.0)
-
+            metrics.setdefault("token_acc", []).append(0.0)
     # Isolated evaluation tracking routine for variant 9
     if m_name == "9_Transformer_PrefixTest":
         print(f"  🔍 Executing Isolated Continuation Analysis for: {m_name}")
@@ -541,21 +590,32 @@ def main():
         all_metrics = {}
         for name, cfg in METHODS.items():
             all_metrics[name] = train_and_collect(base, t_file, te_file, name, cfg)
-
+            
         # ==================== MAIN GRAPH PLOT (24x10 @ 600 DPI) ====================
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 10))
         colors = cm.get_cmap('tab20', len(METHODS))
         
         for i, (name, met) in enumerate(all_metrics.items()):
-            if name == "9_Transformer_PrefixTest": continue # Skip isolated plot variant
+            if name == "9_Transformer_PrefixTest": continue  # Skip isolated plot variant
             c = colors(i)
             clean_label = name.replace('_', ' ')
             
             # Subplot #1: Loss Curves
             ax1.plot(met["epochs"], met["test_loss"], label=clean_label, color=c, linewidth=2.5, alpha=0.85)
-            # Subplot #2: True Inference Performance Profiles
+            
+            # Subplot #2: Exact-match accuracy (solid line with markers)
             if METHODS[name]["type"] == "seq" and METHODS[name]["metric"] == "accuracy":
-                ax2.plot(met["epochs"], met["seq_acc"], label=clean_label, color=c, linewidth=2.5, marker='o', markevery=10, alpha=0.85)
+                ax2.plot(met["epochs"], met["seq_acc"], label=clean_label, color=c, 
+                         linewidth=2.5, marker='o', markevery=10, alpha=0.85)
+            
+            # Subplot #2: Token-avg accuracy (dashed line) WITH FULL SAFETY CHECKS
+            if "token_acc" in met:
+                # Safety check 1: Ensure list length matches epochs (prevents misalignment crashes)
+                # Safety check 2: Ensure at least one non-zero value exists (skip vector/loss-only models)
+                if len(met["token_acc"]) == len(met["epochs"]) and sum(met["token_acc"]) > 0:
+                    ax2.plot(met["epochs"], met["token_acc"], 
+                             label=f"{clean_label} (token-avg)", 
+                             color=c, linewidth=1.5, linestyle='--', alpha=0.7)
 
         ax1.set_xlabel("Epoch Structure", fontsize=14, fontweight='bold')
         ax1.set_ylabel("Cross Entropy / Loss Profile", fontsize=14, fontweight='bold')
@@ -568,9 +628,16 @@ def main():
         ax2.set_title("Autoregressive Verification (Generation Profiling)", fontsize=16, fontweight='bold')
         ax2.grid(True, linestyle='--', alpha=0.6)
         ax2.set_ylim(-0.02, 1.02)
+        
+        # Optional: Add visual legend helper to distinguish line styles
+        ax2.text(0.02, 0.98, "─ solid: exact-sequence match  │  -- dashed: avg token accuracy", 
+                 transform=ax2.transAxes, fontsize=9, verticalalignment='top',
+                 bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))
+        
         ax2.legend(fontsize=10, loc='lower right', framealpha=0.9, shadow=True)
 
-        plt.suptitle(f"Unified Structural Model Testing Summary Analysis — Set: {base}", fontsize=20, fontweight='bold', y=0.98)
+        plt.suptitle(f"Unified Structural Model Testing Summary Analysis — Set: {base}", 
+                     fontsize=20, fontweight='bold', y=0.98)
         plt.tight_layout()
         main_plot_path = f"/kaggle/working/plots/{base}_unified_evaluation_summary.png"
         plt.savefig(main_plot_path, dpi=600, bbox_inches='tight')
@@ -581,10 +648,13 @@ def main():
         prefix_data = all_metrics.get("9_Transformer_PrefixTest")
         if prefix_data and "prefix_lens" in prefix_data:
             plt.figure(figsize=(24, 10))
-            plt.plot(prefix_data["prefix_lens"], prefix_data["prefix_accs"], marker='s', color='#2b5c8f', linewidth=2.5, markersize=8)
-            plt.xlabel("Correct Prefix Tokens Provided (k Context Tokens)", fontsize=12, fontweight='bold')
+            plt.plot(prefix_data["prefix_lens"], prefix_data["prefix_accs"], 
+                     marker='s', color='#2b5c8f', linewidth=2.5, markersize=8)
+            plt.xlabel("Correct Prefix Tokens Provided (k Context Tokens)", 
+                       fontsize=12, fontweight='bold')
             plt.ylabel("Continuation Token Accuracy Profile", fontsize=12, fontweight='bold')
-            plt.title(f"Prefix Continuation Accuracy Profile — Target: {base}\n[Model: 9_Transformer_PrefixTest]", fontsize=14, fontweight='bold')
+            plt.title(f"Prefix Continuation Accuracy Profile — Target: {base}\n[Model: 9_Transformer_PrefixTest]", 
+                      fontsize=14, fontweight='bold')
             plt.grid(True, linestyle=':', alpha=0.8)
             plt.xticks(prefix_data["prefix_lens"])
             plt.ylim(-0.05, 1.05)
