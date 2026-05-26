@@ -760,11 +760,11 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
 # ═══════════════════════════════════════════════════════════════════════════
 
 def main():
-    train_files = sorted(glob.glob("/kaggle/input/datasets/classstudents/test52/*_train.csv"))
+    train_files = sorted(glob.glob("/content/*_train.csv"))
     if not train_files:
         print("⚠️  No training files found. Please adjust the glob pattern or provide a valid path.")
         return
-    os.makedirs("/kaggle/working/plots", exist_ok=True)
+    os.makedirs("/content/plots", exist_ok=True)
 
     for t_file in train_files:
         base = os.path.basename(t_file).replace("_train.csv", "")
@@ -825,7 +825,7 @@ def main():
 
         plt.suptitle(f"Unified Benchmark – {base}", fontsize=20, fontweight='bold', y=0.98)
         plt.tight_layout()
-        main_plot = f"/kaggle/working/plots/{base}_unified_evaluation.png"
+        main_plot = f"/content/plots/{base}_unified_evaluation.png"
         plt.savefig(main_plot, dpi=600, bbox_inches='tight')
         plt.close()
         print(f"💾 Saved: {main_plot}")
@@ -844,7 +844,7 @@ def main():
             plt.xticks(prefix_data["prefix_lens"])
             plt.ylim(-0.05, 1.05)
             plt.tight_layout()
-            prefix_plot = f"/kaggle/working/plots/{base}_prefix_accuracy.png"
+            prefix_plot = f"/content/plots/{base}_prefix_accuracy.png"
             plt.savefig(prefix_plot, dpi=600)
             plt.close()
             print(f"💾 Saved: {prefix_plot}")
