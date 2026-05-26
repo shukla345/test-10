@@ -625,30 +625,33 @@ METHODS = {
 
 def train_and_collect(base, train_file, test_file, m_name, m_cfg):
     typ = m_cfg["type"]
-    scaler = torch.amp.GradScaler('cuda') if torch.cuda.is_available() else None
+    use_cuda = torch.cuda.is_available()
+    if use_cuda:
+        scaler = torch.amp.GradScaler('cuda')
+    else:
+        scaler = None
 
     if typ == "vector":
         train_ds = BinaryVectorDataset(train_file)
         test_ds = BinaryVectorDataset(test_file)
-        tr_ld = DataLoader(train_ds, batch_size=COMMON["BATCH"], shuffle=True, num_workers=2, pin_memory=True)
-        te_ld = DataLoader(test_ds, batch_size=COMMON["BATCH"], shuffle=False, num_workers=2, pin_memory=True)
+        tr_ld = DataLoader(train_ds, batch_size=COMMON["BATCH"], shuffle=True, num_workers=2, pin_memory=use_cuda)
+        te_ld = DataLoader(test_ds, batch_size=COMMON["BATCH"], shuffle=False, num_workers=2, pin_memory=use_cuda)
         model = m_cfg["build"](train_ds.X.shape[1], train_ds.y.shape[1]).to(device)
         criterion = m_cfg["criterion"]
-        # No token config needed for vectors
-        token_cfg = None
     else:   # sequence model
         train_ds = BinarySeqDataset(train_file)
         test_ds = BinarySeqDataset(test_file)
         coll = lambda b: collate_fn(b, TOKEN_CFG)
-        tr_ld = DataLoader(train_ds, batch_size=COMMON["BATCH"], shuffle=True, collate_fn=coll, num_workers=2, pin_memory=True)
-        te_ld = DataLoader(test_ds, batch_size=COMMON["BATCH"], shuffle=False, collate_fn=coll, num_workers=2, pin_memory=True)
+        tr_ld = DataLoader(train_ds, batch_size=COMMON["BATCH"], shuffle=True, collate_fn=coll, num_workers=2, pin_memory=use_cuda)
+        te_ld = DataLoader(test_ds, batch_size=COMMON["BATCH"], shuffle=False, collate_fn=coll, num_workers=2, pin_memory=use_cuda)
         cfg = m_cfg["cfg"]
         model = m_cfg["build"](cfg).to(device)
         criterion = nn.CrossEntropyLoss(ignore_index=PAD_ID)
-        token_cfg = TOKEN_CFG
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=COMMON["LR"], weight_decay=COMMON["WD"])
     metrics = {"epochs": [], "test_loss": [], "seq_acc": [], "token_acc": []}
+    if typ == "vector":
+        metrics["bit_acc"] = []   # store bitwise accuracy per epoch
 
     for ep in range(1, COMMON["EPOCHS"] + 1):
         model.train()
@@ -656,14 +659,22 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
             optimizer.zero_grad()
             if typ == "vector":
                 X, y = batch_data[0].to(device), batch_data[1].to(device)
-                with torch.amp.autocast('cuda') if torch.cuda.is_available() else torch.no_grad():
+                if use_cuda:
+                    with torch.amp.autocast('cuda'):
+                        loss = criterion(model(X), y)
+                else:
                     loss = criterion(model(X), y)
             else:
                 src, y_in, y_out = [t.to(device) for t in batch_data]
-                with torch.amp.autocast('cuda') if torch.cuda.is_available() else torch.no_grad():
+                if use_cuda:
+                    with torch.amp.autocast('cuda'):
+                        logits = model(src, y_in)
+                        loss = criterion(logits.view(-1, VOCAB_SIZE), y_out.view(-1))
+                else:
                     logits = model(src, y_in)
                     loss = criterion(logits.view(-1, VOCAB_SIZE), y_out.view(-1))
-            if torch.cuda.is_available():
+
+            if use_cuda:
                 scaler.scale(loss).backward()
                 scaler.unscale_(optimizer)
                 torch.nn.utils.clip_grad_norm_(model.parameters(), COMMON["CLIP"])
@@ -678,13 +689,28 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
         model.eval()
         total_loss = 0.0
         total_samples = 0
+
+        # For vector models, accumulate bitwise accuracy
+        if typ == "vector":
+            total_bits_correct = 0
+            total_bits = 0
+
         with torch.no_grad():
             for batch_data in te_ld:
                 if typ == "vector":
                     X, y = batch_data[0].to(device), batch_data[1].to(device)
-                    loss = criterion(model(X), y)
+                    logits = model(X)
+                    loss = criterion(logits, y)
                     total_loss += loss.item() * X.size(0)
                     total_samples += X.size(0)
+
+                    # Bitwise accuracy
+                    probs = torch.sigmoid(logits)          # [B, out_dim]
+                    preds = (probs > 0.5).float()          # threshold at 0.5
+                    correct_bits = (preds == y).float()    # [B, out_dim]
+                    total_bits_correct += correct_bits.sum().item()
+                    total_bits += correct_bits.numel()
+
                 else:
                     src, y_in, y_out = [t.to(device) for t in batch_data]
                     logits = model(src, y_in)
@@ -695,15 +721,21 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
         metrics["epochs"].append(ep)
         metrics["test_loss"].append(total_loss / total_samples)
 
-        # accuracy metrics only for sequence models that request it
-        if typ == "seq" and m_cfg.get("metric") == "accuracy":
-            acc_exact = evaluate_true_inference(model, test_ds, BOS_ID, EOS_ID, PAD_ID)
-            acc_token = evaluate_token_accuracy(model, test_ds, BOS_ID, EOS_ID, PAD_ID)
-            metrics["seq_acc"].append(acc_exact)
-            metrics["token_acc"].append(acc_token)
-        else:
+        if typ == "vector":
+            bit_acc = total_bits_correct / total_bits if total_bits > 0 else 0.0
+            metrics["bit_acc"].append(bit_acc)
+            # For compatibility with plotting (seq models only), set seq_acc to 0
             metrics["seq_acc"].append(0.0)
             metrics["token_acc"].append(0.0)
+        else:  # seq model
+            if m_cfg.get("metric") == "accuracy":
+                acc_exact = evaluate_true_inference(model, test_ds, BOS_ID, EOS_ID, PAD_ID)
+                acc_token = evaluate_token_accuracy(model, test_ds, BOS_ID, EOS_ID, PAD_ID)
+                metrics["seq_acc"].append(acc_exact)
+                metrics["token_acc"].append(acc_token)
+            else:
+                metrics["seq_acc"].append(0.0)
+                metrics["token_acc"].append(0.0)
 
     # special prefix analysis for variant 9
     if m_name == "9_Transformer_PrefixTest":
@@ -712,10 +744,14 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
         metrics["prefix_lens"] = p_lens
         metrics["prefix_accs"] = p_accs
 
-    last_acc = metrics["seq_acc"][-1] if metrics["seq_acc"] else 0.0
-    print(f"  {m_name:30s} Complete | Final Loss: {metrics['test_loss'][-1]:.4f} | Acc: {last_acc:.3f}")
+    # Final print: show appropriate accuracy metric
+    if typ == "vector":
+        last_acc = metrics["bit_acc"][-1] if metrics["bit_acc"] else 0.0
+        print(f"  {m_name:30s} Complete | Final Loss: {metrics['test_loss'][-1]:.4f} | Bit Acc: {last_acc:.3f}")
+    else:
+        last_acc = metrics["seq_acc"][-1] if metrics["seq_acc"] else 0.0
+        print(f"  {m_name:30s} Complete | Final Loss: {metrics['test_loss'][-1]:.4f} | Exact Acc: {last_acc:.3f}")
     return metrics
-
 
 # ═══════════════════════════════════════════════════════════════════════════
 # MAIN EXECUTION & PLOTTING
@@ -748,14 +784,26 @@ def main():
                 continue   # skip prefix model in main plot
             c = colors(i)
             clean_label = name.replace('_', ' ')
+            
+            # Loss curves (all models)
             ax1.plot(met["epochs"], met["test_loss"], label=clean_label, color=c, linewidth=2.5, alpha=0.85)
+            
+            # Accuracy curves for sequence models (exact-match)
             if METHODS[name]["type"] == "seq" and METHODS[name].get("metric") == "accuracy":
                 ax2.plot(met["epochs"], met["seq_acc"], label=clean_label, color=c,
                          linewidth=2.5, marker='o', markevery=10, alpha=0.85)
+            
+            # Token-avg accuracy for sequence models (dashed)
             if "token_acc" in met and len(met["token_acc"]) == len(met["epochs"]) and sum(met["token_acc"]) > 0:
                 ax2.plot(met["epochs"], met["token_acc"],
                          label=f"{clean_label} (token-avg)", color=c,
                          linewidth=1.5, linestyle='--', alpha=0.7)
+            
+            # Bit accuracy for vector models (dotted line)
+            if METHODS[name]["type"] == "vector" and "bit_acc" in met:
+                ax2.plot(met["epochs"], met["bit_acc"],
+                         label=f"{clean_label} (bit acc)", color=c,
+                         linewidth=2.0, linestyle=':', alpha=0.8)
 
         ax1.set_xlabel("Epoch", fontsize=14, fontweight='bold')
         ax1.set_ylabel("Cross Entropy Loss", fontsize=14, fontweight='bold')
@@ -765,13 +813,13 @@ def main():
 
         ax2.set_xlabel("Epoch", fontsize=14, fontweight='bold')
         ax2.set_ylabel("Accuracy", fontsize=14, fontweight='bold')
-        ax2.set_title("Autoregressive Generation Accuracy", fontsize=16, fontweight='bold')
+        ax2.set_title("Model Accuracy (Exact / Token / Bitwise)", fontsize=16, fontweight='bold')
         ax2.grid(True, linestyle='--', alpha=0.6)
         ax2.set_ylim(-0.02, 1.02)
-        ax2.text(0.02, 0.98, "─ exact match  │  -- token‑avg",
+        ax2.text(0.02, 0.98, "─ exact match  │  -- token‑avg (seq)  │  : bit acc (vector)",
                  transform=ax2.transAxes, fontsize=9, verticalalignment='top',
                  bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))
-        ax2.legend(fontsize=10, loc='lower right', framealpha=0.9)
+        ax2.legend(fontsize=9, loc='lower right', framealpha=0.9, ncol=2)
 
         plt.suptitle(f"Unified Benchmark – {base}", fontsize=20, fontweight='bold', y=0.98)
         plt.tight_layout()
