@@ -24,7 +24,8 @@ from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from typing import Dict, List, Tuple, Optional
-
+import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 # ═══════════════════════════════════════════════════════════════════════════
 # GLOBAL HARDWARE & TOKEN CONFIGURATION (CLEAN SEMANTICS)
 # ═══════════════════════════════════════════════════════════════════════════
@@ -543,10 +544,10 @@ def evaluate_prefix_accuracy(model, loader, max_prefix_len=30, pad_id=PAD_ID):
 # TRAINING LOOP & MODEL REGISTRY
 # ═══════════════════════════════════════════════════════════════════════════
 
-COMMON = {"BATCH": 256, "LR": 3e-4, "EPOCHS": 200, "WD": 0, "DROP": 0, "CLIP": 1.0}
+COMMON = {"BATCH": 128, "LR": 3e-4, "EPOCHS": 200, "WD": 0, "DROP": 0, "CLIP": 1.0}
 
 METHODS = {
-    # Vector models (binary classification with BCE)
+    # ========== Vector models (unchanged, separate baseline) ==========
     "1_ResNet_Vector": {
         "type": "vector",
         "build": lambda i, o: ResNetMLP(i, 256, 6, o, 0.1),
@@ -572,53 +573,68 @@ METHODS = {
         "build": lambda i, o: FourierModel(i, o, 64, 3.0, 256, 3, 128, 256, 3, 0.1, 0.01),
         "criterion": nn.BCEWithLogitsLoss()
     },
-    # Sequence models (autoregressive, cross‑entropy)
+
+    # ========== Sequence models – balanced parameter count (~150-210k) ==========
+    # Standard Transformer (6,7,8,9,12)
     "6_Transformer_TeacherForced": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 128, "H": 4, "L": 3, "FF": 256},
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "FF": 128},
         "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.1, pad_id=PAD_ID),
         "metric": "loss"
     },
     "7_Transformer_TrueInference": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 128, "H": 4, "L": 3, "FF": 256},
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "FF": 128},
         "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.1, pad_id=PAD_ID),
         "metric": "accuracy"
     },
     "8_TrueInference_Worked_Mode": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 16, "H": 2, "L": 1, "FF": 32},
-        "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.0, pad_id=PAD_ID),
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "FF": 128},
+        "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.1, pad_id=PAD_ID),
         "metric": "accuracy"
     },
     "9_Transformer_PrefixTest": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 2, "L": 2, "FF": 64},
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "FF": 128},
         "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.1, pad_id=PAD_ID),
         "metric": "prefix_isolated"
     },
+    "12_Hope_Variant": {
+        "type": "seq",
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "FF": 128},
+        "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.1, pad_id=PAD_ID),
+        "metric": "accuracy"
+    },
+
+    # MemoryTransformer (10,11) – slightly more params, reduced MEM to 16
     "10_MemoryTransformer_TF": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 128, "H": 4, "L": 3, "MEM": 32},
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "MEM": 16},
         "build": lambda c: MemoryTransformer(c["V"], c["E"], c["H"], c["L"], c["MEM"], 0.1, pad_id=PAD_ID),
         "metric": "loss"
     },
     "11_TrueInference_Memory": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 128, "H": 4, "L": 3, "MEM": 32},
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "H": 4, "L": 2, "MEM": 16},
         "build": lambda c: MemoryTransformer(c["V"], c["E"], c["H"], c["L"], c["MEM"], 0.1, pad_id=PAD_ID),
         "metric": "accuracy"
     },
-    "12_Hope_Variant": {
-        "type": "seq",
-        "cfg": {"V": VOCAB_SIZE, "E": 16, "H": 2, "L": 2, "FF": 64},
-        "build": lambda c: TransformerModel(c["V"], c["E"], c["H"], c["L"], c["FF"], 0.0, pad_id=PAD_ID),
-        "metric": "accuracy"
-    },
+
+    # HierarchicalReasoningModel (13) – tuned to match parameter count
     "13_HierarchicalReasoning_HRM": {
         "type": "seq",
-        "cfg": {"V": VOCAB_SIZE},
-        "build": lambda c: HierarchicalReasoningModel(vocab_size=c["V"], pad_id=PAD_ID),
+        "cfg": {"V": VOCAB_SIZE, "E": 32, "LATENTS": 3, "REASON_STEPS": 2, "ENC_LAYERS": 2, "DEC_LAYERS": 2, "HEADS": 4},
+        "build": lambda c: HierarchicalReasoningModel(
+            vocab_size=c["V"],
+            embed_dim=c["E"],
+            num_latents=c["LATENTS"],
+            reasoning_steps=c["REASON_STEPS"],
+            enc_layers=c["ENC_LAYERS"],
+            dec_layers=c["DEC_LAYERS"],
+            num_heads=c["HEADS"],
+            pad_id=PAD_ID
+        ),
         "metric": "accuracy"
     }
 }
@@ -626,10 +642,6 @@ METHODS = {
 def train_and_collect(base, train_file, test_file, m_name, m_cfg):
     typ = m_cfg["type"]
     use_cuda = torch.cuda.is_available()
-    if use_cuda:
-        scaler = torch.amp.GradScaler('cuda')
-    else:
-        scaler = None
 
     if typ == "vector":
         train_ds = BinaryVectorDataset(train_file)
@@ -659,31 +671,15 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
             optimizer.zero_grad()
             if typ == "vector":
                 X, y = batch_data[0].to(device), batch_data[1].to(device)
-                if use_cuda:
-                    with torch.amp.autocast('cuda'):
-                        loss = criterion(model(X), y)
-                else:
-                    loss = criterion(model(X), y)
+                loss = criterion(model(X), y)
             else:
                 src, y_in, y_out = [t.to(device) for t in batch_data]
-                if use_cuda:
-                    with torch.amp.autocast('cuda'):
-                        logits = model(src, y_in)
-                        loss = criterion(logits.view(-1, VOCAB_SIZE), y_out.view(-1))
-                else:
-                    logits = model(src, y_in)
-                    loss = criterion(logits.view(-1, VOCAB_SIZE), y_out.view(-1))
+                logits = model(src, y_in)
+                loss = criterion(logits.view(-1, VOCAB_SIZE), y_out.view(-1))
 
-            if use_cuda:
-                scaler.scale(loss).backward()
-                scaler.unscale_(optimizer)
-                torch.nn.utils.clip_grad_norm_(model.parameters(), COMMON["CLIP"])
-                scaler.step(optimizer)
-                scaler.update()
-            else:
-                loss.backward()
-                torch.nn.utils.clip_grad_norm_(model.parameters(), COMMON["CLIP"])
-                optimizer.step()
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), COMMON["CLIP"])
+            optimizer.step()
 
         # ---- validation ----
         model.eval()
@@ -751,8 +747,14 @@ def train_and_collect(base, train_file, test_file, m_name, m_cfg):
     else:
         last_acc = metrics["seq_acc"][-1] if metrics["seq_acc"] else 0.0
         print(f"  {m_name:30s} Complete | Final Loss: {metrics['test_loss'][-1]:.4f} | Exact Acc: {last_acc:.3f}")
+        # Clean up GPU memory
+    del model
+    del optimizer
+    if use_cuda:
+        torch.cuda.empty_cache()
+    gc.collect()
     return metrics
-
+    
 # ═══════════════════════════════════════════════════════════════════════════
 # MAIN EXECUTION & PLOTTING
 # ═══════════════════════════════════════════════════════════════════════════
