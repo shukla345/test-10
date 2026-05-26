@@ -46,5 +46,5 @@ csv_files = [f for f in os.listdir('.') if f.endswith('.csv') and not f.endswith
 
 for file in csv_files:
     base_name = os.path.splitext(file)[0]   # removes .csv
-    output_name = f"{base_name}_test.csv"
+    output_name = f"{base_name}_train.csv"
     convert_csv(file, output_name)
