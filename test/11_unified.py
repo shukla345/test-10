@@ -51,8 +51,8 @@ class BinaryVectorDataset(Dataset):
 class BinarySeqDataset(Dataset):
     def __init__(self, file: str):
         df = pd.read_csv(file, header=None, dtype=str)
-        self.X = [parse_seq(x) for x in df.iloc[:, 0]]
-        self.y = [parse_seq(y) for y in df.iloc[:, 1]]
+        self.X = [parse_seq(x) for x in df.iloc[:, 1]]
+        self.y = [parse_seq(y) for y in df.iloc[:, 0]]
     def __len__(self): return len(self.X)
     def __getitem__(self, idx): return self.X[idx], self.y[idx]
 

@@ -22,7 +22,7 @@ from crypto_core import (
     xrp_b58check,
 )
 
-ROWS = 1_000
+ROWS = 10_000
 ED25519_MAX = 1 << 256
 
 

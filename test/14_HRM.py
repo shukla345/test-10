@@ -140,12 +140,12 @@ class BinarySeqDataset(Dataset):
 
         self.X = [
             parse_seq(x)
-            for x in df.iloc[:, 0]
+            for x in df.iloc[:, 1]
         ]
 
         self.y = [
             parse_seq(y)
-            for y in df.iloc[:, 1]
+            for y in df.iloc[:, 0]
         ]
 
     def __len__(self):

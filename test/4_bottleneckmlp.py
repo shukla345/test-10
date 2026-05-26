@@ -49,8 +49,8 @@ class BinaryCSVDataset(Dataset):
     def __init__(self, file):
         df = pd.read_csv(file, header=None, dtype=str)
 
-        self.X = parse_binary(df.iloc[:, 0])
-        self.y = parse_binary(df.iloc[:, 1])
+        self.X = parse_binary(df.iloc[:, 1])
+        self.y = parse_binary(df.iloc[:, 0])
 
     def __len__(self):
         return len(self.X)
