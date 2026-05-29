@@ -128,8 +128,8 @@ for CSV_FILE in csv_files:
 
     for idx, row in df.iterrows():
 
-        x = row[X_COL]
-        y = row[Y_COL]
+        x = row[Y_COL]
+        y = row[X_COL]
 
         x_tokens = encode(x)
         y_tokens = encode(y)
