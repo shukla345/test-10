@@ -19,10 +19,9 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 from torch.optim import Adam
 from torch.nn.utils import clip_grad_norm_
-from tqdm import tqdm
 
 # ------------------------------
-# Dataset loader (same as before)
+# Dataset loader
 # ------------------------------
 class CheckerboardDataset(Dataset):
     def __init__(self, empty_json, solved_json, vocab_json):
@@ -47,7 +46,7 @@ class CheckerboardDataset(Dataset):
         return {'empty': empty_grid, 'solved': solved_grid, 'id': self.empty_data[idx]['id']}
 
 # ------------------------------
-# Model definition (same as before)
+# Model definition (Conditional EBM)
 # ------------------------------
 class CondCheckerboardEBM(nn.Module):
     def __init__(self, vocab_size, embed_dim=64, n_filters=32):
@@ -78,11 +77,10 @@ class CondCheckerboardEBM(nn.Module):
         return self.fc(x)
 
 # ------------------------------
-# Training function (returns history)
+# Training function (clean output, no tqdm)
 # ------------------------------
-def train_ebm(model, dataloader, epochs, lr=1e-4, n_steps=10, step_size=0.1, noise_std=0.05, device='cuda'):
+def train_ebm(model, dataloader, mask_idx, epochs, lr=1e-4, device='cuda', print_every=10):
     optimizer = Adam(model.parameters(), lr=lr)
-    neg_buffer = None
     history = {'real_energy': [], 'fake_energy': [], 'loss': []}
     
     model.train()
@@ -90,29 +88,29 @@ def train_ebm(model, dataloader, epochs, lr=1e-4, n_steps=10, step_size=0.1, noi
         total_loss = 0.0
         total_real = 0.0
         total_fake = 0.0
-        pbar = tqdm(dataloader, desc=f"Epoch {epoch+1}/{epochs}")
-        for batch in pbar:
+        num_batches = len(dataloader)
+        
+        for batch_idx, batch in enumerate(dataloader):
             empty = batch['empty'].to(device)
             solved = batch['solved'].to(device)
-            B = empty.size(0)
             
+            # Energy of real data
             energy_real = model(empty, solved).mean()
             
-            if neg_buffer is None:
-                neg_buffer = solved.clone().detach()
-            else:
-                if neg_buffer.shape != solved.shape:
-                    neg_buffer = solved.clone().detach()
+            # Generate negative: start from solved, then corrupt 30% of masked cells
+            mask = (empty == mask_idx)
+            neg = solved.clone()
+            vocab_size = model.embed.num_embeddings
             
-            neg_buffer = neg_buffer.detach().requires_grad_(True)
-            for _ in range(n_steps):
-                energy_neg = model(empty, neg_buffer).sum()
-                grad = torch.autograd.grad(energy_neg, neg_buffer, create_graph=False)[0]
-                noise = torch.randn_like(neg_buffer) * noise_std
-                neg_buffer = neg_buffer - step_size * grad + noise
-                neg_buffer.data = neg_buffer.data.clamp(0, model.embed.num_embeddings - 1).long()
-            neg_buffer = neg_buffer.detach()
-            energy_fake = model(empty, neg_buffer).mean()
+            masked_indices = torch.nonzero(mask, as_tuple=True)
+            num_masked = len(masked_indices[0])
+            if num_masked > 0:
+                noise_mask = torch.rand(num_masked, device=device) < 0.3
+                if noise_mask.any():
+                    random_tokens = torch.randint(2, vocab_size, (noise_mask.sum().item(),), device=device)
+                    neg[masked_indices[0][noise_mask], masked_indices[1][noise_mask], masked_indices[2][noise_mask]] = random_tokens
+            
+            energy_fake = model(empty, neg).mean()
             
             loss = energy_real - energy_fake
             optimizer.zero_grad()
@@ -123,36 +121,53 @@ def train_ebm(model, dataloader, epochs, lr=1e-4, n_steps=10, step_size=0.1, noi
             total_loss += loss.item()
             total_real += energy_real.item()
             total_fake += energy_fake.item()
-            pbar.set_postfix({'loss': loss.item(), 'E_real': energy_real.item(), 'E_fake': energy_fake.item()})
+            
+            if (batch_idx + 1) % print_every == 0 or batch_idx == num_batches - 1:
+                print(f"Epoch {epoch+1:2d}/{epochs} | Batch {batch_idx+1:4d}/{num_batches} | "
+                      f"Loss: {loss.item():.4f} | Real: {energy_real.item():.4f} | Fake: {energy_fake.item():.4f}")
         
-        avg_loss = total_loss / len(dataloader)
-        avg_real = total_real / len(dataloader)
-        avg_fake = total_fake / len(dataloader)
+        avg_loss = total_loss / num_batches
+        avg_real = total_real / num_batches
+        avg_fake = total_fake / num_batches
         history['loss'].append(avg_loss)
         history['real_energy'].append(avg_real)
         history['fake_energy'].append(avg_fake)
-        print(f"Epoch {epoch+1}: Loss={avg_loss:.4f} Real={avg_real:.4f} Fake={avg_fake:.4f}")
+        print(f"✔ Epoch {epoch+1} complete | Avg Loss: {avg_loss:.4f} | Avg Real: {avg_real:.4f} | Avg Fake: {avg_fake:.4f}\n")
     
     return history
 
 # ------------------------------
-# Fill masked cells (for testing)
+# Greedy filling of masked cells (no gradients)
 # ------------------------------
-def fill_masked_cells(model, empty_grid, mask_idx, vocab_size, n_steps=100, step_size=0.05, device='cuda'):
+def fill_masked_cells_greedy(model, empty_grid, mask_idx, vocab_size, device='cuda'):
     model.eval()
+    # empty_grid already has batch dimension (1, H, W)
     current = empty_grid.clone().detach()
-    mask = (current == mask_idx).long()
-    init_tokens = torch.randint(2, vocab_size, current.shape, device=device) * mask
-    current = current * (1 - mask) + init_tokens
-    current = current.detach().requires_grad_(True)
-    for _ in range(n_steps):
-        energy = model(empty_grid, current).sum()
-        grad = torch.autograd.grad(energy, current)[0]
-        grad = grad * mask
-        current = current - step_size * grad
-        current.data = current.data.clamp(0, vocab_size-1).long()
-        current = current.detach().requires_grad_(True)
-    return current.detach()
+    mask = (current == mask_idx)
+    # Initialize masked cells with random tokens (skip 0,1)
+    current[mask] = torch.randint(2, vocab_size, mask.sum().shape, device=device)
+    
+    # Get masked positions (batch, row, col)
+    positions = torch.nonzero(mask, as_tuple=True)
+    n_masked = len(positions[0])
+    # Multiple passes over all masked positions
+    for _ in range(5):
+        for idx in range(n_masked):
+            b = positions[0][idx]  # batch index (always 0)
+            r = positions[1][idx]
+            c = positions[2][idx]
+            best_token = None
+            best_energy = float('inf')
+            # Try every possible token (skip <PAD> and <MASK>)
+            for token in range(2, vocab_size):
+                current[b, r, c] = token
+                with torch.no_grad():
+                    energy = model(empty_grid, current).item()
+                if energy < best_energy:
+                    best_energy = energy
+                    best_token = token
+            current[b, r, c] = best_token
+    return current
 
 def compute_accuracy(pred_grid, true_grid, mask):
     pred_masked = pred_grid[mask.bool()]
@@ -162,11 +177,11 @@ def compute_accuracy(pred_grid, true_grid, mask):
     return (pred_masked == true_masked).float().mean().item()
 
 # ------------------------------
-# Plotting functions
+# Plotting functions (unchanged)
 # ------------------------------
 def plot_training_history(history, save_path):
     epochs = range(1, len(history['loss'])+1)
-    plt.figure(figsize=(12,4))
+    plt.figure(figsize=(24,8))
     plt.subplot(1,3,1)
     plt.plot(epochs, history['loss'], 'b-', label='Loss')
     plt.xlabel('Epoch')
@@ -191,11 +206,11 @@ def plot_training_history(history, save_path):
     plt.grid(True)
     
     plt.tight_layout()
-    plt.savefig(save_path, dpi=150)
+    plt.savefig(save_path, dpi=300)
     plt.close()
 
 def plot_energy_comparison(real_energies, random_energies, filled_energies, save_path):
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(20,10))
     # Histogram
     plt.subplot(1,2,1)
     plt.hist(real_energies, bins=30, alpha=0.5, label='Real', color='green')
@@ -223,11 +238,11 @@ def plot_energy_comparison(real_energies, random_energies, filled_energies, save
     plt.grid(True, axis='y')
     
     plt.tight_layout()
-    plt.savefig(save_path, dpi=150)
+    plt.savefig(save_path, dpi=300)
     plt.close()
 
 def plot_recovery_accuracy(accuracies, save_path):
-    plt.figure(figsize=(8,5))
+    plt.figure(figsize=(16,10))
     plt.bar(range(len(accuracies)), accuracies, color='skyblue')
     plt.axhline(y=np.mean(accuracies), color='r', linestyle='--', label=f'Mean = {np.mean(accuracies):.3f}')
     plt.xlabel('Test Sample Index')
@@ -235,14 +250,16 @@ def plot_recovery_accuracy(accuracies, save_path):
     plt.title('Recovery Accuracy per Test Sample')
     plt.legend()
     plt.grid(True, axis='y')
-    plt.savefig(save_path, dpi=150)
+    plt.savefig(save_path, dpi=300)
     plt.close()
 
 # ------------------------------
 # Process a single dataset
 # ------------------------------
 def process_dataset(prefix, args, device):
-    print(f"\n{'='*60}\nProcessing dataset: {prefix}\n{'='*60}")
+    print(f"\n{'='*60}")
+    print(f"Processing dataset: {prefix}")
+    print(f"{'='*60}")
     
     # File paths
     empty_file = f"{prefix}_checkerboard_empty.json"
@@ -263,7 +280,10 @@ def process_dataset(prefix, args, device):
     
     vocab_size = dataset.vocab_size
     mask_idx = dataset.mask_idx
-    print(f"Vocab size: {vocab_size}, Grid size: {dataset.grid_size}, Train: {train_size}, Test: {test_size}")
+    print(f"Vocabulary size: {vocab_size}")
+    print(f"Grid size: {dataset.grid_size}×{dataset.grid_size}")
+    print(f"Training samples: {train_size}")
+    print(f"Test samples: {test_size}")
     
     # Model
     model = CondCheckerboardEBM(vocab_size, embed_dim=args.embed_dim, n_filters=args.n_filters)
@@ -273,10 +293,8 @@ def process_dataset(prefix, args, device):
     history = None
     
     if args.mode in ["train", "both"]:
-        print("Training...")
-        history = train_ebm(model, train_loader, epochs=args.epochs, lr=args.lr,
-                            n_steps=args.n_steps_langevin, step_size=0.1, noise_std=0.05,
-                            device=device)
+        print("\nTraining...")
+        history = train_ebm(model, train_loader, mask_idx, epochs=args.epochs, lr=args.lr, device=device)
         torch.save(model.state_dict(), model_path)
         print(f"Model saved to {model_path}")
         # Plot training curves
@@ -291,7 +309,7 @@ def process_dataset(prefix, args, device):
             return
     
     # ---- Testing ----
-    print("Evaluating on test set...")
+    print("\nEvaluating on test set...")
     model.eval()
     
     # Collect energies
@@ -318,8 +336,14 @@ def process_dataset(prefix, args, device):
         empty_grid = sample['empty'].unsqueeze(0).to(device)
         true_grid = sample['solved'].unsqueeze(0).to(device)
         # Fill masked cells
-        filled = fill_masked_cells(model, empty_grid, mask_idx, vocab_size,
-                                   n_steps=args.n_steps_fill, step_size=0.05, device=device)
+        filled = fill_masked_cells_greedy(model, empty_grid, mask_idx, vocab_size, device=device)
+        inv_vocab = {v: k for k, v in dataset.vocab.items()}  # note: dataset is still in scope
+        filled_tokens = filled[0].cpu().tolist()
+        masked_positions = (empty_grid[0] == mask_idx).nonzero(as_tuple=True)
+        # Extract only the odd (masked) cells in reading order
+        y_tokens_filled = [filled_tokens[r][c] for (r, c) in zip(masked_positions[0], masked_positions[1])]
+        y_str_filled = ''.join(inv_vocab[t] for t in y_tokens_filled)
+        print(f"Sample {i}: Predicted y = {y_str_filled}")
         # Energy of filled grid
         e_filled = model(empty_grid, filled).item()
         filled_energies.append(e_filled)
@@ -342,7 +366,7 @@ def process_dataset(prefix, args, device):
     print(f"  Avg Filled Energy: {np.mean(filled_energies):.4f} ± {np.std(filled_energies):.4f}")
     print(f"  Avg Recovery Accuracy: {np.mean(recover_accuracies)*100:.2f}%")
     
-    # Optionally save metrics to JSON
+    # Save metrics to JSON
     metrics = {
         "real_energy_mean": float(np.mean(real_energies)),
         "real_energy_std": float(np.std(real_energies)),
@@ -359,7 +383,7 @@ def process_dataset(prefix, args, device):
     print(f"Plots and metrics saved to {out_dir}")
 
 # ------------------------------
-# Main: find all datasets and process each
+# Main
 # ------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Train/test EBM on multiple checkerboard datasets, generate plots per dataset.")
@@ -371,8 +395,6 @@ def main():
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--embed_dim", type=int, default=64)
     parser.add_argument("--n_filters", type=int, default=32)
-    parser.add_argument("--n_steps_langevin", type=int, default=10)
-    parser.add_argument("--n_steps_fill", type=int, default=100)
     parser.add_argument("--n_recover", type=int, default=20, help="Number of test samples for recovery accuracy")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
     args = parser.parse_args()

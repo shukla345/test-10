@@ -1,0 +1,10 @@
+{
+  "real_energy_mean": 1.478121280670166,
+  "real_energy_std": 0.22661255300045013,
+  "random_energy_mean": 1.0321094989776611,
+  "random_energy_std": 0.44466888904571533,
+  "filled_energy_mean": -0.6816509902477265,
+  "filled_energy_std": 0.22751085636963925,
+  "recovery_accuracy_mean": 0.01015625,
+  "recovery_accuracy_std": 0.015047937722076736
+}
