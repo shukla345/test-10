@@ -1,0 +1,2442 @@
+Time
+#
+Log Message
+8.1s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.1s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.1s	3	0.00s - to python to disable frozen modules.
+8.1s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.8s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.8s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.8s	7	0.00s - to python to disable frozen modules.
+8.8s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+13.6s	9	Found 11 datasets: ['ada_addresses', 'avax_addresses', 'bch_addresses', 'bnb_addresses', 'btc_addresses', 'doge_addresses', 'eth_addresses', 'ltc_addresses', 'sol_addresses', 'trx_addresses', 'xrp_addresses']
+13.6s	10	
+13.6s	11	============================================================
+13.6s	12	Processing dataset: ada_addresses
+13.6s	13	============================================================
+14.3s	14	Vocabulary size: 36
+14.3s	15	Grid size: 12×12
+14.3s	16	Training samples: 8000
+14.3s	17	Test samples: 2000
+14.3s	18	
+14.3s	19	Training...
+22.3s	20	Epoch  1/20 | Batch   10/63 | Loss: -0.0048 | Real: -1.0995 | Fake: -1.0947
+24.6s	21	Epoch  1/20 | Batch   20/63 | Loss: -0.0133 | Real: -1.0950 | Fake: -1.0817
+26.9s	22	Epoch  1/20 | Batch   30/63 | Loss: -0.0049 | Real: -1.0920 | Fake: -1.0871
+29.3s	23	Epoch  1/20 | Batch   40/63 | Loss: -0.0147 | Real: -1.0810 | Fake: -1.0663
+31.6s	24	Epoch  1/20 | Batch   50/63 | Loss: -0.0174 | Real: -1.0748 | Fake: -1.0575
+33.9s	25	Epoch  1/20 | Batch   60/63 | Loss: -0.0282 | Real: -1.0724 | Fake: -1.0442
+34.5s	26	Epoch  1/20 | Batch   63/63 | Loss: -0.0377 | Real: -1.0680 | Fake: -1.0303
+34.5s	27	✔ Epoch 1 complete | Avg Loss: -0.0118 | Avg Real: -1.0871 | Avg Fake: -1.0753
+34.5s	28	
+36.8s	29	Epoch  2/20 | Batch   10/63 | Loss: -0.0162 | Real: -1.0634 | Fake: -1.0472
+39.1s	30	Epoch  2/20 | Batch   20/63 | Loss: -0.0252 | Real: -1.0615 | Fake: -1.0363
+41.4s	31	Epoch  2/20 | Batch   30/63 | Loss: -0.0856 | Real: -1.0532 | Fake: -0.9676
+43.7s	32	Epoch  2/20 | Batch   40/63 | Loss: -0.0966 | Real: -1.0566 | Fake: -0.9600
+46.0s	33	Epoch  2/20 | Batch   50/63 | Loss: -0.0576 | Real: -1.0571 | Fake: -0.9994
+48.3s	34	Epoch  2/20 | Batch   60/63 | Loss: -0.1256 | Real: -1.0455 | Fake: -0.9199
+48.9s	35	Epoch  2/20 | Batch   63/63 | Loss: -0.0783 | Real: -1.0322 | Fake: -0.9539
+48.9s	36	✔ Epoch 2 complete | Avg Loss: -0.0505 | Avg Real: -1.0574 | Avg Fake: -1.0070
+48.9s	37	
+51.1s	38	Epoch  3/20 | Batch   10/63 | Loss: -0.0342 | Real: -1.0395 | Fake: -1.0054
+53.5s	39	Epoch  3/20 | Batch   20/63 | Loss: -0.1065 | Real: -1.0376 | Fake: -0.9311
+55.7s	40	Epoch  3/20 | Batch   30/63 | Loss: -0.1632 | Real: -1.0328 | Fake: -0.8696
+58.0s	41	Epoch  3/20 | Batch   40/63 | Loss: -0.1699 | Real: -1.0391 | Fake: -0.8691
+60.3s	42	Epoch  3/20 | Batch   50/63 | Loss: -0.1283 | Real: -1.0332 | Fake: -0.9049
+62.6s	43	Epoch  3/20 | Batch   60/63 | Loss: -0.0411 | Real: -1.0314 | Fake: -0.9903
+63.2s	44	Epoch  3/20 | Batch   63/63 | Loss: -0.0341 | Real: -1.0300 | Fake: -0.9959
+63.2s	45	✔ Epoch 3 complete | Avg Loss: -0.1244 | Avg Real: -1.0348 | Avg Fake: -0.9104
+63.2s	46	
+65.5s	47	Epoch  4/20 | Batch   10/63 | Loss: -0.2751 | Real: -1.0347 | Fake: -0.7596
+67.7s	48	Epoch  4/20 | Batch   20/63 | Loss: -0.3210 | Real: -1.0066 | Fake: -0.6856
+70.0s	49	Epoch  4/20 | Batch   30/63 | Loss: -0.3468 | Real: -1.0088 | Fake: -0.6620
+72.3s	50	Epoch  4/20 | Batch   40/63 | Loss: -0.2742 | Real: -0.9898 | Fake: -0.7155
+74.6s	51	Epoch  4/20 | Batch   50/63 | Loss: -0.0871 | Real: -1.0053 | Fake: -0.9182
+76.9s	52	Epoch  4/20 | Batch   60/63 | Loss: -0.1069 | Real: -0.9873 | Fake: -0.8804
+77.5s	53	Epoch  4/20 | Batch   63/63 | Loss: -0.4652 | Real: -0.9751 | Fake: -0.5099
+77.5s	54	✔ Epoch 4 complete | Avg Loss: -0.2487 | Avg Real: -1.0073 | Avg Fake: -0.7586
+77.5s	55	
+79.7s	56	Epoch  5/20 | Batch   10/63 | Loss: -0.4390 | Real: -0.9860 | Fake: -0.5470
+82.0s	57	Epoch  5/20 | Batch   20/63 | Loss: -0.4629 | Real: -0.9892 | Fake: -0.5263
+84.3s	58	Epoch  5/20 | Batch   30/63 | Loss: -0.5770 | Real: -0.9734 | Fake: -0.3963
+86.5s	59	Epoch  5/20 | Batch   40/63 | Loss: -0.1505 | Real: -0.9977 | Fake: -0.8471
+88.8s	60	Epoch  5/20 | Batch   50/63 | Loss: -0.6566 | Real: -0.9910 | Fake: -0.3345
+91.0s	61	Epoch  5/20 | Batch   60/63 | Loss: -0.6831 | Real: -0.9754 | Fake: -0.2923
+91.6s	62	Epoch  5/20 | Batch   63/63 | Loss: -0.3670 | Real: -0.9714 | Fake: -0.6044
+91.6s	63	✔ Epoch 5 complete | Avg Loss: -0.4010 | Avg Real: -0.9849 | Avg Fake: -0.5839
+91.6s	64	
+93.9s	65	Epoch  6/20 | Batch   10/63 | Loss: -0.6683 | Real: -1.0086 | Fake: -0.3403
+96.1s	66	Epoch  6/20 | Batch   20/63 | Loss: -0.8083 | Real: -1.0023 | Fake: -0.1940
+98.4s	67	Epoch  6/20 | Batch   30/63 | Loss: -0.5764 | Real: -1.0165 | Fake: -0.4401
+100.6s	68	Epoch  6/20 | Batch   40/63 | Loss: -0.6030 | Real: -1.0487 | Fake: -0.4457
+103.0s	69	Epoch  6/20 | Batch   50/63 | Loss: -1.0169 | Real: -1.0627 | Fake: -0.0458
+105.2s	70	Epoch  6/20 | Batch   60/63 | Loss: -0.5971 | Real: -1.0943 | Fake: -0.4972
+105.8s	71	Epoch  6/20 | Batch   63/63 | Loss: -0.2540 | Real: -1.0684 | Fake: -0.8145
+105.8s	72	✔ Epoch 6 complete | Avg Loss: -0.6469 | Avg Real: -1.0317 | Avg Fake: -0.3849
+105.8s	73	
+108.0s	74	Epoch  7/20 | Batch   10/63 | Loss: -1.0607 | Real: -1.0883 | Fake: -0.0276
+110.2s	75	Epoch  7/20 | Batch   20/63 | Loss: -0.6927 | Real: -1.1794 | Fake: -0.4867
+112.5s	76	Epoch  7/20 | Batch   30/63 | Loss: -1.0952 | Real: -1.1198 | Fake: -0.0246
+114.8s	77	Epoch  7/20 | Batch   40/63 | Loss: -0.7001 | Real: -1.2276 | Fake: -0.5275
+117.0s	78	Epoch  7/20 | Batch   50/63 | Loss: -0.6895 | Real: -1.2146 | Fake: -0.5251
+119.2s	79	Epoch  7/20 | Batch   60/63 | Loss: -0.4705 | Real: -1.2075 | Fake: -0.7370
+119.8s	80	Epoch  7/20 | Batch   63/63 | Loss: -1.2326 | Real: -1.2067 | Fake: 0.0260
+119.8s	81	✔ Epoch 7 complete | Avg Loss: -0.8582 | Avg Real: -1.1638 | Avg Fake: -0.3055
+119.8s	82	
+122.0s	83	Epoch  8/20 | Batch   10/63 | Loss: -1.2697 | Real: -1.2090 | Fake: 0.0607
+124.3s	84	Epoch  8/20 | Batch   20/63 | Loss: -1.1624 | Real: -1.2844 | Fake: -0.1220
+126.6s	85	Epoch  8/20 | Batch   30/63 | Loss: -1.0927 | Real: -1.2837 | Fake: -0.1910
+128.8s	86	Epoch  8/20 | Batch   40/63 | Loss: -0.8923 | Real: -1.2599 | Fake: -0.3676
+131.0s	87	Epoch  8/20 | Batch   50/63 | Loss: -1.3136 | Real: -1.3277 | Fake: -0.0141
+133.3s	88	Epoch  8/20 | Batch   60/63 | Loss: -0.6217 | Real: -1.3761 | Fake: -0.7543
+133.9s	89	Epoch  8/20 | Batch   63/63 | Loss: -1.3887 | Real: -1.3849 | Fake: 0.0038
+133.9s	90	✔ Epoch 8 complete | Avg Loss: -1.0551 | Avg Real: -1.2821 | Avg Fake: -0.2270
+133.9s	91	
+136.1s	92	Epoch  9/20 | Batch   10/63 | Loss: -1.2224 | Real: -1.4042 | Fake: -0.1817
+138.3s	93	Epoch  9/20 | Batch   20/63 | Loss: -0.7154 | Real: -1.4370 | Fake: -0.7216
+140.6s	94	Epoch  9/20 | Batch   30/63 | Loss: -1.6167 | Real: -1.4851 | Fake: 0.1315
+142.8s	95	Epoch  9/20 | Batch   40/63 | Loss: -0.2746 | Real: -1.4524 | Fake: -1.1778
+145.1s	96	Epoch  9/20 | Batch   50/63 | Loss: -1.0695 | Real: -1.4588 | Fake: -0.3893
+147.3s	97	Epoch  9/20 | Batch   60/63 | Loss: -0.7013 | Real: -1.5289 | Fake: -0.8276
+147.9s	98	Epoch  9/20 | Batch   63/63 | Loss: -1.7190 | Real: -1.5278 | Fake: 0.1912
+147.9s	99	✔ Epoch 9 complete | Avg Loss: -1.2297 | Avg Real: -1.4583 | Avg Fake: -0.2286
+147.9s	100	
+150.1s	101	Epoch 10/20 | Batch   10/63 | Loss: -0.2834 | Real: -1.5813 | Fake: -1.2979
+152.4s	102	Epoch 10/20 | Batch   20/63 | Loss: -0.6315 | Real: -1.5312 | Fake: -0.8997
+154.6s	103	Epoch 10/20 | Batch   30/63 | Loss: -0.6613 | Real: -1.5336 | Fake: -0.8723
+156.9s	104	Epoch 10/20 | Batch   40/63 | Loss: -1.1672 | Real: -1.4866 | Fake: -0.3193
+159.1s	105	Epoch 10/20 | Batch   50/63 | Loss: -0.7886 | Real: -1.5769 | Fake: -0.7884
+161.3s	106	Epoch 10/20 | Batch   60/63 | Loss: -1.3751 | Real: -1.5892 | Fake: -0.2141
+161.9s	107	Epoch 10/20 | Batch   63/63 | Loss: -0.5731 | Real: -1.5577 | Fake: -0.9847
+161.9s	108	✔ Epoch 10 complete | Avg Loss: -1.2310 | Avg Real: -1.5460 | Avg Fake: -0.3149
+161.9s	109	
+164.2s	110	Epoch 11/20 | Batch   10/63 | Loss: -1.7288 | Real: -1.5682 | Fake: 0.1606
+166.4s	111	Epoch 11/20 | Batch   20/63 | Loss: -1.3630 | Real: -1.6406 | Fake: -0.2775
+168.6s	112	Epoch 11/20 | Batch   30/63 | Loss: -1.7023 | Real: -1.5170 | Fake: 0.1853
+170.8s	113	Epoch 11/20 | Batch   40/63 | Loss: -1.6257 | Real: -1.6051 | Fake: 0.0206
+173.1s	114	Epoch 11/20 | Batch   50/63 | Loss: -1.9113 | Real: -1.6601 | Fake: 0.2511
+175.3s	115	Epoch 11/20 | Batch   60/63 | Loss: -2.0311 | Real: -1.7413 | Fake: 0.2898
+175.9s	116	Epoch 11/20 | Batch   63/63 | Loss: -1.8495 | Real: -1.7603 | Fake: 0.0892
+175.9s	117	✔ Epoch 11 complete | Avg Loss: -1.5403 | Avg Real: -1.6142 | Avg Fake: -0.0739
+175.9s	118	
+178.1s	119	Epoch 12/20 | Batch   10/63 | Loss: -1.6812 | Real: -1.7827 | Fake: -0.1015
+180.3s	120	Epoch 12/20 | Batch   20/63 | Loss: -1.9224 | Real: -1.8338 | Fake: 0.0887
+182.6s	121	Epoch 12/20 | Batch   30/63 | Loss: -1.0876 | Real: -1.8304 | Fake: -0.7428
+184.8s	122	Epoch 12/20 | Batch   40/63 | Loss: -1.7592 | Real: -1.8827 | Fake: -0.1234
+187.0s	123	Epoch 12/20 | Batch   50/63 | Loss: -1.7266 | Real: -1.9015 | Fake: -0.1749
+189.2s	124	Epoch 12/20 | Batch   60/63 | Loss: -2.2205 | Real: -1.8992 | Fake: 0.3213
+189.8s	125	Epoch 12/20 | Batch   63/63 | Loss: -2.1972 | Real: -1.8770 | Fake: 0.3202
+189.8s	126	✔ Epoch 12 complete | Avg Loss: -1.7657 | Avg Real: -1.8510 | Avg Fake: -0.0853
+189.8s	127	
+192.0s	128	Epoch 13/20 | Batch   10/63 | Loss: -2.2907 | Real: -1.9632 | Fake: 0.3275
+194.3s	129	Epoch 13/20 | Batch   20/63 | Loss: -2.2109 | Real: -1.9778 | Fake: 0.2331
+196.5s	130	Epoch 13/20 | Batch   30/63 | Loss: -2.3297 | Real: -2.0109 | Fake: 0.3188
+198.7s	131	Epoch 13/20 | Batch   40/63 | Loss: -2.3841 | Real: -2.0456 | Fake: 0.3386
+201.0s	132	Epoch 13/20 | Batch   50/63 | Loss: -2.3644 | Real: -2.0729 | Fake: 0.2915
+203.2s	133	Epoch 13/20 | Batch   60/63 | Loss: -1.4970 | Real: -2.0972 | Fake: -0.6002
+203.8s	134	Epoch 13/20 | Batch   63/63 | Loss: -1.3156 | Real: -2.0897 | Fake: -0.7741
+203.8s	135	✔ Epoch 13 complete | Avg Loss: -1.8694 | Avg Real: -2.0188 | Avg Fake: -0.1494
+203.8s	136	
+206.0s	137	Epoch 14/20 | Batch   10/63 | Loss: -1.1000 | Real: -2.0570 | Fake: -0.9570
+208.3s	138	Epoch 14/20 | Batch   20/63 | Loss: -2.3904 | Real: -2.0513 | Fake: 0.3390
+210.5s	139	Epoch 14/20 | Batch   30/63 | Loss: -2.2411 | Real: -2.1036 | Fake: 0.1375
+212.8s	140	Epoch 14/20 | Batch   40/63 | Loss: -1.1756 | Real: -2.1560 | Fake: -0.9804
+215.0s	141	Epoch 14/20 | Batch   50/63 | Loss: -2.5150 | Real: -2.1969 | Fake: 0.3181
+217.2s	142	Epoch 14/20 | Batch   60/63 | Loss: -2.4005 | Real: -2.2046 | Fake: 0.1959
+217.8s	143	Epoch 14/20 | Batch   63/63 | Loss: -2.5180 | Real: -2.2280 | Fake: 0.2899
+217.8s	144	✔ Epoch 14 complete | Avg Loss: -2.0196 | Avg Real: -2.1220 | Avg Fake: -0.1025
+217.8s	145	
+220.0s	146	Epoch 15/20 | Batch   10/63 | Loss: -1.1840 | Real: -2.2363 | Fake: -1.0524
+222.2s	147	Epoch 15/20 | Batch   20/63 | Loss: -2.5754 | Real: -2.2712 | Fake: 0.3042
+224.5s	148	Epoch 15/20 | Batch   30/63 | Loss: -1.6241 | Real: -2.3126 | Fake: -0.6885
+226.8s	149	Epoch 15/20 | Batch   40/63 | Loss: -1.4405 | Real: -2.3366 | Fake: -0.8961
+229.0s	150	Epoch 15/20 | Batch   50/63 | Loss: -1.1267 | Real: -2.3100 | Fake: -1.1833
+231.2s	151	Epoch 15/20 | Batch   60/63 | Loss: -0.9151 | Real: -2.3665 | Fake: -1.4514
+231.8s	152	Epoch 15/20 | Batch   63/63 | Loss: -2.1868 | Real: -2.3695 | Fake: -0.1827
+231.8s	153	✔ Epoch 15 complete | Avg Loss: -2.1811 | Avg Real: -2.2998 | Avg Fake: -0.1187
+231.8s	154	
+234.1s	155	Epoch 16/20 | Batch   10/63 | Loss: -2.6725 | Real: -2.3586 | Fake: 0.3139
+236.4s	156	Epoch 16/20 | Batch   20/63 | Loss: -2.7205 | Real: -2.3715 | Fake: 0.3490
+238.6s	157	Epoch 16/20 | Batch   30/63 | Loss: -2.7058 | Real: -2.3946 | Fake: 0.3112
+240.8s	158	Epoch 16/20 | Batch   40/63 | Loss: -2.0245 | Real: -2.4293 | Fake: -0.4048
+243.1s	159	Epoch 16/20 | Batch   50/63 | Loss: -2.3323 | Real: -2.4155 | Fake: -0.0832
+245.3s	160	Epoch 16/20 | Batch   60/63 | Loss: -1.0714 | Real: -2.4293 | Fake: -1.3578
+245.9s	161	Epoch 16/20 | Batch   63/63 | Loss: -2.7300 | Real: -2.4310 | Fake: 0.2990
+245.9s	162	✔ Epoch 16 complete | Avg Loss: -2.2895 | Avg Real: -2.3969 | Avg Fake: -0.1074
+245.9s	163	
+248.1s	164	Epoch 17/20 | Batch   10/63 | Loss: -2.8066 | Real: -2.4667 | Fake: 0.3399
+250.3s	165	Epoch 17/20 | Batch   20/63 | Loss: -2.2816 | Real: -2.4423 | Fake: -0.1607
+252.6s	166	Epoch 17/20 | Batch   30/63 | Loss: -2.6910 | Real: -2.4427 | Fake: 0.2483
+254.9s	167	Epoch 17/20 | Batch   40/63 | Loss: -2.4698 | Real: -2.4866 | Fake: -0.0168
+257.1s	168	Epoch 17/20 | Batch   50/63 | Loss: -2.7577 | Real: -2.4658 | Fake: 0.2919
+259.4s	169	Epoch 17/20 | Batch   60/63 | Loss: -2.8422 | Real: -2.4945 | Fake: 0.3477
+259.9s	170	Epoch 17/20 | Batch   63/63 | Loss: -2.8349 | Real: -2.5093 | Fake: 0.3256
+259.9s	171	✔ Epoch 17 complete | Avg Loss: -2.4266 | Avg Real: -2.4614 | Avg Fake: -0.0349
+259.9s	172	
+262.2s	173	Epoch 18/20 | Batch   10/63 | Loss: -2.8606 | Real: -2.5185 | Fake: 0.3421
+264.5s	174	Epoch 18/20 | Batch   20/63 | Loss: -2.8893 | Real: -2.5312 | Fake: 0.3580
+266.8s	175	Epoch 18/20 | Batch   30/63 | Loss: -2.8948 | Real: -2.5567 | Fake: 0.3381
+269.0s	176	Epoch 18/20 | Batch   40/63 | Loss: -2.6225 | Real: -2.5447 | Fake: 0.0777
+271.3s	177	Epoch 18/20 | Batch   50/63 | Loss: -2.6139 | Real: -2.5800 | Fake: 0.0339
+273.6s	178	Epoch 18/20 | Batch   60/63 | Loss: -2.9018 | Real: -2.5874 | Fake: 0.3143
+274.2s	179	Epoch 18/20 | Batch   63/63 | Loss: -2.8060 | Real: -2.5884 | Fake: 0.2175
+274.2s	180	✔ Epoch 18 complete | Avg Loss: -2.6153 | Avg Real: -2.5484 | Avg Fake: 0.0669
+274.2s	181	
+276.4s	182	Epoch 19/20 | Batch   10/63 | Loss: -2.9356 | Real: -2.5689 | Fake: 0.3667
+278.7s	183	Epoch 19/20 | Batch   20/63 | Loss: -1.9697 | Real: -2.6017 | Fake: -0.6320
+280.9s	184	Epoch 19/20 | Batch   30/63 | Loss: -1.9391 | Real: -2.6183 | Fake: -0.6792
+283.2s	185	Epoch 19/20 | Batch   40/63 | Loss: -2.9133 | Real: -2.6124 | Fake: 0.3009
+285.5s	186	Epoch 19/20 | Batch   50/63 | Loss: -3.0224 | Real: -2.6225 | Fake: 0.3999
+287.7s	187	Epoch 19/20 | Batch   60/63 | Loss: -2.0430 | Real: -2.6336 | Fake: -0.5906
+288.2s	188	Epoch 19/20 | Batch   63/63 | Loss: -2.9751 | Real: -2.6287 | Fake: 0.3464
+288.2s	189	✔ Epoch 19 complete | Avg Loss: -2.5767 | Avg Real: -2.6077 | Avg Fake: -0.0310
+288.2s	190	
+290.5s	191	Epoch 20/20 | Batch   10/63 | Loss: -3.0113 | Real: -2.6372 | Fake: 0.3741
+292.8s	192	Epoch 20/20 | Batch   20/63 | Loss: -3.0614 | Real: -2.6548 | Fake: 0.4066
+295.1s	193	Epoch 20/20 | Batch   30/63 | Loss: -3.0588 | Real: -2.6565 | Fake: 0.4023
+297.4s	194	Epoch 20/20 | Batch   40/63 | Loss: -1.4909 | Real: -2.6589 | Fake: -1.1680
+299.6s	195	Epoch 20/20 | Batch   50/63 | Loss: -3.0471 | Real: -2.6707 | Fake: 0.3764
+301.8s	196	Epoch 20/20 | Batch   60/63 | Loss: -2.9333 | Real: -2.6779 | Fake: 0.2553
+302.5s	197	Epoch 20/20 | Batch   63/63 | Loss: -3.0897 | Real: -2.6834 | Fake: 0.4062
+302.5s	198	✔ Epoch 20 complete | Avg Loss: -2.7877 | Avg Real: -2.6570 | Avg Fake: 0.1307
+302.5s	199	
+302.5s	200	Model saved to /kaggle/working//plots/ada_addresses/model.pt
+304.2s	201	
+304.2s	202	Evaluating on test set...
+318.0s	203	Sample 0: Predicted y = 1b111bb1abb1bb510b55fb81fb102bb15811b12b8e5511c5fbb19bb115118c1b
+330.6s	204	Sample 1: Predicted y = fb111bb130210cc1818acc1b1158110bfbbb151303bbbccc113999b8c5118c9b
+343.2s	205	Sample 2: Predicted y = 1f511bcb1bb15510bbffbb11115beb00cb518111b1abbb15b55fbb55bb111118
+355.7s	206	Sample 3: Predicted y = 11111bbc0b01080bc85111ac84841bacac51cc99bbf9511111bb818c11cec8cc
+368.4s	207	Sample 4: Predicted y = 11b11bb01bb18410b1c841186c04cbfcc05516819bcac8110b9b41b111558ccc
+381.2s	208	Sample 5: Predicted y = 11111b0b0bb110102bb881110bbbeb811081b882bc50c111b122b1fb111f18cc
+394.1s	209	Sample 6: Predicted y = 11111beb8fb110b1fb881801bcbc981a5face6b11b89bac181309bcccc11ccc9
+406.7s	210	Sample 7: Predicted y = fb111b51f2818812b2acb11311f0b1b4b115b1081b38c9b1cb51b1c51b1f1b1f
+419.3s	211	Sample 8: Predicted y = 11b11bb01bb1841051cacb1b510b11fb11b510b4fb881881ccccb199995f1111
+431.8s	212	Sample 9: Predicted y = 6f8111fb1b081018eb88beb1c1815150cb9b811510cbb1b15fb141fb108518cc
+444.5s	213	Sample 10: Predicted y = 1b611bb1fb110b1bc15151ccb9b11bfb10b11841b10c581b19b213b1114cfc8c
+457.0s	214	Sample 11: Predicted y = b11111130bbe6c10814c9ccb511a5ffbb1bb115115089b814b10b181b81fb158
+469.5s	215	Sample 12: Predicted y = 11811bcbab11acc8e1b1bac05117819b8cbb155505b119b1b41151184b4bc818
+482.0s	216	Sample 13: Predicted y = 111111c00bbb681055abb811110bb1bb810000b48184181bb84b150fb10181fc
+494.8s	217	Sample 14: Predicted y = 11111b500b01b118bb184c1130a80bc90141c198acf5acb21b111bb1b1418c8c
+507.4s	218	Sample 15: Predicted y = 11b11bb018218cc50405f9881b1ab1818c55cc59bbff9b11fb1551a5519effb1
+519.9s	219	Sample 16: Predicted y = 1b1111b1fbbffb155181511bb1b81b1018b1884151cbb8fb511b10fb418c18c8
+532.3s	220	Sample 17: Predicted y = 11111bc0cb11818b41fb11f515ac1b8c21515a51b19b1b151f5b1bb811b1c8cc
+544.9s	221	Sample 18: Predicted y = 11111bc080119cc0bc518811b114e1180c80811981b48acb881113ceec4ceee8
+557.5s	222	Sample 19: Predicted y = 1b111bb1fb11841bb1c5510b69bb11fb118818eb2b8c5151b9bbb411111fcc8c
+559.8s	223	
+559.8s	224	Results for ada_addresses:
+559.8s	225	  Avg Real Energy: -3.0360 ± 0.1783
+559.8s	226	  Avg Random Energy: -0.9283 ± 0.3938
+559.8s	227	  Avg Filled Energy: -4.4124 ± 0.0434
+559.8s	228	  Avg Recovery Accuracy: 6.72%
+559.8s	229	Plots and metrics saved to /kaggle/working//plots/ada_addresses
+559.8s	230	
+559.8s	231	============================================================
+559.8s	232	Processing dataset: avax_addresses
+559.8s	233	============================================================
+560.4s	234	Vocabulary size: 25
+560.4s	235	Grid size: 12×12
+560.4s	236	Training samples: 8000
+560.4s	237	Test samples: 2000
+560.4s	238	
+560.4s	239	Training...
+562.7s	240	Epoch  1/20 | Batch   10/63 | Loss: -0.0111 | Real: -0.5893 | Fake: -0.5781
+565.0s	241	Epoch  1/20 | Batch   20/63 | Loss: -0.0190 | Real: -0.6002 | Fake: -0.5812
+567.2s	242	Epoch  1/20 | Batch   30/63 | Loss: -0.0532 | Real: -0.6125 | Fake: -0.5593
+569.5s	243	Epoch  1/20 | Batch   40/63 | Loss: -0.0599 | Real: -0.6287 | Fake: -0.5688
+571.8s	244	Epoch  1/20 | Batch   50/63 | Loss: -0.0770 | Real: -0.6446 | Fake: -0.5676
+574.1s	245	Epoch  1/20 | Batch   60/63 | Loss: -0.0964 | Real: -0.6597 | Fake: -0.5633
+574.7s	246	Epoch  1/20 | Batch   63/63 | Loss: -0.0975 | Real: -0.6657 | Fake: -0.5682
+574.7s	247	✔ Epoch 1 complete | Avg Loss: -0.0437 | Avg Real: -0.6189 | Avg Fake: -0.5752
+574.7s	248	
+576.9s	249	Epoch  2/20 | Batch   10/63 | Loss: -0.0704 | Real: -0.6860 | Fake: -0.6156
+579.2s	250	Epoch  2/20 | Batch   20/63 | Loss: -0.0870 | Real: -0.6959 | Fake: -0.6089
+581.4s	251	Epoch  2/20 | Batch   30/63 | Loss: -0.0836 | Real: -0.7144 | Fake: -0.6308
+583.7s	252	Epoch  2/20 | Batch   40/63 | Loss: -0.1188 | Real: -0.7404 | Fake: -0.6216
+586.0s	253	Epoch  2/20 | Batch   50/63 | Loss: -0.1167 | Real: -0.7603 | Fake: -0.6436
+588.2s	254	Epoch  2/20 | Batch   60/63 | Loss: -0.1108 | Real: -0.7818 | Fake: -0.6710
+588.8s	255	Epoch  2/20 | Batch   63/63 | Loss: -0.1204 | Real: -0.7868 | Fake: -0.6664
+588.8s	256	✔ Epoch 2 complete | Avg Loss: -0.1091 | Avg Real: -0.7233 | Avg Fake: -0.6141
+588.8s	257	
+591.1s	258	Epoch  3/20 | Batch   10/63 | Loss: -0.2062 | Real: -0.8010 | Fake: -0.5948
+593.4s	259	Epoch  3/20 | Batch   20/63 | Loss: -0.1909 | Real: -0.8276 | Fake: -0.6366
+595.7s	260	Epoch  3/20 | Batch   30/63 | Loss: -0.1561 | Real: -0.8395 | Fake: -0.6834
+598.0s	261	Epoch  3/20 | Batch   40/63 | Loss: -0.2359 | Real: -0.8421 | Fake: -0.6062
+600.3s	262	Epoch  3/20 | Batch   50/63 | Loss: -0.2598 | Real: -0.8727 | Fake: -0.6130
+602.6s	263	Epoch  3/20 | Batch   60/63 | Loss: -0.1738 | Real: -0.8880 | Fake: -0.7142
+603.2s	264	Epoch  3/20 | Batch   63/63 | Loss: -0.2135 | Real: -0.8923 | Fake: -0.6789
+603.2s	265	✔ Epoch 3 complete | Avg Loss: -0.1977 | Avg Real: -0.8408 | Avg Fake: -0.6431
+603.2s	266	
+605.5s	267	Epoch  4/20 | Batch   10/63 | Loss: -0.3354 | Real: -0.9066 | Fake: -0.5711
+607.8s	268	Epoch  4/20 | Batch   20/63 | Loss: -0.3434 | Real: -0.9287 | Fake: -0.5853
+610.0s	269	Epoch  4/20 | Batch   30/63 | Loss: -0.3469 | Real: -0.9456 | Fake: -0.5987
+612.2s	270	Epoch  4/20 | Batch   40/63 | Loss: -0.1353 | Real: -0.9681 | Fake: -0.8328
+614.6s	271	Epoch  4/20 | Batch   50/63 | Loss: -0.4674 | Real: -0.9763 | Fake: -0.5089
+616.8s	272	Epoch  4/20 | Batch   60/63 | Loss: -0.2284 | Real: -0.9966 | Fake: -0.7682
+617.4s	273	Epoch  4/20 | Batch   63/63 | Loss: -0.3372 | Real: -1.0032 | Fake: -0.6659
+617.4s	274	✔ Epoch 4 complete | Avg Loss: -0.3154 | Avg Real: -0.9481 | Avg Fake: -0.6327
+617.4s	275	
+619.7s	276	Epoch  5/20 | Batch   10/63 | Loss: -0.4291 | Real: -0.9952 | Fake: -0.5661
+622.0s	277	Epoch  5/20 | Batch   20/63 | Loss: -0.3248 | Real: -1.0187 | Fake: -0.6940
+624.3s	278	Epoch  5/20 | Batch   30/63 | Loss: -0.4245 | Real: -1.0457 | Fake: -0.6211
+626.6s	279	Epoch  5/20 | Batch   40/63 | Loss: -0.2287 | Real: -1.0532 | Fake: -0.8244
+628.8s	280	Epoch  5/20 | Batch   50/63 | Loss: -0.5481 | Real: -1.0661 | Fake: -0.5180
+631.1s	281	Epoch  5/20 | Batch   60/63 | Loss: -0.3565 | Real: -1.0851 | Fake: -0.7286
+631.6s	282	Epoch  5/20 | Batch   63/63 | Loss: -0.5090 | Real: -1.0892 | Fake: -0.5802
+631.6s	283	✔ Epoch 5 complete | Avg Loss: -0.4545 | Avg Real: -1.0388 | Avg Fake: -0.5843
+631.6s	284	
+634.0s	285	Epoch  6/20 | Batch   10/63 | Loss: -0.6726 | Real: -1.1035 | Fake: -0.4310
+636.2s	286	Epoch  6/20 | Batch   20/63 | Loss: -0.7010 | Real: -1.1453 | Fake: -0.4443
+638.5s	287	Epoch  6/20 | Batch   30/63 | Loss: -0.3220 | Real: -1.1549 | Fake: -0.8330
+640.7s	288	Epoch  6/20 | Batch   40/63 | Loss: -0.7143 | Real: -1.1781 | Fake: -0.4638
+643.0s	289	Epoch  6/20 | Batch   50/63 | Loss: -0.7835 | Real: -1.2011 | Fake: -0.4176
+645.3s	290	Epoch  6/20 | Batch   60/63 | Loss: -0.8186 | Real: -1.2190 | Fake: -0.4004
+645.9s	291	Epoch  6/20 | Batch   63/63 | Loss: -0.8851 | Real: -1.2544 | Fake: -0.3693
+645.9s	292	✔ Epoch 6 complete | Avg Loss: -0.6350 | Avg Real: -1.1599 | Avg Fake: -0.5249
+645.9s	293	
+648.1s	294	Epoch  7/20 | Batch   10/63 | Loss: -0.5875 | Real: -1.2950 | Fake: -0.7075
+650.3s	295	Epoch  7/20 | Batch   20/63 | Loss: -0.9555 | Real: -1.2627 | Fake: -0.3072
+652.6s	296	Epoch  7/20 | Batch   30/63 | Loss: -1.0432 | Real: -1.3172 | Fake: -0.2740
+654.9s	297	Epoch  7/20 | Batch   40/63 | Loss: -0.9141 | Real: -1.3707 | Fake: -0.4566
+657.2s	298	Epoch  7/20 | Batch   50/63 | Loss: -1.0167 | Real: -1.3531 | Fake: -0.3365
+659.4s	299	Epoch  7/20 | Batch   60/63 | Loss: -1.1458 | Real: -1.3991 | Fake: -0.2534
+660.0s	300	Epoch  7/20 | Batch   63/63 | Loss: -1.0691 | Real: -1.4255 | Fake: -0.3565
+660.0s	301	✔ Epoch 7 complete | Avg Loss: -0.8631 | Avg Real: -1.3251 | Avg Fake: -0.4620
+660.0s	302	
+662.2s	303	Epoch  8/20 | Batch   10/63 | Loss: -0.9875 | Real: -1.4219 | Fake: -0.4344
+664.5s	304	Epoch  8/20 | Batch   20/63 | Loss: -1.1896 | Real: -1.4617 | Fake: -0.2721
+666.7s	305	Epoch  8/20 | Batch   30/63 | Loss: -0.4678 | Real: -1.4996 | Fake: -1.0318
+669.0s	306	Epoch  8/20 | Batch   40/63 | Loss: -0.9217 | Real: -1.4508 | Fake: -0.5291
+671.2s	307	Epoch  8/20 | Batch   50/63 | Loss: -1.1244 | Real: -1.5337 | Fake: -0.4093
+673.4s	308	Epoch  8/20 | Batch   60/63 | Loss: -1.3860 | Real: -1.5262 | Fake: -0.1402
+674.0s	309	Epoch  8/20 | Batch   63/63 | Loss: -1.1518 | Real: -1.5490 | Fake: -0.3972
+674.0s	310	✔ Epoch 8 complete | Avg Loss: -1.0548 | Avg Real: -1.4801 | Avg Fake: -0.4253
+674.0s	311	
+676.2s	312	Epoch  9/20 | Batch   10/63 | Loss: -1.2425 | Real: -1.6133 | Fake: -0.3709
+678.5s	313	Epoch  9/20 | Batch   20/63 | Loss: -1.3377 | Real: -1.6103 | Fake: -0.2726
+680.7s	314	Epoch  9/20 | Batch   30/63 | Loss: -1.4635 | Real: -1.6343 | Fake: -0.1708
+683.0s	315	Epoch  9/20 | Batch   40/63 | Loss: -1.3659 | Real: -1.7044 | Fake: -0.3384
+685.2s	316	Epoch  9/20 | Batch   50/63 | Loss: -1.4553 | Real: -1.6599 | Fake: -0.2045
+687.5s	317	Epoch  9/20 | Batch   60/63 | Loss: -0.9158 | Real: -1.7193 | Fake: -0.8035
+688.0s	318	Epoch  9/20 | Batch   63/63 | Loss: -1.2698 | Real: -1.7230 | Fake: -0.4531
+688.0s	319	✔ Epoch 9 complete | Avg Loss: -1.2734 | Avg Real: -1.6502 | Avg Fake: -0.3769
+688.0s	320	
+690.3s	321	Epoch 10/20 | Batch   10/63 | Loss: -0.9083 | Real: -1.7442 | Fake: -0.8359
+692.5s	322	Epoch 10/20 | Batch   20/63 | Loss: -1.6619 | Real: -1.7847 | Fake: -0.1228
+694.8s	323	Epoch 10/20 | Batch   30/63 | Loss: -1.6463 | Real: -1.8547 | Fake: -0.2084
+697.0s	324	Epoch 10/20 | Batch   40/63 | Loss: -1.6741 | Real: -1.8231 | Fake: -0.1490
+699.3s	325	Epoch 10/20 | Batch   50/63 | Loss: -1.7491 | Real: -1.8998 | Fake: -0.1507
+701.5s	326	Epoch 10/20 | Batch   60/63 | Loss: -1.6424 | Real: -1.8679 | Fake: -0.2255
+702.0s	327	Epoch 10/20 | Batch   63/63 | Loss: -1.8563 | Real: -1.8930 | Fake: -0.0367
+702.0s	328	✔ Epoch 10 complete | Avg Loss: -1.5424 | Avg Real: -1.8200 | Avg Fake: -0.2776
+702.0s	329	
+704.3s	330	Epoch 11/20 | Batch   10/63 | Loss: -1.8448 | Real: -1.9262 | Fake: -0.0814
+706.5s	331	Epoch 11/20 | Batch   20/63 | Loss: -1.6898 | Real: -1.9059 | Fake: -0.2161
+708.8s	332	Epoch 11/20 | Batch   30/63 | Loss: -1.7678 | Real: -1.9306 | Fake: -0.1629
+711.0s	333	Epoch 11/20 | Batch   40/63 | Loss: -1.3496 | Real: -1.9772 | Fake: -0.6276
+713.3s	334	Epoch 11/20 | Batch   50/63 | Loss: -2.0491 | Real: -2.0098 | Fake: 0.0393
+715.5s	335	Epoch 11/20 | Batch   60/63 | Loss: -1.9353 | Real: -1.9998 | Fake: -0.0646
+716.1s	336	Epoch 11/20 | Batch   63/63 | Loss: -1.9995 | Real: -2.0189 | Fake: -0.0194
+716.1s	337	✔ Epoch 11 complete | Avg Loss: -1.7457 | Avg Real: -1.9567 | Avg Fake: -0.2110
+716.1s	338	
+718.3s	339	Epoch 12/20 | Batch   10/63 | Loss: -1.5090 | Real: -2.0631 | Fake: -0.5541
+720.6s	340	Epoch 12/20 | Batch   20/63 | Loss: -2.1603 | Real: -2.0938 | Fake: 0.0666
+722.9s	341	Epoch 12/20 | Batch   30/63 | Loss: -2.2129 | Real: -2.1244 | Fake: 0.0885
+725.1s	342	Epoch 12/20 | Batch   40/63 | Loss: -1.8201 | Real: -2.0680 | Fake: -0.2479
+727.3s	343	Epoch 12/20 | Batch   50/63 | Loss: -2.0433 | Real: -2.1381 | Fake: -0.0947
+729.6s	344	Epoch 12/20 | Batch   60/63 | Loss: -2.1629 | Real: -2.1254 | Fake: 0.0374
+730.1s	345	Epoch 12/20 | Batch   63/63 | Loss: -2.2088 | Real: -2.1397 | Fake: 0.0690
+730.1s	346	✔ Epoch 12 complete | Avg Loss: -1.9475 | Avg Real: -2.0964 | Avg Fake: -0.1489
+730.1s	347	
+732.4s	348	Epoch 13/20 | Batch   10/63 | Loss: -2.1668 | Real: -2.1499 | Fake: 0.0169
+734.7s	349	Epoch 13/20 | Batch   20/63 | Loss: -2.1873 | Real: -2.1597 | Fake: 0.0276
+736.9s	350	Epoch 13/20 | Batch   30/63 | Loss: -2.2105 | Real: -2.1946 | Fake: 0.0160
+739.2s	351	Epoch 13/20 | Batch   40/63 | Loss: -2.3146 | Real: -2.1475 | Fake: 0.1672
+741.4s	352	Epoch 13/20 | Batch   50/63 | Loss: -2.2742 | Real: -2.2156 | Fake: 0.0586
+743.7s	353	Epoch 13/20 | Batch   60/63 | Loss: -2.1494 | Real: -2.1866 | Fake: -0.0372
+744.2s	354	Epoch 13/20 | Batch   63/63 | Loss: -2.1578 | Real: -2.1980 | Fake: -0.0402
+744.2s	355	✔ Epoch 13 complete | Avg Loss: -2.1714 | Avg Real: -2.1743 | Avg Fake: -0.0029
+744.2s	356	
+746.5s	357	Epoch 14/20 | Batch   10/63 | Loss: -2.2652 | Real: -2.2360 | Fake: 0.0293
+748.8s	358	Epoch 14/20 | Batch   20/63 | Loss: -2.4517 | Real: -2.2368 | Fake: 0.2148
+751.1s	359	Epoch 14/20 | Batch   30/63 | Loss: -2.4480 | Real: -2.2504 | Fake: 0.1976
+753.4s	360	Epoch 14/20 | Batch   40/63 | Loss: -2.3260 | Real: -2.2442 | Fake: 0.0817
+755.6s	361	Epoch 14/20 | Batch   50/63 | Loss: -2.3159 | Real: -2.2777 | Fake: 0.0382
+757.9s	362	Epoch 14/20 | Batch   60/63 | Loss: -2.4993 | Real: -2.2681 | Fake: 0.2312
+758.4s	363	Epoch 14/20 | Batch   63/63 | Loss: -2.4434 | Real: -2.2627 | Fake: 0.1808
+758.4s	364	✔ Epoch 14 complete | Avg Loss: -2.3453 | Avg Real: -2.2508 | Avg Fake: 0.0945
+758.4s	365	
+760.7s	366	Epoch 15/20 | Batch   10/63 | Loss: -2.4906 | Real: -2.2964 | Fake: 0.1942
+763.0s	367	Epoch 15/20 | Batch   20/63 | Loss: -2.4253 | Real: -2.2888 | Fake: 0.1365
+765.2s	368	Epoch 15/20 | Batch   30/63 | Loss: -2.5522 | Real: -2.3069 | Fake: 0.2453
+767.4s	369	Epoch 15/20 | Batch   40/63 | Loss: -1.5315 | Real: -2.3185 | Fake: -0.7870
+769.6s	370	Epoch 15/20 | Batch   50/63 | Loss: -2.5416 | Real: -2.3166 | Fake: 0.2250
+771.8s	371	Epoch 15/20 | Batch   60/63 | Loss: -2.5659 | Real: -2.3252 | Fake: 0.2407
+772.4s	372	Epoch 15/20 | Batch   63/63 | Loss: -2.5916 | Real: -2.3200 | Fake: 0.2716
+772.4s	373	✔ Epoch 15 complete | Avg Loss: -2.5028 | Avg Real: -2.3043 | Avg Fake: 0.1985
+772.4s	374	
+774.7s	375	Epoch 16/20 | Batch   10/63 | Loss: -2.3431 | Real: -2.3382 | Fake: 0.0049
+776.9s	376	Epoch 16/20 | Batch   20/63 | Loss: -2.6491 | Real: -2.3313 | Fake: 0.3178
+779.2s	377	Epoch 16/20 | Batch   30/63 | Loss: -2.6843 | Real: -2.3324 | Fake: 0.3519
+781.4s	378	Epoch 16/20 | Batch   40/63 | Loss: -2.6139 | Real: -2.3467 | Fake: 0.2672
+783.7s	379	Epoch 16/20 | Batch   50/63 | Loss: -2.7466 | Real: -2.3331 | Fake: 0.4135
+786.0s	380	Epoch 16/20 | Batch   60/63 | Loss: -2.5442 | Real: -2.3478 | Fake: 0.1964
+786.6s	381	Epoch 16/20 | Batch   63/63 | Loss: -2.7255 | Real: -2.3461 | Fake: 0.3794
+786.6s	382	✔ Epoch 16 complete | Avg Loss: -2.6531 | Avg Real: -2.3369 | Avg Fake: 0.3162
+786.6s	383	
+788.8s	384	Epoch 17/20 | Batch   10/63 | Loss: -2.6908 | Real: -2.3544 | Fake: 0.3364
+791.1s	385	Epoch 17/20 | Batch   20/63 | Loss: -2.8732 | Real: -2.3495 | Fake: 0.5237
+793.4s	386	Epoch 17/20 | Batch   30/63 | Loss: -2.9158 | Real: -2.3605 | Fake: 0.5553
+795.6s	387	Epoch 17/20 | Batch   40/63 | Loss: -2.7219 | Real: -2.3603 | Fake: 0.3616
+797.9s	388	Epoch 17/20 | Batch   50/63 | Loss: -2.8049 | Real: -2.3722 | Fake: 0.4327
+800.2s	389	Epoch 17/20 | Batch   60/63 | Loss: -2.8422 | Real: -2.3768 | Fake: 0.4654
+800.7s	390	Epoch 17/20 | Batch   63/63 | Loss: -2.9553 | Real: -2.3804 | Fake: 0.5748
+800.7s	391	✔ Epoch 17 complete | Avg Loss: -2.8092 | Avg Real: -2.3608 | Avg Fake: 0.4484
+800.7s	392	
+803.0s	393	Epoch 18/20 | Batch   10/63 | Loss: -2.9052 | Real: -2.3723 | Fake: 0.5329
+805.3s	394	Epoch 18/20 | Batch   20/63 | Loss: -2.9730 | Real: -2.3889 | Fake: 0.5841
+807.6s	395	Epoch 18/20 | Batch   30/63 | Loss: -2.7909 | Real: -2.3657 | Fake: 0.4251
+809.8s	396	Epoch 18/20 | Batch   40/63 | Loss: -3.0310 | Real: -2.3746 | Fake: 0.6565
+812.1s	397	Epoch 18/20 | Batch   50/63 | Loss: -3.0507 | Real: -2.3914 | Fake: 0.6594
+814.4s	398	Epoch 18/20 | Batch   60/63 | Loss: -3.0864 | Real: -2.3904 | Fake: 0.6961
+814.9s	399	Epoch 18/20 | Batch   63/63 | Loss: -3.0962 | Real: -2.3893 | Fake: 0.7069
+814.9s	400	✔ Epoch 18 complete | Avg Loss: -2.9381 | Avg Real: -2.3813 | Avg Fake: 0.5567
+814.9s	401	
+817.2s	402	Epoch 19/20 | Batch   10/63 | Loss: -3.0619 | Real: -2.4043 | Fake: 0.6576
+819.4s	403	Epoch 19/20 | Batch   20/63 | Loss: -3.1563 | Real: -2.4092 | Fake: 0.7471
+821.7s	404	Epoch 19/20 | Batch   30/63 | Loss: -3.1313 | Real: -2.4168 | Fake: 0.7145
+824.0s	405	Epoch 19/20 | Batch   40/63 | Loss: -3.1878 | Real: -2.4162 | Fake: 0.7716
+826.3s	406	Epoch 19/20 | Batch   50/63 | Loss: -3.1471 | Real: -2.4166 | Fake: 0.7305
+828.6s	407	Epoch 19/20 | Batch   60/63 | Loss: -3.2290 | Real: -2.4175 | Fake: 0.8115
+829.1s	408	Epoch 19/20 | Batch   63/63 | Loss: -3.1923 | Real: -2.4215 | Fake: 0.7708
+829.1s	409	✔ Epoch 19 complete | Avg Loss: -3.0941 | Avg Real: -2.4131 | Avg Fake: 0.6810
+829.1s	410	
+831.4s	411	Epoch 20/20 | Batch   10/63 | Loss: -3.2031 | Real: -2.4357 | Fake: 0.7674
+833.7s	412	Epoch 20/20 | Batch   20/63 | Loss: -2.6124 | Real: -2.4297 | Fake: 0.1827
+835.9s	413	Epoch 20/20 | Batch   30/63 | Loss: -2.8788 | Real: -2.4252 | Fake: 0.4536
+838.2s	414	Epoch 20/20 | Batch   40/63 | Loss: -2.8391 | Real: -2.4323 | Fake: 0.4068
+840.4s	415	Epoch 20/20 | Batch   50/63 | Loss: -3.2392 | Real: -2.4369 | Fake: 0.8022
+842.6s	416	Epoch 20/20 | Batch   60/63 | Loss: -3.3420 | Real: -2.4432 | Fake: 0.8988
+843.3s	417	Epoch 20/20 | Batch   63/63 | Loss: -3.2474 | Real: -2.4301 | Fake: 0.8174
+843.3s	418	✔ Epoch 20 complete | Avg Loss: -3.1916 | Avg Real: -2.4308 | Avg Fake: 0.7608
+843.3s	419	
+843.3s	420	Model saved to /kaggle/working//plots/avax_addresses/model.pt
+845.1s	421	
+845.1s	422	Evaluating on test set...
+854.9s	423	Sample 0: Predicted y = x1xx1x66167216167761617671x67x67278667627712766676177x67b6666677
+863.4s	424	Sample 1: Predicted y = x1x1xx66162716176x67x6x266761x17276267617x7672768666272777766666
+871.9s	425	Sample 2: Predicted y = xx1x1x66x1x212727x672766676x7xb6766276677x6876767662726278677667
+880.4s	426	Sample 3: Predicted y = xx7x1x6666f61771x262661776766x67278668627272776786686627b27b6676
+889.0s	427	Sample 4: Predicted y = xxxx2x6666f6777d72666f2777486x6669f6778b8x6660af87b0ad909a0abbba
+897.7s	428	Sample 5: Predicted y = xx6x1x6671x216x27x61616672777x66668678727762776676677x6778666667
+906.4s	429	Sample 6: Predicted y = xx7x1x66866172776x67667267867x16676678687762726666677xb8b8662627
+915.2s	430	Sample 7: Predicted y = xx7xxx66662877716x676x1267667x56776686677x4876661617b26766676177
+924.0s	431	Sample 8: Predicted y = xx8x7x66af66c0a8b20a0afb0a0ada80a0ada0a0ad0a0a010a0a27a0b276a2f6
+932.7s	432	Sample 9: Predicted y = xx7x7x16661617867266276786686x4712766x16x2722721166127277b666667
+941.4s	433	Sample 10: Predicted y = xx7x2x66667677767666616877614x661661727772676667617866b2727b7676
+950.2s	434	Sample 11: Predicted y = xxx71x66666278886666x27776766x6161826122768276687677276866766776
+959.0s	435	Sample 12: Predicted y = xx6x6x66767978669062778b86627d27786f6627278b868627727b8668667867
+967.7s	436	Sample 13: Predicted y = xx2x6x66767176166x67687227261x76676677617266166776176667667b6176
+976.5s	437	Sample 14: Predicted y = xx1x7x66666212777x67661667b27x7627661768b2268227627767b868662767
+985.4s	438	Sample 15: Predicted y = xxx2xx666767776x6x66767276x67x67276627616x86121272767x6867666767
+994.3s	439	Sample 16: Predicted y = xx7x7x6666661778b9686x2727676x66x672728616614f2776676767b2766676
+1003.0s	440	Sample 17: Predicted y = xx7x7x66668677727266676777676x667686b2767x6767666861b2b272777676
+1011.5s	441	Sample 18: Predicted y = xx8x7x90af66adb8770adaf601da8x166d407b86ad662f08b8c8b00a0a0adada
+1020.1s	442	Sample 19: Predicted y = xx2x1x66766277x77x66686677277x6676867612726177686666271777766666
+1022.4s	443	
+1022.4s	444	Results for avax_addresses:
+1022.4s	445	  Avg Real Energy: -2.5925 ± 0.1346
+1022.4s	446	  Avg Random Energy: -1.3701 ± 0.2910
+1022.4s	447	  Avg Filled Energy: -4.0280 ± 0.0793
+1022.4s	448	  Avg Recovery Accuracy: 5.08%
+1022.4s	449	Plots and metrics saved to /kaggle/working//plots/avax_addresses
+1022.4s	450	
+1022.4s	451	============================================================
+1022.4s	452	Processing dataset: bch_addresses
+1022.4s	453	============================================================
+1023.0s	454	Vocabulary size: 39
+1023.0s	455	Grid size: 12×12
+1023.0s	456	Training samples: 8000
+1023.0s	457	Test samples: 2000
+1023.0s	458	
+1023.0s	459	Training...
+1025.3s	460	Epoch  1/20 | Batch   10/63 | Loss: 0.0028 | Real: -0.0560 | Fake: -0.0589
+1027.6s	461	Epoch  1/20 | Batch   20/63 | Loss: -0.0058 | Real: -0.0525 | Fake: -0.0467
+1029.9s	462	Epoch  1/20 | Batch   30/63 | Loss: -0.0186 | Real: -0.0484 | Fake: -0.0297
+1032.1s	463	Epoch  1/20 | Batch   40/63 | Loss: -0.0294 | Real: -0.0413 | Fake: -0.0119
+1034.4s	464	Epoch  1/20 | Batch   50/63 | Loss: -0.0439 | Real: -0.0406 | Fake: 0.0033
+1036.7s	465	Epoch  1/20 | Batch   60/63 | Loss: -0.0853 | Real: -0.0319 | Fake: 0.0533
+1037.2s	466	Epoch  1/20 | Batch   63/63 | Loss: -0.0144 | Real: -0.0271 | Fake: -0.0127
+1037.2s	467	✔ Epoch 1 complete | Avg Loss: -0.0246 | Avg Real: -0.0463 | Avg Fake: -0.0217
+1037.2s	468	
+1039.5s	469	Epoch  2/20 | Batch   10/63 | Loss: -0.1259 | Real: -0.0251 | Fake: 0.1008
+1041.8s	470	Epoch  2/20 | Batch   20/63 | Loss: -0.1247 | Real: -0.0269 | Fake: 0.0978
+1044.1s	471	Epoch  2/20 | Batch   30/63 | Loss: -0.0872 | Real: -0.0100 | Fake: 0.0772
+1046.3s	472	Epoch  2/20 | Batch   40/63 | Loss: -0.1335 | Real: 0.0055 | Fake: 0.1390
+1048.6s	473	Epoch  2/20 | Batch   50/63 | Loss: -0.1653 | Real: -0.0071 | Fake: 0.1581
+1050.9s	474	Epoch  2/20 | Batch   60/63 | Loss: -0.2080 | Real: -0.0105 | Fake: 0.1975
+1051.5s	475	Epoch  2/20 | Batch   63/63 | Loss: -0.1089 | Real: -0.0106 | Fake: 0.0983
+1051.5s	476	✔ Epoch 2 complete | Avg Loss: -0.0990 | Avg Real: -0.0134 | Avg Fake: 0.0856
+1051.5s	477	
+1053.8s	478	Epoch  3/20 | Batch   10/63 | Loss: -0.2747 | Real: -0.0068 | Fake: 0.2679
+1056.1s	479	Epoch  3/20 | Batch   20/63 | Loss: -0.3014 | Real: -0.0290 | Fake: 0.2724
+1058.3s	480	Epoch  3/20 | Batch   30/63 | Loss: -0.2675 | Real: -0.0272 | Fake: 0.2403
+1060.5s	481	Epoch  3/20 | Batch   40/63 | Loss: -0.3438 | Real: -0.0786 | Fake: 0.2652
+1062.8s	482	Epoch  3/20 | Batch   50/63 | Loss: -0.1753 | Real: -0.1172 | Fake: 0.0581
+1065.1s	483	Epoch  3/20 | Batch   60/63 | Loss: -0.5438 | Real: -0.0960 | Fake: 0.4477
+1065.6s	484	Epoch  3/20 | Batch   63/63 | Loss: -0.5400 | Real: -0.1212 | Fake: 0.4188
+1065.6s	485	✔ Epoch 3 complete | Avg Loss: -0.2836 | Avg Real: -0.0557 | Avg Fake: 0.2279
+1065.6s	486	
+1067.9s	487	Epoch  4/20 | Batch   10/63 | Loss: -0.5251 | Real: -0.1987 | Fake: 0.3264
+1070.2s	488	Epoch  4/20 | Batch   20/63 | Loss: -0.5154 | Real: -0.1890 | Fake: 0.3264
+1072.4s	489	Epoch  4/20 | Batch   30/63 | Loss: -0.6523 | Real: -0.2100 | Fake: 0.4424
+1074.8s	490	Epoch  4/20 | Batch   40/63 | Loss: -0.1455 | Real: -0.2417 | Fake: -0.0962
+1077.0s	491	Epoch  4/20 | Batch   50/63 | Loss: -0.7565 | Real: -0.2528 | Fake: 0.5037
+1079.2s	492	Epoch  4/20 | Batch   60/63 | Loss: -0.2577 | Real: -0.3073 | Fake: -0.0497
+1079.8s	493	Epoch  4/20 | Batch   63/63 | Loss: -0.5372 | Real: -0.3201 | Fake: 0.2171
+1079.8s	494	✔ Epoch 4 complete | Avg Loss: -0.4469 | Avg Real: -0.2229 | Avg Fake: 0.2240
+1079.8s	495	
+1082.1s	496	Epoch  5/20 | Batch   10/63 | Loss: -0.1879 | Real: -0.3307 | Fake: -0.1428
+1084.4s	497	Epoch  5/20 | Batch   20/63 | Loss: -0.9182 | Real: -0.3654 | Fake: 0.5527
+1086.6s	498	Epoch  5/20 | Batch   30/63 | Loss: -0.5250 | Real: -0.4411 | Fake: 0.0839
+1088.9s	499	Epoch  5/20 | Batch   40/63 | Loss: -0.2065 | Real: -0.3885 | Fake: -0.1820
+1091.2s	500	Epoch  5/20 | Batch   50/63 | Loss: -0.2595 | Real: -0.4386 | Fake: -0.1790
+1093.5s	501	Epoch  5/20 | Batch   60/63 | Loss: -0.2773 | Real: -0.5168 | Fake: -0.2395
+1094.0s	502	Epoch  5/20 | Batch   63/63 | Loss: -1.0738 | Real: -0.5225 | Fake: 0.5513
+1094.0s	503	✔ Epoch 5 complete | Avg Loss: -0.6441 | Avg Real: -0.4049 | Avg Fake: 0.2392
+1094.0s	504	
+1096.3s	505	Epoch  6/20 | Batch   10/63 | Loss: -1.1532 | Real: -0.6129 | Fake: 0.5403
+1098.5s	506	Epoch  6/20 | Batch   20/63 | Loss: -1.1642 | Real: -0.7108 | Fake: 0.4535
+1100.8s	507	Epoch  6/20 | Batch   30/63 | Loss: -0.3691 | Real: -0.7149 | Fake: -0.3457
+1103.1s	508	Epoch  6/20 | Batch   40/63 | Loss: -1.3402 | Real: -0.7079 | Fake: 0.6323
+1105.3s	509	Epoch  6/20 | Batch   50/63 | Loss: -0.8869 | Real: -0.7977 | Fake: 0.0892
+1107.6s	510	Epoch  6/20 | Batch   60/63 | Loss: -1.4327 | Real: -0.8327 | Fake: 0.6000
+1108.2s	511	Epoch  6/20 | Batch   63/63 | Loss: -0.3018 | Real: -0.8627 | Fake: -0.5610
+1108.2s	512	✔ Epoch 6 complete | Avg Loss: -0.9379 | Avg Real: -0.7115 | Avg Fake: 0.2265
+1108.2s	513	
+1110.4s	514	Epoch  7/20 | Batch   10/63 | Loss: -1.4641 | Real: -0.8574 | Fake: 0.6067
+1112.7s	515	Epoch  7/20 | Batch   20/63 | Loss: -1.3548 | Real: -0.9062 | Fake: 0.4485
+1115.0s	516	Epoch  7/20 | Batch   30/63 | Loss: -1.5246 | Real: -0.9524 | Fake: 0.5722
+1117.2s	517	Epoch  7/20 | Batch   40/63 | Loss: -1.4510 | Real: -0.9699 | Fake: 0.4811
+1119.5s	518	Epoch  7/20 | Batch   50/63 | Loss: -1.5895 | Real: -1.0411 | Fake: 0.5484
+1121.7s	519	Epoch  7/20 | Batch   60/63 | Loss: -1.4214 | Real: -1.0811 | Fake: 0.3404
+1122.3s	520	Epoch  7/20 | Batch   63/63 | Loss: -1.6012 | Real: -1.0686 | Fake: 0.5325
+1122.3s	521	✔ Epoch 7 complete | Avg Loss: -1.1174 | Avg Real: -0.9612 | Avg Fake: 0.1562
+1122.3s	522	
+1124.5s	523	Epoch  8/20 | Batch   10/63 | Loss: -0.2210 | Real: -1.1367 | Fake: -0.9156
+1126.8s	524	Epoch  8/20 | Batch   20/63 | Loss: -1.7610 | Real: -1.1986 | Fake: 0.5624
+1129.0s	525	Epoch  8/20 | Batch   30/63 | Loss: -1.7458 | Real: -1.1882 | Fake: 0.5576
+1131.2s	526	Epoch  8/20 | Batch   40/63 | Loss: -1.5269 | Real: -1.2066 | Fake: 0.3203
+1133.5s	527	Epoch  8/20 | Batch   50/63 | Loss: -0.6214 | Real: -1.1828 | Fake: -0.5614
+1135.8s	528	Epoch  8/20 | Batch   60/63 | Loss: -0.9615 | Real: -1.1800 | Fake: -0.2184
+1136.3s	529	Epoch  8/20 | Batch   63/63 | Loss: -1.7268 | Real: -1.1892 | Fake: 0.5376
+1136.3s	530	✔ Epoch 8 complete | Avg Loss: -1.1317 | Avg Real: -1.1760 | Avg Fake: -0.0443
+1136.3s	531	
+1138.5s	532	Epoch  9/20 | Batch   10/63 | Loss: -1.6131 | Real: -1.2734 | Fake: 0.3397
+1140.8s	533	Epoch  9/20 | Batch   20/63 | Loss: -1.7750 | Real: -1.2463 | Fake: 0.5288
+1143.1s	534	Epoch  9/20 | Batch   30/63 | Loss: -0.9282 | Real: -1.3306 | Fake: -0.4024
+1145.3s	535	Epoch  9/20 | Batch   40/63 | Loss: -0.9622 | Real: -1.4115 | Fake: -0.4493
+1147.6s	536	Epoch  9/20 | Batch   50/63 | Loss: -0.3917 | Real: -1.4300 | Fake: -1.0382
+1149.8s	537	Epoch  9/20 | Batch   60/63 | Loss: -1.9674 | Real: -1.4466 | Fake: 0.5208
+1150.3s	538	Epoch  9/20 | Batch   63/63 | Loss: -1.2978 | Real: -1.4755 | Fake: -0.1776
+1150.3s	539	✔ Epoch 9 complete | Avg Loss: -1.4240 | Avg Real: -1.3455 | Avg Fake: 0.0785
+1150.3s	540	
+1152.6s	541	Epoch 10/20 | Batch   10/63 | Loss: -2.0092 | Real: -1.4960 | Fake: 0.5132
+1154.9s	542	Epoch 10/20 | Batch   20/63 | Loss: -1.7385 | Real: -1.5583 | Fake: 0.1802
+1157.1s	543	Epoch 10/20 | Batch   30/63 | Loss: -2.1464 | Real: -1.5948 | Fake: 0.5516
+1159.3s	544	Epoch 10/20 | Batch   40/63 | Loss: -1.5262 | Real: -1.5983 | Fake: -0.0721
+1161.6s	545	Epoch 10/20 | Batch   50/63 | Loss: -1.6427 | Real: -1.5764 | Fake: 0.0663
+1163.8s	546	Epoch 10/20 | Batch   60/63 | Loss: -2.1338 | Real: -1.5647 | Fake: 0.5691
+1164.4s	547	Epoch 10/20 | Batch   63/63 | Loss: -2.1298 | Real: -1.5673 | Fake: 0.5626
+1164.4s	548	✔ Epoch 10 complete | Avg Loss: -1.5900 | Avg Real: -1.5581 | Avg Fake: 0.0319
+1164.4s	549	
+1166.6s	550	Epoch 11/20 | Batch   10/63 | Loss: -2.2378 | Real: -1.6791 | Fake: 0.5587
+1168.9s	551	Epoch 11/20 | Batch   20/63 | Loss: -0.4599 | Real: -1.7259 | Fake: -1.2660
+1171.2s	552	Epoch 11/20 | Batch   30/63 | Loss: -0.7296 | Real: -1.7549 | Fake: -1.0253
+1173.5s	553	Epoch 11/20 | Batch   40/63 | Loss: -2.2713 | Real: -1.7422 | Fake: 0.5291
+1175.7s	554	Epoch 11/20 | Batch   50/63 | Loss: -1.8473 | Real: -1.7582 | Fake: 0.0891
+1178.0s	555	Epoch 11/20 | Batch   60/63 | Loss: -1.7667 | Real: -1.8024 | Fake: -0.0358
+1178.5s	556	Epoch 11/20 | Batch   63/63 | Loss: -2.4346 | Real: -1.7937 | Fake: 0.6409
+1178.5s	557	✔ Epoch 11 complete | Avg Loss: -1.7986 | Avg Real: -1.7303 | Avg Fake: 0.0683
+1178.5s	558	
+1180.7s	559	Epoch 12/20 | Batch   10/63 | Loss: -2.4508 | Real: -1.7918 | Fake: 0.6590
+1183.0s	560	Epoch 12/20 | Batch   20/63 | Loss: -1.6517 | Real: -1.8389 | Fake: -0.1871
+1185.2s	561	Epoch 12/20 | Batch   30/63 | Loss: -2.5630 | Real: -1.8691 | Fake: 0.6939
+1187.5s	562	Epoch 12/20 | Batch   40/63 | Loss: -0.8810 | Real: -1.8641 | Fake: -0.9831
+1189.8s	563	Epoch 12/20 | Batch   50/63 | Loss: -2.4651 | Real: -1.8824 | Fake: 0.5827
+1192.0s	564	Epoch 12/20 | Batch   60/63 | Loss: -2.6015 | Real: -1.8663 | Fake: 0.7352
+1192.6s	565	Epoch 12/20 | Batch   63/63 | Loss: -1.7446 | Real: -1.8520 | Fake: -0.1074
+1192.6s	566	✔ Epoch 12 complete | Avg Loss: -1.9748 | Avg Real: -1.8458 | Avg Fake: 0.1290
+1192.6s	567	
+1194.9s	568	Epoch 13/20 | Batch   10/63 | Loss: -2.5587 | Real: -1.8632 | Fake: 0.6955
+1197.1s	569	Epoch 13/20 | Batch   20/63 | Loss: -2.4427 | Real: -1.9113 | Fake: 0.5315
+1199.3s	570	Epoch 13/20 | Batch   30/63 | Loss: -2.6802 | Real: -1.9058 | Fake: 0.7744
+1201.6s	571	Epoch 13/20 | Batch   40/63 | Loss: -0.4756 | Real: -1.9280 | Fake: -1.4524
+1203.9s	572	Epoch 13/20 | Batch   50/63 | Loss: -1.6736 | Real: -1.9145 | Fake: -0.2410
+1206.2s	573	Epoch 13/20 | Batch   60/63 | Loss: -2.7694 | Real: -1.8931 | Fake: 0.8763
+1206.7s	574	Epoch 13/20 | Batch   63/63 | Loss: -2.7219 | Real: -1.8952 | Fake: 0.8268
+1206.7s	575	✔ Epoch 13 complete | Avg Loss: -2.0770 | Avg Real: -1.9000 | Avg Fake: 0.1771
+1206.7s	576	
+1209.0s	577	Epoch 14/20 | Batch   10/63 | Loss: -1.0122 | Real: -1.9051 | Fake: -0.8930
+1211.2s	578	Epoch 14/20 | Batch   20/63 | Loss: -2.7905 | Real: -1.9419 | Fake: 0.8485
+1213.5s	579	Epoch 14/20 | Batch   30/63 | Loss: -2.5686 | Real: -1.9018 | Fake: 0.6668
+1215.7s	580	Epoch 14/20 | Batch   40/63 | Loss: -2.8447 | Real: -1.9147 | Fake: 0.9301
+1218.0s	581	Epoch 14/20 | Batch   50/63 | Loss: -2.8748 | Real: -1.9008 | Fake: 0.9740
+1220.2s	582	Epoch 14/20 | Batch   60/63 | Loss: -2.1963 | Real: -1.9488 | Fake: 0.2474
+1220.7s	583	Epoch 14/20 | Batch   63/63 | Loss: -2.9288 | Real: -1.9440 | Fake: 0.9848
+1220.7s	584	✔ Epoch 14 complete | Avg Loss: -2.2799 | Avg Real: -1.9189 | Avg Fake: 0.3610
+1220.7s	585	
+1223.1s	586	Epoch 15/20 | Batch   10/63 | Loss: -2.9042 | Real: -1.9348 | Fake: 0.9695
+1225.3s	587	Epoch 15/20 | Batch   20/63 | Loss: -3.0001 | Real: -1.9419 | Fake: 1.0583
+1227.6s	588	Epoch 15/20 | Batch   30/63 | Loss: -2.5722 | Real: -1.9502 | Fake: 0.6220
+1229.9s	589	Epoch 15/20 | Batch   40/63 | Loss: -1.2529 | Real: -1.9187 | Fake: -0.6658
+1232.1s	590	Epoch 15/20 | Batch   50/63 | Loss: -0.8714 | Real: -1.9382 | Fake: -1.0668
+1234.3s	591	Epoch 15/20 | Batch   60/63 | Loss: -2.9540 | Real: -1.8435 | Fake: 1.1106
+1234.9s	592	Epoch 15/20 | Batch   63/63 | Loss: -2.5568 | Real: -1.8411 | Fake: 0.7158
+1234.9s	593	✔ Epoch 15 complete | Avg Loss: -2.5015 | Avg Real: -1.9310 | Avg Fake: 0.5705
+1234.9s	594	
+1237.1s	595	Epoch 16/20 | Batch   10/63 | Loss: -3.0749 | Real: -1.8964 | Fake: 1.1786
+1239.4s	596	Epoch 16/20 | Batch   20/63 | Loss: -2.7320 | Real: -1.9309 | Fake: 0.8011
+1241.6s	597	Epoch 16/20 | Batch   30/63 | Loss: -3.1097 | Real: -1.9325 | Fake: 1.1772
+1243.9s	598	Epoch 16/20 | Batch   40/63 | Loss: -3.1775 | Real: -1.9506 | Fake: 1.2268
+1246.2s	599	Epoch 16/20 | Batch   50/63 | Loss: -2.7955 | Real: -1.9510 | Fake: 0.8445
+1248.4s	600	Epoch 16/20 | Batch   60/63 | Loss: -3.2086 | Real: -1.9200 | Fake: 1.2886
+1249.0s	601	Epoch 16/20 | Batch   63/63 | Loss: -3.2498 | Real: -1.9373 | Fake: 1.3124
+1249.0s	602	✔ Epoch 16 complete | Avg Loss: -2.8381 | Avg Real: -1.9280 | Avg Fake: 0.9101
+1249.0s	603	
+1251.3s	604	Epoch 17/20 | Batch   10/63 | Loss: -3.2669 | Real: -1.9367 | Fake: 1.3302
+1253.5s	605	Epoch 17/20 | Batch   20/63 | Loss: -3.2567 | Real: -1.9468 | Fake: 1.3099
+1255.8s	606	Epoch 17/20 | Batch   30/63 | Loss: -3.2685 | Real: -1.8995 | Fake: 1.3689
+1258.0s	607	Epoch 17/20 | Batch   40/63 | Loss: -3.3214 | Real: -1.9432 | Fake: 1.3782
+1260.3s	608	Epoch 17/20 | Batch   50/63 | Loss: -2.9463 | Real: -1.9406 | Fake: 1.0057
+1262.5s	609	Epoch 17/20 | Batch   60/63 | Loss: -3.3221 | Real: -1.9277 | Fake: 1.3944
+1263.1s	610	Epoch 17/20 | Batch   63/63 | Loss: -3.2833 | Real: -1.9173 | Fake: 1.3660
+1263.1s	611	✔ Epoch 17 complete | Avg Loss: -2.8403 | Avg Real: -1.9368 | Avg Fake: 0.9035
+1263.1s	612	
+1265.4s	613	Epoch 18/20 | Batch   10/63 | Loss: -2.6860 | Real: -1.9318 | Fake: 0.7542
+1267.6s	614	Epoch 18/20 | Batch   20/63 | Loss: -3.3658 | Real: -1.9543 | Fake: 1.4115
+1269.9s	615	Epoch 18/20 | Batch   30/63 | Loss: -3.4360 | Real: -1.9626 | Fake: 1.4735
+1272.1s	616	Epoch 18/20 | Batch   40/63 | Loss: -1.6337 | Real: -1.9542 | Fake: -0.3205
+1274.4s	617	Epoch 18/20 | Batch   50/63 | Loss: -3.3238 | Real: -1.8379 | Fake: 1.4859
+1276.6s	618	Epoch 18/20 | Batch   60/63 | Loss: -3.4318 | Real: -1.9299 | Fake: 1.5019
+1277.1s	619	Epoch 18/20 | Batch   63/63 | Loss: -1.1387 | Real: -1.9304 | Fake: -0.7918
+1277.1s	620	✔ Epoch 18 complete | Avg Loss: -2.9956 | Avg Real: -1.9308 | Avg Fake: 1.0648
+1277.1s	621	
+1279.4s	622	Epoch 19/20 | Batch   10/63 | Loss: -3.4769 | Real: -1.9485 | Fake: 1.5284
+1281.6s	623	Epoch 19/20 | Batch   20/63 | Loss: -3.4479 | Real: -1.9258 | Fake: 1.5220
+1283.9s	624	Epoch 19/20 | Batch   30/63 | Loss: -3.5119 | Real: -1.9473 | Fake: 1.5646
+1286.2s	625	Epoch 19/20 | Batch   40/63 | Loss: -3.5314 | Real: -1.9604 | Fake: 1.5710
+1288.4s	626	Epoch 19/20 | Batch   50/63 | Loss: -3.1477 | Real: -1.9552 | Fake: 1.1925
+1290.7s	627	Epoch 19/20 | Batch   60/63 | Loss: -3.5446 | Real: -1.9487 | Fake: 1.5959
+1291.2s	628	Epoch 19/20 | Batch   63/63 | Loss: -2.2671 | Real: -1.9563 | Fake: 0.3109
+1291.2s	629	✔ Epoch 19 complete | Avg Loss: -2.9833 | Avg Real: -1.9472 | Avg Fake: 1.0361
+1291.2s	630	
+1293.5s	631	Epoch 20/20 | Batch   10/63 | Loss: -2.7236 | Real: -1.9586 | Fake: 0.7650
+1295.7s	632	Epoch 20/20 | Batch   20/63 | Loss: -1.2293 | Real: -1.9813 | Fake: -0.7520
+1297.9s	633	Epoch 20/20 | Batch   30/63 | Loss: -3.5307 | Real: -1.9569 | Fake: 1.5738
+1300.2s	634	Epoch 20/20 | Batch   40/63 | Loss: -3.4886 | Real: -1.9642 | Fake: 1.5244
+1302.4s	635	Epoch 20/20 | Batch   50/63 | Loss: -2.2948 | Real: -1.9605 | Fake: 0.3343
+1304.7s	636	Epoch 20/20 | Batch   60/63 | Loss: -3.6605 | Real: -1.9742 | Fake: 1.6863
+1305.4s	637	Epoch 20/20 | Batch   63/63 | Loss: -3.6512 | Real: -1.9735 | Fake: 1.6778
+1305.4s	638	✔ Epoch 20 complete | Avg Loss: -3.2580 | Avg Real: -1.9644 | Avg Fake: 1.2936
+1305.4s	639	
+1305.4s	640	Model saved to /kaggle/working//plots/bch_addresses/model.pt
+1307.0s	641	
+1307.0s	642	Evaluating on test set...
+1322.1s	643	Sample 0: Predicted y = b1311cb111661666666116661666166611661666611661666666116111161666
+1335.7s	644	Sample 1: Predicted y = 16111166166661661c61666611616c1665661616666661161666156616611661
+1349.6s	645	Sample 2: Predicted y = b13333b165cd1616d3bc66b016661c6166151166656666611661561111166666
+1363.4s	646	Sample 3: Predicted y = 116111116563661ccc6161c666166616666111611c1511661566611161116616
+1377.1s	647	Sample 4: Predicted y = b11115b1666511cc16666666666165611661666666166c666665116111661661
+1390.8s	648	Sample 5: Predicted y = 611116616565611c166166611666166616661661616166666651111666666611
+1404.6s	649	Sample 6: Predicted y = b61111711663166c6c666166666665611c6116666666661c6665161161666661
+1418.1s	650	Sample 7: Predicted y = 163111611163666611661666161166666666161c666666661666111116166661
+1431.9s	651	Sample 8: Predicted y = 113111666166161c6566161166666361666c1656656616666666611611616166
+1445.8s	652	Sample 9: Predicted y = 16111136166611cc666166111666666666161161666666651c61151661611651
+1459.7s	653	Sample 10: Predicted y = c11111611666166c66666616166516666166166663661c666666111161666651
+1473.7s	654	Sample 11: Predicted y = c1111361666116c66666561c1166166666661c11666666661661511611166166
+1487.6s	655	Sample 12: Predicted y = 1111113616631666c16666661161161666666666656161611616661111166666
+1501.7s	656	Sample 13: Predicted y = b511113116631166c166666616661c6166161661661661666666116161161616
+1515.7s	657	Sample 14: Predicted y = 11111c16656311161c6666666116666666666661166656661666611111166666
+1529.5s	658	Sample 15: Predicted y = b111c3716665166c156616616166666661161666616661661666111166166661
+1543.7s	659	Sample 16: Predicted y = 116111116163661ccc6666666666666116661666656666611666151161616661
+1557.5s	660	Sample 17: Predicted y = b36116b111651566166166161116656666111666661665666616111111166666
+1571.2s	661	Sample 18: Predicted y = b1111cb1666316c6166666161656656616111666666661661656666616111516
+1585.0s	662	Sample 19: Predicted y = c161116161631666cc6616661666666616566661616166661156116616161661
+1587.3s	663	
+1587.3s	664	Results for bch_addresses:
+1587.3s	665	  Avg Real Energy: -2.8954 ± 0.0673
+1587.3s	666	  Avg Random Energy: 0.0812 ± 0.5687
+1587.3s	667	  Avg Filled Energy: -3.8892 ± 0.0282
+1587.3s	668	  Avg Recovery Accuracy: 5.16%
+1587.3s	669	Plots and metrics saved to /kaggle/working//plots/bch_addresses
+1587.3s	670	
+1587.3s	671	============================================================
+1587.3s	672	Processing dataset: bnb_addresses
+1587.3s	673	============================================================
+1587.9s	674	Vocabulary size: 25
+1587.9s	675	Grid size: 12×12
+1587.9s	676	Training samples: 8000
+1587.9s	677	Test samples: 2000
+1587.9s	678	
+1587.9s	679	Training...
+1590.2s	680	Epoch  1/20 | Batch   10/63 | Loss: -0.0304 | Real: 0.5378 | Fake: 0.5682
+1592.5s	681	Epoch  1/20 | Batch   20/63 | Loss: -0.0149 | Real: 0.5301 | Fake: 0.5449
+1594.8s	682	Epoch  1/20 | Batch   30/63 | Loss: -0.0421 | Real: 0.5256 | Fake: 0.5678
+1597.0s	683	Epoch  1/20 | Batch   40/63 | Loss: -0.0208 | Real: 0.5162 | Fake: 0.5370
+1599.3s	684	Epoch  1/20 | Batch   50/63 | Loss: -0.0167 | Real: 0.5110 | Fake: 0.5276
+1601.6s	685	Epoch  1/20 | Batch   60/63 | Loss: -0.0408 | Real: 0.5023 | Fake: 0.5431
+1602.1s	686	Epoch  1/20 | Batch   63/63 | Loss: -0.0644 | Real: 0.5004 | Fake: 0.5648
+1602.1s	687	✔ Epoch 1 complete | Avg Loss: -0.0290 | Avg Real: 0.5233 | Avg Fake: 0.5523
+1602.1s	688	
+1604.5s	689	Epoch  2/20 | Batch   10/63 | Loss: -0.0974 | Real: 0.4986 | Fake: 0.5960
+1606.7s	690	Epoch  2/20 | Batch   20/63 | Loss: -0.1015 | Real: 0.4913 | Fake: 0.5928
+1609.0s	691	Epoch  2/20 | Batch   30/63 | Loss: -0.1250 | Real: 0.4800 | Fake: 0.6050
+1611.3s	692	Epoch  2/20 | Batch   40/63 | Loss: -0.0569 | Real: 0.4728 | Fake: 0.5297
+1613.6s	693	Epoch  2/20 | Batch   50/63 | Loss: -0.0650 | Real: 0.4692 | Fake: 0.5341
+1615.9s	694	Epoch  2/20 | Batch   60/63 | Loss: -0.1520 | Real: 0.4643 | Fake: 0.6163
+1616.4s	695	Epoch  2/20 | Batch   63/63 | Loss: -0.1020 | Real: 0.4652 | Fake: 0.5672
+1616.4s	696	✔ Epoch 2 complete | Avg Loss: -0.1003 | Avg Real: 0.4816 | Avg Fake: 0.5819
+1616.4s	697	
+1618.7s	698	Epoch  3/20 | Batch   10/63 | Loss: -0.1033 | Real: 0.4640 | Fake: 0.5673
+1621.0s	699	Epoch  3/20 | Batch   20/63 | Loss: -0.2040 | Real: 0.4568 | Fake: 0.6608
+1623.4s	700	Epoch  3/20 | Batch   30/63 | Loss: -0.1902 | Real: 0.4540 | Fake: 0.6442
+1625.6s	701	Epoch  3/20 | Batch   40/63 | Loss: -0.3507 | Real: 0.4415 | Fake: 0.7922
+1627.9s	702	Epoch  3/20 | Batch   50/63 | Loss: -0.3469 | Real: 0.4474 | Fake: 0.7943
+1630.1s	703	Epoch  3/20 | Batch   60/63 | Loss: -0.0981 | Real: 0.4496 | Fake: 0.5477
+1630.7s	704	Epoch  3/20 | Batch   63/63 | Loss: -0.2388 | Real: 0.4503 | Fake: 0.6891
+1630.7s	705	✔ Epoch 3 complete | Avg Loss: -0.1988 | Avg Real: 0.4535 | Avg Fake: 0.6523
+1630.7s	706	
+1633.0s	707	Epoch  4/20 | Batch   10/63 | Loss: -0.3209 | Real: 0.4491 | Fake: 0.7700
+1635.3s	708	Epoch  4/20 | Batch   20/63 | Loss: -0.2572 | Real: 0.4458 | Fake: 0.7030
+1637.6s	709	Epoch  4/20 | Batch   30/63 | Loss: -0.4306 | Real: 0.4521 | Fake: 0.8827
+1639.9s	710	Epoch  4/20 | Batch   40/63 | Loss: -0.3405 | Real: 0.4593 | Fake: 0.7998
+1642.1s	711	Epoch  4/20 | Batch   50/63 | Loss: -0.4763 | Real: 0.4541 | Fake: 0.9304
+1644.4s	712	Epoch  4/20 | Batch   60/63 | Loss: -0.4537 | Real: 0.4542 | Fake: 0.9078
+1644.9s	713	Epoch  4/20 | Batch   63/63 | Loss: -0.5515 | Real: 0.4474 | Fake: 0.9989
+1644.9s	714	✔ Epoch 4 complete | Avg Loss: -0.3246 | Avg Real: 0.4520 | Avg Fake: 0.7766
+1644.9s	715	
+1647.3s	716	Epoch  5/20 | Batch   10/63 | Loss: -0.5623 | Real: 0.4206 | Fake: 0.9829
+1649.5s	717	Epoch  5/20 | Batch   20/63 | Loss: -0.5643 | Real: 0.4324 | Fake: 0.9967
+1651.8s	718	Epoch  5/20 | Batch   30/63 | Loss: -0.7008 | Real: 0.4059 | Fake: 1.1066
+1654.1s	719	Epoch  5/20 | Batch   40/63 | Loss: -0.7209 | Real: 0.3855 | Fake: 1.1063
+1656.3s	720	Epoch  5/20 | Batch   50/63 | Loss: -0.4040 | Real: 0.3588 | Fake: 0.7628
+1658.6s	721	Epoch  5/20 | Batch   60/63 | Loss: -0.8754 | Real: 0.3334 | Fake: 1.2088
+1659.2s	722	Epoch  5/20 | Batch   63/63 | Loss: -0.8865 | Real: 0.3278 | Fake: 1.2143
+1659.2s	723	✔ Epoch 5 complete | Avg Loss: -0.5629 | Avg Real: 0.3964 | Avg Fake: 0.9593
+1659.2s	724	
+1661.4s	725	Epoch  6/20 | Batch   10/63 | Loss: -0.6129 | Real: 0.2925 | Fake: 0.9055
+1663.7s	726	Epoch  6/20 | Batch   20/63 | Loss: -0.6863 | Real: 0.2758 | Fake: 0.9621
+1666.0s	727	Epoch  6/20 | Batch   30/63 | Loss: -0.4848 | Real: 0.2926 | Fake: 0.7774
+1668.2s	728	Epoch  6/20 | Batch   40/63 | Loss: -0.9521 | Real: 0.2603 | Fake: 1.2124
+1670.5s	729	Epoch  6/20 | Batch   50/63 | Loss: -1.0755 | Real: 0.2526 | Fake: 1.3280
+1672.7s	730	Epoch  6/20 | Batch   60/63 | Loss: -1.0112 | Real: 0.2524 | Fake: 1.2636
+1673.3s	731	Epoch  6/20 | Batch   63/63 | Loss: -1.1465 | Real: 0.2634 | Fake: 1.4099
+1673.3s	732	✔ Epoch 6 complete | Avg Loss: -0.8406 | Avg Real: 0.2793 | Avg Fake: 1.1200
+1673.3s	733	
+1675.6s	734	Epoch  7/20 | Batch   10/63 | Loss: -1.2593 | Real: 0.2080 | Fake: 1.4673
+1677.9s	735	Epoch  7/20 | Batch   20/63 | Loss: -1.4277 | Real: 0.1511 | Fake: 1.5787
+1680.1s	736	Epoch  7/20 | Batch   30/63 | Loss: -0.9237 | Real: 0.1484 | Fake: 1.0720
+1682.3s	737	Epoch  7/20 | Batch   40/63 | Loss: -1.1770 | Real: 0.0836 | Fake: 1.2606
+1684.6s	738	Epoch  7/20 | Batch   50/63 | Loss: -1.3710 | Real: 0.0713 | Fake: 1.4422
+1686.9s	739	Epoch  7/20 | Batch   60/63 | Loss: -1.0192 | Real: 0.1303 | Fake: 1.1495
+1687.4s	740	Epoch  7/20 | Batch   63/63 | Loss: -1.0736 | Real: 0.1387 | Fake: 1.2123
+1687.4s	741	✔ Epoch 7 complete | Avg Loss: -1.1829 | Avg Real: 0.1472 | Avg Fake: 1.3301
+1687.4s	742	
+1689.7s	743	Epoch  8/20 | Batch   10/63 | Loss: -1.5237 | Real: 0.1554 | Fake: 1.6791
+1691.9s	744	Epoch  8/20 | Batch   20/63 | Loss: -1.6971 | Real: 0.0713 | Fake: 1.7683
+1694.2s	745	Epoch  8/20 | Batch   30/63 | Loss: -1.5138 | Real: 0.1232 | Fake: 1.6370
+1696.5s	746	Epoch  8/20 | Batch   40/63 | Loss: -1.2144 | Real: 0.1350 | Fake: 1.3495
+1698.7s	747	Epoch  8/20 | Batch   50/63 | Loss: -1.1707 | Real: 0.1271 | Fake: 1.2979
+1700.9s	748	Epoch  8/20 | Batch   60/63 | Loss: -1.3396 | Real: 0.1143 | Fake: 1.4539
+1701.5s	749	Epoch  8/20 | Batch   63/63 | Loss: -1.2795 | Real: 0.1197 | Fake: 1.3992
+1701.5s	750	✔ Epoch 8 complete | Avg Loss: -1.3548 | Avg Real: 0.1268 | Avg Fake: 1.4816
+1701.5s	751	
+1703.7s	752	Epoch  9/20 | Batch   10/63 | Loss: -1.8026 | Real: 0.0713 | Fake: 1.8739
+1706.0s	753	Epoch  9/20 | Batch   20/63 | Loss: -1.8284 | Real: 0.0259 | Fake: 1.8543
+1708.2s	754	Epoch  9/20 | Batch   30/63 | Loss: -1.2510 | Real: -0.0012 | Fake: 1.2499
+1710.4s	755	Epoch  9/20 | Batch   40/63 | Loss: -1.8663 | Real: -0.0094 | Fake: 1.8568
+1712.7s	756	Epoch  9/20 | Batch   50/63 | Loss: -1.9551 | Real: -0.0767 | Fake: 1.8784
+1714.9s	757	Epoch  9/20 | Batch   60/63 | Loss: -1.6494 | Real: -0.0029 | Fake: 1.6464
+1715.5s	758	Epoch  9/20 | Batch   63/63 | Loss: -1.9179 | Real: 0.0055 | Fake: 1.9233
+1715.5s	759	✔ Epoch 9 complete | Avg Loss: -1.6581 | Avg Real: 0.0071 | Avg Fake: 1.6652
+1715.5s	760	
+1717.7s	761	Epoch 10/20 | Batch   10/63 | Loss: -1.7450 | Real: -0.0960 | Fake: 1.6490
+1720.0s	762	Epoch 10/20 | Batch   20/63 | Loss: -2.0092 | Real: -0.1145 | Fake: 1.8947
+1722.2s	763	Epoch 10/20 | Batch   30/63 | Loss: -2.1305 | Real: -0.1821 | Fake: 1.9484
+1724.5s	764	Epoch 10/20 | Batch   40/63 | Loss: -1.6843 | Real: -0.2239 | Fake: 1.4605
+1726.7s	765	Epoch 10/20 | Batch   50/63 | Loss: -2.1456 | Real: -0.2841 | Fake: 1.8615
+1728.9s	766	Epoch 10/20 | Batch   60/63 | Loss: -2.1670 | Real: -0.2653 | Fake: 1.9017
+1729.4s	767	Epoch 10/20 | Batch   63/63 | Loss: -1.8924 | Real: -0.2884 | Fake: 1.6039
+1729.4s	768	✔ Epoch 10 complete | Avg Loss: -1.9365 | Avg Real: -0.1942 | Avg Fake: 1.7424
+1729.4s	769	
+1731.7s	770	Epoch 11/20 | Batch   10/63 | Loss: -1.9159 | Real: -0.2996 | Fake: 1.6163
+1733.9s	771	Epoch 11/20 | Batch   20/63 | Loss: -1.4364 | Real: -0.3854 | Fake: 1.0510
+1736.2s	772	Epoch 11/20 | Batch   30/63 | Loss: -2.3292 | Real: -0.4194 | Fake: 1.9099
+1738.4s	773	Epoch 11/20 | Batch   40/63 | Loss: -2.1299 | Real: -0.3929 | Fake: 1.7370
+1740.6s	774	Epoch 11/20 | Batch   50/63 | Loss: -1.3801 | Real: -0.4748 | Fake: 0.9053
+1742.9s	775	Epoch 11/20 | Batch   60/63 | Loss: -2.2632 | Real: -0.4156 | Fake: 1.8475
+1743.5s	776	Epoch 11/20 | Batch   63/63 | Loss: -2.2091 | Real: -0.4400 | Fake: 1.7691
+1743.5s	777	✔ Epoch 11 complete | Avg Loss: -2.0733 | Avg Real: -0.3951 | Avg Fake: 1.6781
+1743.5s	778	
+1745.7s	779	Epoch 12/20 | Batch   10/63 | Loss: -1.8697 | Real: -0.4699 | Fake: 1.3998
+1748.0s	780	Epoch 12/20 | Batch   20/63 | Loss: -2.1684 | Real: -0.5321 | Fake: 1.6362
+1750.2s	781	Epoch 12/20 | Batch   30/63 | Loss: -2.2886 | Real: -0.5601 | Fake: 1.7285
+1752.4s	782	Epoch 12/20 | Batch   40/63 | Loss: -2.3684 | Real: -0.5803 | Fake: 1.7881
+1754.7s	783	Epoch 12/20 | Batch   50/63 | Loss: -2.2533 | Real: -0.5821 | Fake: 1.6712
+1757.0s	784	Epoch 12/20 | Batch   60/63 | Loss: -2.4016 | Real: -0.6169 | Fake: 1.7848
+1757.5s	785	Epoch 12/20 | Batch   63/63 | Loss: -2.5688 | Real: -0.6222 | Fake: 1.9466
+1757.5s	786	✔ Epoch 12 complete | Avg Loss: -2.2958 | Avg Real: -0.5464 | Avg Fake: 1.7494
+1757.5s	787	
+1759.8s	788	Epoch 13/20 | Batch   10/63 | Loss: -2.5297 | Real: -0.6778 | Fake: 1.8519
+1762.0s	789	Epoch 13/20 | Batch   20/63 | Loss: -2.4111 | Real: -0.6848 | Fake: 1.7263
+1764.3s	790	Epoch 13/20 | Batch   30/63 | Loss: -2.5418 | Real: -0.7107 | Fake: 1.8311
+1766.5s	791	Epoch 13/20 | Batch   40/63 | Loss: -2.4866 | Real: -0.7517 | Fake: 1.7348
+1768.8s	792	Epoch 13/20 | Batch   50/63 | Loss: -2.6945 | Real: -0.7733 | Fake: 1.9212
+1771.0s	793	Epoch 13/20 | Batch   60/63 | Loss: -2.5084 | Real: -0.8294 | Fake: 1.6790
+1771.6s	794	Epoch 13/20 | Batch   63/63 | Loss: -2.5260 | Real: -0.7948 | Fake: 1.7312
+1771.6s	795	✔ Epoch 13 complete | Avg Loss: -2.4247 | Avg Real: -0.7273 | Avg Fake: 1.6974
+1771.6s	796	
+1773.9s	797	Epoch 14/20 | Batch   10/63 | Loss: -2.6253 | Real: -0.8265 | Fake: 1.7988
+1776.1s	798	Epoch 14/20 | Batch   20/63 | Loss: -2.6068 | Real: -0.8407 | Fake: 1.7661
+1778.4s	799	Epoch 14/20 | Batch   30/63 | Loss: -2.7044 | Real: -0.8801 | Fake: 1.8243
+1780.6s	800	Epoch 14/20 | Batch   40/63 | Loss: -2.8197 | Real: -0.9099 | Fake: 1.9099
+1782.9s	801	Epoch 14/20 | Batch   50/63 | Loss: -2.4607 | Real: -0.9181 | Fake: 1.5425
+1785.2s	802	Epoch 14/20 | Batch   60/63 | Loss: -2.6700 | Real: -0.9423 | Fake: 1.7277
+1785.7s	803	Epoch 14/20 | Batch   63/63 | Loss: -2.5852 | Real: -0.9241 | Fake: 1.6611
+1785.7s	804	✔ Epoch 14 complete | Avg Loss: -2.6147 | Avg Real: -0.8728 | Avg Fake: 1.7419
+1785.7s	805	
+1788.0s	806	Epoch 15/20 | Batch   10/63 | Loss: -2.8171 | Real: -0.9855 | Fake: 1.8316
+1790.2s	807	Epoch 15/20 | Batch   20/63 | Loss: -2.8091 | Real: -0.9869 | Fake: 1.8222
+1792.5s	808	Epoch 15/20 | Batch   30/63 | Loss: -2.7178 | Real: -1.0202 | Fake: 1.6976
+1794.7s	809	Epoch 15/20 | Batch   40/63 | Loss: -2.9304 | Real: -1.0438 | Fake: 1.8867
+1796.9s	810	Epoch 15/20 | Batch   50/63 | Loss: -2.7862 | Real: -1.0488 | Fake: 1.7373
+1799.2s	811	Epoch 15/20 | Batch   60/63 | Loss: -2.7230 | Real: -1.0792 | Fake: 1.6438
+1799.7s	812	Epoch 15/20 | Batch   63/63 | Loss: -2.8567 | Real: -1.0379 | Fake: 1.8188
+1799.7s	813	✔ Epoch 15 complete | Avg Loss: -2.8032 | Avg Real: -1.0168 | Avg Fake: 1.7864
+1799.7s	814	
+1801.9s	815	Epoch 16/20 | Batch   10/63 | Loss: -2.9514 | Real: -1.1025 | Fake: 1.8488
+1804.2s	816	Epoch 16/20 | Batch   20/63 | Loss: -2.8662 | Real: -1.0739 | Fake: 1.7923
+1806.5s	817	Epoch 16/20 | Batch   30/63 | Loss: -2.9097 | Real: -1.0995 | Fake: 1.8102
+1808.7s	818	Epoch 16/20 | Batch   40/63 | Loss: -2.9793 | Real: -1.0901 | Fake: 1.8892
+1810.9s	819	Epoch 16/20 | Batch   50/63 | Loss: -3.0257 | Real: -1.1255 | Fake: 1.9002
+1813.2s	820	Epoch 16/20 | Batch   60/63 | Loss: -2.6422 | Real: -1.1538 | Fake: 1.4883
+1813.8s	821	Epoch 16/20 | Batch   63/63 | Loss: -3.0396 | Real: -1.1323 | Fake: 1.9074
+1813.8s	822	✔ Epoch 16 complete | Avg Loss: -2.9752 | Avg Real: -1.1028 | Avg Fake: 1.8724
+1813.8s	823	
+1816.0s	824	Epoch 17/20 | Batch   10/63 | Loss: -2.7740 | Real: -1.1628 | Fake: 1.6112
+1818.2s	825	Epoch 17/20 | Batch   20/63 | Loss: -3.0969 | Real: -1.1612 | Fake: 1.9358
+1820.5s	826	Epoch 17/20 | Batch   30/63 | Loss: -3.1385 | Real: -1.1917 | Fake: 1.9468
+1822.8s	827	Epoch 17/20 | Batch   40/63 | Loss: -3.1939 | Real: -1.1882 | Fake: 2.0058
+1825.1s	828	Epoch 17/20 | Batch   50/63 | Loss: -3.2130 | Real: -1.1882 | Fake: 2.0248
+1827.3s	829	Epoch 17/20 | Batch   60/63 | Loss: -3.1517 | Real: -1.2208 | Fake: 1.9309
+1827.9s	830	Epoch 17/20 | Batch   63/63 | Loss: -2.8719 | Real: -1.2101 | Fake: 1.6618
+1827.9s	831	✔ Epoch 17 complete | Avg Loss: -3.0843 | Avg Real: -1.1826 | Avg Fake: 1.9017
+1827.9s	832	
+1830.2s	833	Epoch 18/20 | Batch   10/63 | Loss: -3.1712 | Real: -1.2262 | Fake: 1.9450
+1832.4s	834	Epoch 18/20 | Batch   20/63 | Loss: -3.2942 | Real: -1.2383 | Fake: 2.0559
+1834.7s	835	Epoch 18/20 | Batch   30/63 | Loss: -3.2287 | Real: -1.2408 | Fake: 1.9879
+1836.9s	836	Epoch 18/20 | Batch   40/63 | Loss: -3.2244 | Real: -1.2625 | Fake: 1.9619
+1839.1s	837	Epoch 18/20 | Batch   50/63 | Loss: -3.0947 | Real: -1.2689 | Fake: 1.8258
+1841.4s	838	Epoch 18/20 | Batch   60/63 | Loss: -3.2043 | Real: -1.2614 | Fake: 1.9429
+1841.9s	839	Epoch 18/20 | Batch   63/63 | Loss: -3.3385 | Real: -1.2579 | Fake: 2.0805
+1841.9s	840	✔ Epoch 18 complete | Avg Loss: -3.2179 | Avg Real: -1.2470 | Avg Fake: 1.9708
+1841.9s	841	
+1844.2s	842	Epoch 19/20 | Batch   10/63 | Loss: -3.2823 | Real: -1.2734 | Fake: 2.0089
+1846.5s	843	Epoch 19/20 | Batch   20/63 | Loss: -3.2085 | Real: -1.3085 | Fake: 1.9000
+1848.7s	844	Epoch 19/20 | Batch   30/63 | Loss: -3.3127 | Real: -1.2688 | Fake: 2.0439
+1851.0s	845	Epoch 19/20 | Batch   40/63 | Loss: -3.4160 | Real: -1.3110 | Fake: 2.1050
+1853.3s	846	Epoch 19/20 | Batch   50/63 | Loss: -3.4313 | Real: -1.3089 | Fake: 2.1223
+1855.6s	847	Epoch 19/20 | Batch   60/63 | Loss: -3.3675 | Real: -1.3265 | Fake: 2.0410
+1856.1s	848	Epoch 19/20 | Batch   63/63 | Loss: -3.2678 | Real: -1.3063 | Fake: 1.9615
+1856.1s	849	✔ Epoch 19 complete | Avg Loss: -3.3128 | Avg Real: -1.2922 | Avg Fake: 2.0206
+1856.1s	850	
+1858.4s	851	Epoch 20/20 | Batch   10/63 | Loss: -3.3668 | Real: -1.3309 | Fake: 2.0358
+1860.6s	852	Epoch 20/20 | Batch   20/63 | Loss: -3.4794 | Real: -1.3444 | Fake: 2.1350
+1862.9s	853	Epoch 20/20 | Batch   30/63 | Loss: -3.3698 | Real: -1.3495 | Fake: 2.0203
+1865.1s	854	Epoch 20/20 | Batch   40/63 | Loss: -3.4298 | Real: -1.3669 | Fake: 2.0629
+1867.4s	855	Epoch 20/20 | Batch   50/63 | Loss: -3.4128 | Real: -1.3523 | Fake: 2.0605
+1869.6s	856	Epoch 20/20 | Batch   60/63 | Loss: -3.4387 | Real: -1.3670 | Fake: 2.0717
+1870.2s	857	Epoch 20/20 | Batch   63/63 | Loss: -3.4601 | Real: -1.3577 | Fake: 2.1023
+1870.2s	858	✔ Epoch 20 complete | Avg Loss: -3.4174 | Avg Real: -1.3437 | Avg Fake: 2.0737
+1870.2s	859	
+1870.2s	860	Model saved to /kaggle/working//plots/bnb_addresses/model.pt
+1871.9s	861	
+1871.9s	862	Evaluating on test set...
+1881.5s	863	Sample 0: Predicted y = e2x6xxf10e0e0e3a31aeee63636ee1e0e33e33ee31fe63eefaefe1ab6131aaae
+1890.2s	864	Sample 1: Predicted y = x2x97x2102x24330e912ee3e3eee61e733e312efe10e61eefa8e31ab6a61aeae
+1898.9s	865	Sample 2: Predicted y = ex7x6xfee27267e639ae612efee3f1136ex3e130exeee3f13eeabd636102a10b
+1907.6s	866	Sample 3: Predicted y = x6xx6x0e20e2f703e9363fe312x66x6b0eee033031dfeefea6ee316e3361aea1
+1916.3s	867	Sample 4: Predicted y = x2x6xx210e9e303efeeefee30ee3ee633e63aeeee17fe67eafe3616e3610ae10
+1925.1s	868	Sample 5: Predicted y = ex6xxxfx100703633xdfe0e0a6331360eee9e3e3ex3ee6e2f7ee34ab6361aaa1
+1933.9s	869	Sample 6: Predicted y = x6xx6x210e10433303a6eee6ee6ee67e103a633f63eeeaee3ee631636361a1f1
+1942.2s	870	Sample 7: Predicted y = exx66xf10e02633634eea13a3e6ee663ee6eae3e016f66300e0ea3a33312aaa1
+1950.9s	871	Sample 8: Predicted y = x6x6xx0e0e0ef3f131efe3ee1eee718e3e63a6eeexee36323a10e7eb6bf1aeaa
+1959.7s	872	Sample 9: Predicted y = x2xx6x2100e7303366ae6aaeeee6f1633ee3eef3e17ee6ee63ee31e63611aa14
+1968.4s	873	Sample 10: Predicted y = x2xx6x010e13fe3361aee6e3eeefe1a331eeefe331ea6eaee0e361363fa1aaae
+1977.0s	874	Sample 11: Predicted y = xx2x6x2a72e036b313aeee3563312xaefe30fefea3e3e3e5aee67x603e42aef1
+1985.7s	875	Sample 12: Predicted y = x2x4xx0e0e20fe3303963a9f0ee2x663fe20ae3e333fefeee3e3f17636a1aa10
+1994.3s	876	Sample 13: Predicted y = x6xx6x2100e24333791207e2e6x6e6ae0e3063fe63afe31de6eebx3e7e10f131
+2003.1s	877	Sample 14: Predicted y = x2xx6x2100e34b33e1a67e22e4fee7f7x639627e6x0e3fe236e634ae0ef1f131
+2011.6s	878	Sample 15: Predicted y = x2x6xx210e20333303eeeee5e63eax7e0ee063f333e61eae10e861eb36a1aaaa
+2020.1s	879	Sample 16: Predicted y = x2xx6x0e70e0fe63e3afeeeee63e31fe9e0e3aeef1fe6ee3fee36xa63610aa10
+2028.6s	880	Sample 17: Predicted y = ex19x4f18fe76exe6xe02710330e39fee63e3e10e1efedf3136a6x36131010ea
+2037.2s	881	Sample 18: Predicted y = ex7x6xfee2e963efeeaeee363e3ee36a363ee6efe67e2e61613e3ba0eba1aeae
+2045.8s	882	Sample 19: Predicted y = ex6xxxeae00e8f3f316x6eee2eee617f3310afee330e3feefe1361e36ba1aaae
+2048.3s	883	
+2048.3s	884	Results for bnb_addresses:
+2048.3s	885	  Avg Real Energy: -1.1565 ± 0.4022
+2048.3s	886	  Avg Random Energy: 0.6088 ± 0.4833
+2048.3s	887	  Avg Filled Energy: -2.4568 ± 0.0183
+2048.3s	888	  Avg Recovery Accuracy: 5.47%
+2048.3s	889	Plots and metrics saved to /kaggle/working//plots/bnb_addresses
+2048.3s	890	
+2048.3s	891	============================================================
+2048.3s	892	Processing dataset: btc_addresses
+2048.3s	893	============================================================
+2048.8s	894	Vocabulary size: 36
+2048.8s	895	Grid size: 12×12
+2048.8s	896	Training samples: 8000
+2048.8s	897	Test samples: 2000
+2048.8s	898	
+2048.8s	899	Training...
+2051.1s	900	Epoch  1/20 | Batch   10/63 | Loss: -0.0062 | Real: 0.1383 | Fake: 0.1444
+2053.4s	901	Epoch  1/20 | Batch   20/63 | Loss: -0.0181 | Real: 0.1289 | Fake: 0.1471
+2055.7s	902	Epoch  1/20 | Batch   30/63 | Loss: -0.0380 | Real: 0.1249 | Fake: 0.1628
+2057.9s	903	Epoch  1/20 | Batch   40/63 | Loss: -0.0382 | Real: 0.1196 | Fake: 0.1578
+2060.1s	904	Epoch  1/20 | Batch   50/63 | Loss: -0.0290 | Real: 0.1162 | Fake: 0.1453
+2062.4s	905	Epoch  1/20 | Batch   60/63 | Loss: -0.0441 | Real: 0.1171 | Fake: 0.1611
+2063.0s	906	Epoch  1/20 | Batch   63/63 | Loss: -0.0770 | Real: 0.1161 | Fake: 0.1931
+2063.0s	907	✔ Epoch 1 complete | Avg Loss: -0.0350 | Avg Real: 0.1255 | Avg Fake: 0.1605
+2063.0s	908	
+2065.3s	909	Epoch  2/20 | Batch   10/63 | Loss: -0.0427 | Real: 0.1152 | Fake: 0.1578
+2067.6s	910	Epoch  2/20 | Batch   20/63 | Loss: -0.0904 | Real: 0.1106 | Fake: 0.2010
+2069.8s	911	Epoch  2/20 | Batch   30/63 | Loss: -0.0694 | Real: 0.1147 | Fake: 0.1841
+2072.0s	912	Epoch  2/20 | Batch   40/63 | Loss: -0.0729 | Real: 0.1156 | Fake: 0.1885
+2074.3s	913	Epoch  2/20 | Batch   50/63 | Loss: -0.1197 | Real: 0.1220 | Fake: 0.2417
+2076.6s	914	Epoch  2/20 | Batch   60/63 | Loss: -0.0938 | Real: 0.1183 | Fake: 0.2121
+2077.1s	915	Epoch  2/20 | Batch   63/63 | Loss: -0.1287 | Real: 0.1199 | Fake: 0.2486
+2077.1s	916	✔ Epoch 2 complete | Avg Loss: -0.0948 | Avg Real: 0.1162 | Avg Fake: 0.2110
+2077.1s	917	
+2079.3s	918	Epoch  3/20 | Batch   10/63 | Loss: -0.1280 | Real: 0.1382 | Fake: 0.2662
+2081.6s	919	Epoch  3/20 | Batch   20/63 | Loss: -0.1971 | Real: 0.1284 | Fake: 0.3254
+2083.9s	920	Epoch  3/20 | Batch   30/63 | Loss: -0.2147 | Real: 0.1356 | Fake: 0.3503
+2086.1s	921	Epoch  3/20 | Batch   40/63 | Loss: -0.2850 | Real: 0.1463 | Fake: 0.4313
+2088.4s	922	Epoch  3/20 | Batch   50/63 | Loss: -0.1293 | Real: 0.1488 | Fake: 0.2782
+2090.6s	923	Epoch  3/20 | Batch   60/63 | Loss: -0.2358 | Real: 0.1843 | Fake: 0.4200
+2091.2s	924	Epoch  3/20 | Batch   63/63 | Loss: -0.3376 | Real: 0.1662 | Fake: 0.5038
+2091.2s	925	✔ Epoch 3 complete | Avg Loss: -0.1982 | Avg Real: 0.1452 | Avg Fake: 0.3434
+2091.2s	926	
+2093.5s	927	Epoch  4/20 | Batch   10/63 | Loss: 0.0090 | Real: 0.1665 | Fake: 0.1575
+2095.7s	928	Epoch  4/20 | Batch   20/63 | Loss: -0.1903 | Real: 0.1688 | Fake: 0.3591
+2098.0s	929	Epoch  4/20 | Batch   30/63 | Loss: -0.3694 | Real: 0.1933 | Fake: 0.5627
+2100.2s	930	Epoch  4/20 | Batch   40/63 | Loss: -0.4394 | Real: 0.1760 | Fake: 0.6154
+2102.5s	931	Epoch  4/20 | Batch   50/63 | Loss: -0.4576 | Real: 0.1817 | Fake: 0.6393
+2104.8s	932	Epoch  4/20 | Batch   60/63 | Loss: -0.3434 | Real: 0.1750 | Fake: 0.5185
+2105.3s	933	Epoch  4/20 | Batch   63/63 | Loss: -0.3512 | Real: 0.1735 | Fake: 0.5246
+2105.3s	934	✔ Epoch 4 complete | Avg Loss: -0.2824 | Avg Real: 0.1752 | Avg Fake: 0.4576
+2105.3s	935	
+2107.6s	936	Epoch  5/20 | Batch   10/63 | Loss: -0.5044 | Real: 0.1548 | Fake: 0.6592
+2109.9s	937	Epoch  5/20 | Batch   20/63 | Loss: -0.1916 | Real: 0.1480 | Fake: 0.3396
+2112.1s	938	Epoch  5/20 | Batch   30/63 | Loss: -0.6413 | Real: 0.1362 | Fake: 0.7775
+2114.4s	939	Epoch  5/20 | Batch   40/63 | Loss: -0.3582 | Real: 0.0857 | Fake: 0.4439
+2116.6s	940	Epoch  5/20 | Batch   50/63 | Loss: -0.7916 | Real: 0.0200 | Fake: 0.8116
+2118.8s	941	Epoch  5/20 | Batch   60/63 | Loss: -0.5944 | Real: -0.0292 | Fake: 0.5653
+2119.4s	942	Epoch  5/20 | Batch   63/63 | Loss: -0.8384 | Real: -0.0344 | Fake: 0.8040
+2119.4s	943	✔ Epoch 5 complete | Avg Loss: -0.5133 | Avg Real: 0.0949 | Avg Fake: 0.6082
+2119.4s	944	
+2121.7s	945	Epoch  6/20 | Batch   10/63 | Loss: -0.5819 | Real: -0.0978 | Fake: 0.4842
+2124.0s	946	Epoch  6/20 | Batch   20/63 | Loss: -0.9157 | Real: -0.1462 | Fake: 0.7695
+2126.2s	947	Epoch  6/20 | Batch   30/63 | Loss: -0.2002 | Real: -0.2105 | Fake: -0.0103
+2128.5s	948	Epoch  6/20 | Batch   40/63 | Loss: -1.0821 | Real: -0.2385 | Fake: 0.8436
+2130.8s	949	Epoch  6/20 | Batch   50/63 | Loss: -0.2658 | Real: -0.3207 | Fake: -0.0548
+2133.1s	950	Epoch  6/20 | Batch   60/63 | Loss: -0.9147 | Real: -0.3633 | Fake: 0.5514
+2133.6s	951	Epoch  6/20 | Batch   63/63 | Loss: -1.3147 | Real: -0.3497 | Fake: 0.9650
+2133.6s	952	✔ Epoch 6 complete | Avg Loss: -0.7859 | Avg Real: -0.2093 | Avg Fake: 0.5766
+2133.6s	953	
+2135.9s	954	Epoch  7/20 | Batch   10/63 | Loss: -1.3681 | Real: -0.3976 | Fake: 0.9705
+2138.1s	955	Epoch  7/20 | Batch   20/63 | Loss: -1.4225 | Real: -0.4461 | Fake: 0.9764
+2140.3s	956	Epoch  7/20 | Batch   30/63 | Loss: -1.5114 | Real: -0.5202 | Fake: 0.9912
+2142.6s	957	Epoch  7/20 | Batch   40/63 | Loss: -1.1541 | Real: -0.5469 | Fake: 0.6072
+2144.9s	958	Epoch  7/20 | Batch   50/63 | Loss: -1.4487 | Real: -0.4932 | Fake: 0.9555
+2147.1s	959	Epoch  7/20 | Batch   60/63 | Loss: -1.5852 | Real: -0.5819 | Fake: 1.0032
+2147.6s	960	Epoch  7/20 | Batch   63/63 | Loss: -0.9072 | Real: -0.6168 | Fake: 0.2904
+2147.6s	961	✔ Epoch 7 complete | Avg Loss: -1.0861 | Avg Real: -0.4847 | Avg Fake: 0.6015
+2147.6s	962	
+2149.9s	963	Epoch  8/20 | Batch   10/63 | Loss: -1.0267 | Real: -0.6512 | Fake: 0.3755
+2152.1s	964	Epoch  8/20 | Batch   20/63 | Loss: -1.5577 | Real: -0.6636 | Fake: 0.8941
+2154.4s	965	Epoch  8/20 | Batch   30/63 | Loss: -1.6577 | Real: -0.7228 | Fake: 0.9349
+2156.7s	966	Epoch  8/20 | Batch   40/63 | Loss: -1.8226 | Real: -0.7525 | Fake: 1.0701
+2159.0s	967	Epoch  8/20 | Batch   50/63 | Loss: -1.3295 | Real: -0.7692 | Fake: 0.5603
+2161.1s	968	Epoch  8/20 | Batch   60/63 | Loss: -1.8920 | Real: -0.8162 | Fake: 1.0759
+2161.7s	969	Epoch  8/20 | Batch   63/63 | Loss: -0.8184 | Real: -0.8153 | Fake: 0.0031
+2161.7s	970	✔ Epoch 8 complete | Avg Loss: -1.3998 | Avg Real: -0.7091 | Avg Fake: 0.6907
+2161.7s	971	
+2164.0s	972	Epoch  9/20 | Batch   10/63 | Loss: -1.8918 | Real: -0.8235 | Fake: 1.0683
+2166.2s	973	Epoch  9/20 | Batch   20/63 | Loss: -0.5790 | Real: -0.7627 | Fake: -0.1836
+2168.4s	974	Epoch  9/20 | Batch   30/63 | Loss: -1.9001 | Real: -0.8558 | Fake: 1.0443
+2170.6s	975	Epoch  9/20 | Batch   40/63 | Loss: -0.8247 | Real: -0.8698 | Fake: -0.0451
+2172.9s	976	Epoch  9/20 | Batch   50/63 | Loss: -1.9557 | Real: -0.8438 | Fake: 1.1119
+2175.2s	977	Epoch  9/20 | Batch   60/63 | Loss: -0.6445 | Real: -0.8405 | Fake: -0.1961
+2175.7s	978	Epoch  9/20 | Batch   63/63 | Loss: -1.3110 | Real: -0.8192 | Fake: 0.4919
+2175.7s	979	✔ Epoch 9 complete | Avg Loss: -1.3908 | Avg Real: -0.8356 | Avg Fake: 0.5552
+2175.7s	980	
+2178.0s	981	Epoch 10/20 | Batch   10/63 | Loss: -0.7265 | Real: -0.8099 | Fake: -0.0834
+2180.2s	982	Epoch 10/20 | Batch   20/63 | Loss: -2.0056 | Real: -0.8267 | Fake: 1.1789
+2182.4s	983	Epoch 10/20 | Batch   30/63 | Loss: -2.0702 | Real: -0.8580 | Fake: 1.2123
+2184.8s	984	Epoch 10/20 | Batch   40/63 | Loss: -2.1204 | Real: -0.8919 | Fake: 1.2284
+2187.0s	985	Epoch 10/20 | Batch   50/63 | Loss: -2.1033 | Real: -0.8652 | Fake: 1.2381
+2189.4s	986	Epoch 10/20 | Batch   60/63 | Loss: -2.0365 | Real: -0.9488 | Fake: 1.0877
+2189.9s	987	Epoch 10/20 | Batch   63/63 | Loss: -0.9375 | Real: -0.9496 | Fake: -0.0121
+2189.9s	988	✔ Epoch 10 complete | Avg Loss: -1.5926 | Avg Real: -0.8681 | Avg Fake: 0.7245
+2189.9s	989	
+2192.1s	990	Epoch 11/20 | Batch   10/63 | Loss: -1.2909 | Real: -0.9039 | Fake: 0.3870
+2194.4s	991	Epoch 11/20 | Batch   20/63 | Loss: -1.0883 | Real: -0.9458 | Fake: 0.1425
+2196.6s	992	Epoch 11/20 | Batch   30/63 | Loss: -2.1577 | Real: -0.8613 | Fake: 1.2964
+2198.8s	993	Epoch 11/20 | Batch   40/63 | Loss: -2.2349 | Real: -0.9327 | Fake: 1.3022
+2201.1s	994	Epoch 11/20 | Batch   50/63 | Loss: -2.2571 | Real: -0.9670 | Fake: 1.2901
+2203.4s	995	Epoch 11/20 | Batch   60/63 | Loss: -1.5445 | Real: -0.9404 | Fake: 0.6041
+2203.9s	996	Epoch 11/20 | Batch   63/63 | Loss: -1.7746 | Real: -0.9563 | Fake: 0.8183
+2203.9s	997	✔ Epoch 11 complete | Avg Loss: -1.7342 | Avg Real: -0.9311 | Avg Fake: 0.8030
+2203.9s	998	
+2206.2s	999	Epoch 12/20 | Batch   10/63 | Loss: -2.2998 | Real: -0.9579 | Fake: 1.3419
+2208.4s	1000	Epoch 12/20 | Batch   20/63 | Loss: -2.0854 | Real: -0.9945 | Fake: 1.0909
+2210.6s	1001	Epoch 12/20 | Batch   30/63 | Loss: -2.3111 | Real: -0.9677 | Fake: 1.3435
+2212.9s	1002	Epoch 12/20 | Batch   40/63 | Loss: -2.3489 | Real: -0.9563 | Fake: 1.3925
+2215.2s	1003	Epoch 12/20 | Batch   50/63 | Loss: -1.6799 | Real: -1.0091 | Fake: 0.6708
+2217.4s	1004	Epoch 12/20 | Batch   60/63 | Loss: -2.2503 | Real: -1.0031 | Fake: 1.2472
+2217.9s	1005	Epoch 12/20 | Batch   63/63 | Loss: -1.4339 | Real: -1.0003 | Fake: 0.4336
+2217.9s	1006	✔ Epoch 12 complete | Avg Loss: -2.0218 | Avg Real: -0.9829 | Avg Fake: 1.0389
+2217.9s	1007	
+2220.2s	1008	Epoch 13/20 | Batch   10/63 | Loss: -2.4053 | Real: -0.9812 | Fake: 1.4240
+2222.4s	1009	Epoch 13/20 | Batch   20/63 | Loss: -1.6819 | Real: -1.0110 | Fake: 0.6709
+2224.7s	1010	Epoch 13/20 | Batch   30/63 | Loss: -2.5302 | Real: -1.0204 | Fake: 1.5098
+2227.0s	1011	Epoch 13/20 | Batch   40/63 | Loss: -2.5331 | Real: -1.0456 | Fake: 1.4875
+2229.3s	1012	Epoch 13/20 | Batch   50/63 | Loss: -1.6205 | Real: -1.0785 | Fake: 0.5420
+2231.5s	1013	Epoch 13/20 | Batch   60/63 | Loss: -2.6037 | Real: -1.0835 | Fake: 1.5202
+2232.1s	1014	Epoch 13/20 | Batch   63/63 | Loss: -2.6296 | Real: -1.0804 | Fake: 1.5492
+2232.1s	1015	✔ Epoch 13 complete | Avg Loss: -2.2019 | Avg Real: -1.0313 | Avg Fake: 1.1705
+2232.1s	1016	
+2234.4s	1017	Epoch 14/20 | Batch   10/63 | Loss: -1.8826 | Real: -1.1099 | Fake: 0.7727
+2236.6s	1018	Epoch 14/20 | Batch   20/63 | Loss: -0.9155 | Real: -1.0919 | Fake: -0.1764
+2238.9s	1019	Epoch 14/20 | Batch   30/63 | Loss: -2.5701 | Real: -1.0842 | Fake: 1.4859
+2241.1s	1020	Epoch 14/20 | Batch   40/63 | Loss: -2.6549 | Real: -1.1057 | Fake: 1.5492
+2243.4s	1021	Epoch 14/20 | Batch   50/63 | Loss: -2.2411 | Real: -1.1205 | Fake: 1.1205
+2245.6s	1022	Epoch 14/20 | Batch   60/63 | Loss: -2.3537 | Real: -1.0354 | Fake: 1.3182
+2246.2s	1023	Epoch 14/20 | Batch   63/63 | Loss: -2.6334 | Real: -1.0497 | Fake: 1.5838
+2246.2s	1024	✔ Epoch 14 complete | Avg Loss: -2.3357 | Avg Real: -1.0894 | Avg Fake: 1.2463
+2246.2s	1025	
+2248.5s	1026	Epoch 15/20 | Batch   10/63 | Loss: -1.7874 | Real: -1.1285 | Fake: 0.6589
+2250.8s	1027	Epoch 15/20 | Batch   20/63 | Loss: -2.6970 | Real: -1.0912 | Fake: 1.6057
+2253.0s	1028	Epoch 15/20 | Batch   30/63 | Loss: -2.7002 | Real: -1.0950 | Fake: 1.6053
+2255.3s	1029	Epoch 15/20 | Batch   40/63 | Loss: -2.7372 | Real: -1.1169 | Fake: 1.6203
+2257.5s	1030	Epoch 15/20 | Batch   50/63 | Loss: -2.7510 | Real: -1.1340 | Fake: 1.6170
+2259.7s	1031	Epoch 15/20 | Batch   60/63 | Loss: -2.8075 | Real: -1.1415 | Fake: 1.6660
+2260.3s	1032	Epoch 15/20 | Batch   63/63 | Loss: -2.4124 | Real: -1.1525 | Fake: 1.2599
+2260.3s	1033	✔ Epoch 15 complete | Avg Loss: -2.4562 | Avg Real: -1.1161 | Avg Fake: 1.3401
+2260.3s	1034	
+2262.5s	1035	Epoch 16/20 | Batch   10/63 | Loss: -2.2305 | Real: -1.1443 | Fake: 1.0862
+2264.8s	1036	Epoch 16/20 | Batch   20/63 | Loss: -2.8799 | Real: -1.1731 | Fake: 1.7068
+2267.1s	1037	Epoch 16/20 | Batch   30/63 | Loss: -2.8500 | Real: -1.2043 | Fake: 1.6456
+2269.3s	1038	Epoch 16/20 | Batch   40/63 | Loss: -2.8118 | Real: -1.2075 | Fake: 1.6043
+2271.5s	1039	Epoch 16/20 | Batch   50/63 | Loss: -2.1831 | Real: -1.2180 | Fake: 0.9651
+2273.8s	1040	Epoch 16/20 | Batch   60/63 | Loss: -2.8925 | Real: -1.2013 | Fake: 1.6912
+2274.4s	1041	Epoch 16/20 | Batch   63/63 | Loss: -2.5251 | Real: -1.2035 | Fake: 1.3216
+2274.4s	1042	✔ Epoch 16 complete | Avg Loss: -2.6201 | Avg Real: -1.1827 | Avg Fake: 1.4374
+2274.4s	1043	
+2276.6s	1044	Epoch 17/20 | Batch   10/63 | Loss: -2.9471 | Real: -1.1852 | Fake: 1.7619
+2278.8s	1045	Epoch 17/20 | Batch   20/63 | Loss: -2.9298 | Real: -1.1321 | Fake: 1.7977
+2281.1s	1046	Epoch 17/20 | Batch   30/63 | Loss: -2.9801 | Real: -1.1335 | Fake: 1.8466
+2283.3s	1047	Epoch 17/20 | Batch   40/63 | Loss: -2.8737 | Real: -1.1191 | Fake: 1.7547
+2285.6s	1048	Epoch 17/20 | Batch   50/63 | Loss: -1.6928 | Real: -1.1215 | Fake: 0.5713
+2287.8s	1049	Epoch 17/20 | Batch   60/63 | Loss: -2.8400 | Real: -1.1175 | Fake: 1.7225
+2288.4s	1050	Epoch 17/20 | Batch   63/63 | Loss: -2.8583 | Real: -1.1584 | Fake: 1.6999
+2288.4s	1051	✔ Epoch 17 complete | Avg Loss: -2.6676 | Avg Real: -1.1486 | Avg Fake: 1.5190
+2288.4s	1052	
+2290.6s	1053	Epoch 18/20 | Batch   10/63 | Loss: -3.0151 | Real: -1.1280 | Fake: 1.8871
+2292.9s	1054	Epoch 18/20 | Batch   20/63 | Loss: -3.0569 | Real: -1.1869 | Fake: 1.8700
+2295.2s	1055	Epoch 18/20 | Batch   30/63 | Loss: -3.0889 | Real: -1.2080 | Fake: 1.8809
+2297.4s	1056	Epoch 18/20 | Batch   40/63 | Loss: -2.3792 | Real: -1.2082 | Fake: 1.1710
+2299.6s	1057	Epoch 18/20 | Batch   50/63 | Loss: -1.7720 | Real: -1.2113 | Fake: 0.5607
+2301.9s	1058	Epoch 18/20 | Batch   60/63 | Loss: -3.1099 | Real: -1.2167 | Fake: 1.8933
+2302.5s	1059	Epoch 18/20 | Batch   63/63 | Loss: -3.1427 | Real: -1.2107 | Fake: 1.9320
+2302.5s	1060	✔ Epoch 18 complete | Avg Loss: -2.8449 | Avg Real: -1.1902 | Avg Fake: 1.6546
+2302.5s	1061	
+2304.7s	1062	Epoch 19/20 | Batch   10/63 | Loss: -3.0450 | Real: -1.1946 | Fake: 1.8503
+2306.9s	1063	Epoch 19/20 | Batch   20/63 | Loss: -3.0639 | Real: -1.2193 | Fake: 1.8446
+2309.2s	1064	Epoch 19/20 | Batch   30/63 | Loss: -2.9958 | Real: -1.2189 | Fake: 1.7769
+2311.5s	1065	Epoch 19/20 | Batch   40/63 | Loss: -2.6208 | Real: -1.2052 | Fake: 1.4156
+2313.7s	1066	Epoch 19/20 | Batch   50/63 | Loss: -3.1789 | Real: -1.2232 | Fake: 1.9557
+2316.0s	1067	Epoch 19/20 | Batch   60/63 | Loss: -3.1585 | Real: -1.2373 | Fake: 1.9212
+2316.5s	1068	Epoch 19/20 | Batch   63/63 | Loss: -3.1754 | Real: -1.2083 | Fake: 1.9671
+2316.5s	1069	✔ Epoch 19 complete | Avg Loss: -2.9068 | Avg Real: -1.2093 | Avg Fake: 1.6975
+2316.5s	1070	
+2318.7s	1071	Epoch 20/20 | Batch   10/63 | Loss: -3.1131 | Real: -1.2384 | Fake: 1.8747
+2320.9s	1072	Epoch 20/20 | Batch   20/63 | Loss: -1.6772 | Real: -1.2490 | Fake: 0.4282
+2323.2s	1073	Epoch 20/20 | Batch   30/63 | Loss: -3.2277 | Real: -1.2353 | Fake: 1.9924
+2325.4s	1074	Epoch 20/20 | Batch   40/63 | Loss: -1.7365 | Real: -1.2669 | Fake: 0.4697
+2327.6s	1075	Epoch 20/20 | Batch   50/63 | Loss: -3.1758 | Real: -1.2758 | Fake: 1.9000
+2329.9s	1076	Epoch 20/20 | Batch   60/63 | Loss: -3.1842 | Real: -1.2887 | Fake: 1.8956
+2330.5s	1077	Epoch 20/20 | Batch   63/63 | Loss: -3.1183 | Real: -1.2323 | Fake: 1.8859
+2330.5s	1078	✔ Epoch 20 complete | Avg Loss: -3.0662 | Avg Real: -1.2589 | Avg Fake: 1.8073
+2330.5s	1079	
+2330.5s	1080	Model saved to /kaggle/working//plots/btc_addresses/model.pt
+2332.1s	1081	
+2332.1s	1082	Evaluating on test set...
+2345.7s	1083	Sample 0: Predicted y = 1111111111111111111111111111111111111111116111111111111111111111
+2358.5s	1084	Sample 1: Predicted y = 1111111111111111111111111111116111111111111111111111111111111111
+2371.2s	1085	Sample 2: Predicted y = 1111111111111111111111111111116111111111116111111111111111111111
+2384.1s	1086	Sample 3: Predicted y = 1111111111111111111111111111111111111111116111111111111111111111
+2396.8s	1087	Sample 4: Predicted y = 1111116111111111111111111111116111111111111111111111111111111111
+2409.3s	1088	Sample 5: Predicted y = 1111111111111111111111111111116111111111111111111111111111111111
+2422.0s	1089	Sample 6: Predicted y = 1111111111111111111111111111116111111111111111111111111111111111
+2434.6s	1090	Sample 7: Predicted y = 1111111111111111111111111111111111111111116111111111111111111111
+2447.1s	1091	Sample 8: Predicted y = 1111111111111111111111111111116111116111119b1111911111c111119111
+2459.9s	1092	Sample 9: Predicted y = 1111116111111111111111111111116111111111111111111111111111111111
+2472.7s	1093	Sample 10: Predicted y = 1111111111111111111111111111116111111111116111111111111111111111
+2485.2s	1094	Sample 11: Predicted y = 1111111111111111111111111111116111111111116111111111111111111111
+2498.0s	1095	Sample 12: Predicted y = 1111111111111111111111111111116111111111116111111111111111111111
+2510.6s	1096	Sample 13: Predicted y = 1111111111111111111111111111111111111111116111111111111111111111
+2523.2s	1097	Sample 14: Predicted y = 1111111111111111111111111111111111111111111111111111111111111111
+2536.0s	1098	Sample 15: Predicted y = 1111111111111111111111111111111111111111111111111111111111111111
+2548.8s	1099	Sample 16: Predicted y = 1111111111111111111111111111111111111111116111111111111111111111
+2561.6s	1100	Sample 17: Predicted y = 1111111111111111111111111111116111111111116111111111111111111111
+2574.4s	1101	Sample 18: Predicted y = 1111116111111111111111111111111111111111111111111111111111111111
+2587.1s	1102	Sample 19: Predicted y = 1111111111111111116111111111111111111111111111111111111111111111
+2589.4s	1103	
+2589.4s	1104	Results for btc_addresses:
+2589.4s	1105	  Avg Real Energy: -1.3054 ± 0.0777
+2589.4s	1106	  Avg Random Energy: 1.3017 ± 0.5629
+2589.4s	1107	  Avg Filled Energy: -3.1424 ± 0.0450
+2589.4s	1108	  Avg Recovery Accuracy: 7.97%
+2589.4s	1109	Plots and metrics saved to /kaggle/working//plots/btc_addresses
+2589.4s	1110	
+2589.4s	1111	============================================================
+2589.4s	1112	Processing dataset: doge_addresses
+2589.4s	1113	============================================================
+2590.0s	1114	Vocabulary size: 61
+2590.0s	1115	Grid size: 12×12
+2590.0s	1116	Training samples: 8000
+2590.0s	1117	Test samples: 2000
+2590.0s	1118	
+2590.0s	1119	Training...
+2592.2s	1120	Epoch  1/20 | Batch   10/63 | Loss: -0.0070 | Real: 0.3414 | Fake: 0.3484
+2594.5s	1121	Epoch  1/20 | Batch   20/63 | Loss: -0.0342 | Real: 0.3298 | Fake: 0.3640
+2596.7s	1122	Epoch  1/20 | Batch   30/63 | Loss: -0.0560 | Real: 0.3181 | Fake: 0.3741
+2599.0s	1123	Epoch  1/20 | Batch   40/63 | Loss: -0.0840 | Real: 0.3071 | Fake: 0.3912
+2601.2s	1124	Epoch  1/20 | Batch   50/63 | Loss: -0.0674 | Real: 0.2967 | Fake: 0.3641
+2603.5s	1125	Epoch  1/20 | Batch   60/63 | Loss: -0.0584 | Real: 0.2893 | Fake: 0.3477
+2604.1s	1126	Epoch  1/20 | Batch   63/63 | Loss: -0.1262 | Real: 0.2894 | Fake: 0.4156
+2604.1s	1127	✔ Epoch 1 complete | Avg Loss: -0.0555 | Avg Real: 0.3169 | Avg Fake: 0.3724
+2604.1s	1128	
+2606.4s	1129	Epoch  2/20 | Batch   10/63 | Loss: -0.0617 | Real: 0.2724 | Fake: 0.3341
+2608.6s	1130	Epoch  2/20 | Batch   20/63 | Loss: -0.1301 | Real: 0.2619 | Fake: 0.3920
+2610.9s	1131	Epoch  2/20 | Batch   30/63 | Loss: -0.1834 | Real: 0.2518 | Fake: 0.4353
+2613.1s	1132	Epoch  2/20 | Batch   40/63 | Loss: -0.2247 | Real: 0.2636 | Fake: 0.4882
+2615.3s	1133	Epoch  2/20 | Batch   50/63 | Loss: -0.2623 | Real: 0.2636 | Fake: 0.5259
+2617.6s	1134	Epoch  2/20 | Batch   60/63 | Loss: -0.0850 | Real: 0.2588 | Fake: 0.3438
+2618.2s	1135	Epoch  2/20 | Batch   63/63 | Loss: -0.2228 | Real: 0.2617 | Fake: 0.4845
+2618.2s	1136	✔ Epoch 2 complete | Avg Loss: -0.1543 | Avg Real: 0.2641 | Avg Fake: 0.4184
+2618.2s	1137	
+2620.4s	1138	Epoch  3/20 | Batch   10/63 | Loss: -0.0883 | Real: 0.2619 | Fake: 0.3502
+2622.7s	1139	Epoch  3/20 | Batch   20/63 | Loss: -0.3232 | Real: 0.2806 | Fake: 0.6038
+2624.9s	1140	Epoch  3/20 | Batch   30/63 | Loss: -0.3754 | Real: 0.2737 | Fake: 0.6490
+2627.1s	1141	Epoch  3/20 | Batch   40/63 | Loss: -0.3527 | Real: 0.3179 | Fake: 0.6706
+2629.4s	1142	Epoch  3/20 | Batch   50/63 | Loss: -0.2771 | Real: 0.2908 | Fake: 0.5679
+2631.6s	1143	Epoch  3/20 | Batch   60/63 | Loss: -0.1530 | Real: 0.3104 | Fake: 0.4634
+2632.2s	1144	Epoch  3/20 | Batch   63/63 | Loss: -0.3692 | Real: 0.3110 | Fake: 0.6802
+2632.2s	1145	✔ Epoch 3 complete | Avg Loss: -0.2681 | Avg Real: 0.2849 | Avg Fake: 0.5529
+2632.2s	1146	
+2634.5s	1147	Epoch  4/20 | Batch   10/63 | Loss: -0.3272 | Real: 0.3128 | Fake: 0.6401
+2636.8s	1148	Epoch  4/20 | Batch   20/63 | Loss: -0.4674 | Real: 0.3206 | Fake: 0.7879
+2639.0s	1149	Epoch  4/20 | Batch   30/63 | Loss: -0.5343 | Real: 0.3372 | Fake: 0.8715
+2641.2s	1150	Epoch  4/20 | Batch   40/63 | Loss: -0.5752 | Real: 0.3242 | Fake: 0.8994
+2643.5s	1151	Epoch  4/20 | Batch   50/63 | Loss: -0.5981 | Real: 0.3208 | Fake: 0.9189
+2645.7s	1152	Epoch  4/20 | Batch   60/63 | Loss: -0.6258 | Real: 0.3016 | Fake: 0.9274
+2646.2s	1153	Epoch  4/20 | Batch   63/63 | Loss: -0.7037 | Real: 0.2788 | Fake: 0.9825
+2646.2s	1154	✔ Epoch 4 complete | Avg Loss: -0.4387 | Avg Real: 0.3187 | Avg Fake: 0.7575
+2646.2s	1155	
+2648.5s	1156	Epoch  5/20 | Batch   10/63 | Loss: -0.6808 | Real: 0.3094 | Fake: 0.9902
+2650.7s	1157	Epoch  5/20 | Batch   20/63 | Loss: -0.4619 | Real: 0.2849 | Fake: 0.7468
+2653.0s	1158	Epoch  5/20 | Batch   30/63 | Loss: -0.5324 | Real: 0.2499 | Fake: 0.7823
+2655.2s	1159	Epoch  5/20 | Batch   40/63 | Loss: -0.8244 | Real: 0.2339 | Fake: 1.0583
+2657.4s	1160	Epoch  5/20 | Batch   50/63 | Loss: -0.9178 | Real: 0.2047 | Fake: 1.1225
+2659.6s	1161	Epoch  5/20 | Batch   60/63 | Loss: -0.9859 | Real: 0.1601 | Fake: 1.1460
+2660.2s	1162	Epoch  5/20 | Batch   63/63 | Loss: -0.9758 | Real: 0.1645 | Fake: 1.1403
+2660.2s	1163	✔ Epoch 5 complete | Avg Loss: -0.6273 | Avg Real: 0.2457 | Avg Fake: 0.8731
+2660.2s	1164	
+2662.4s	1165	Epoch  6/20 | Batch   10/63 | Loss: -0.3807 | Real: 0.1097 | Fake: 0.4903
+2664.7s	1166	Epoch  6/20 | Batch   20/63 | Loss: -1.1114 | Real: 0.0944 | Fake: 1.2058
+2667.0s	1167	Epoch  6/20 | Batch   30/63 | Loss: -0.9951 | Real: 0.1102 | Fake: 1.1053
+2669.2s	1168	Epoch  6/20 | Batch   40/63 | Loss: -0.7142 | Real: 0.0764 | Fake: 0.7906
+2671.4s	1169	Epoch  6/20 | Batch   50/63 | Loss: -0.6900 | Real: -0.0149 | Fake: 0.6751
+2673.7s	1170	Epoch  6/20 | Batch   60/63 | Loss: -1.2401 | Real: -0.0343 | Fake: 1.2059
+2674.3s	1171	Epoch  6/20 | Batch   63/63 | Loss: -1.2653 | Real: -0.0447 | Fake: 1.2206
+2674.3s	1172	✔ Epoch 6 complete | Avg Loss: -0.8231 | Avg Real: 0.0672 | Avg Fake: 0.8903
+2674.3s	1173	
+2676.5s	1174	Epoch  7/20 | Batch   10/63 | Loss: -1.2858 | Real: -0.0857 | Fake: 1.2001
+2678.7s	1175	Epoch  7/20 | Batch   20/63 | Loss: -0.8809 | Real: -0.1218 | Fake: 0.7592
+2681.0s	1176	Epoch  7/20 | Batch   30/63 | Loss: -0.3635 | Real: -0.1506 | Fake: 0.2129
+2683.3s	1177	Epoch  7/20 | Batch   40/63 | Loss: -1.3967 | Real: -0.1179 | Fake: 1.2788
+2685.5s	1178	Epoch  7/20 | Batch   50/63 | Loss: -1.4752 | Real: -0.1985 | Fake: 1.2766
+2687.7s	1179	Epoch  7/20 | Batch   60/63 | Loss: -1.4376 | Real: -0.1633 | Fake: 1.2743
+2688.2s	1180	Epoch  7/20 | Batch   63/63 | Loss: -0.5773 | Real: -0.2110 | Fake: 0.3663
+2688.2s	1181	✔ Epoch 7 complete | Avg Loss: -1.0347 | Avg Real: -0.1328 | Avg Fake: 0.9019
+2688.2s	1182	
+2690.4s	1183	Epoch  8/20 | Batch   10/63 | Loss: -1.3560 | Real: -0.2407 | Fake: 1.1153
+2692.7s	1184	Epoch  8/20 | Batch   20/63 | Loss: -1.4762 | Real: -0.2198 | Fake: 1.2563
+2694.9s	1185	Epoch  8/20 | Batch   30/63 | Loss: -1.5954 | Real: -0.2858 | Fake: 1.3096
+2697.2s	1186	Epoch  8/20 | Batch   40/63 | Loss: -1.5768 | Real: -0.2500 | Fake: 1.3268
+2699.4s	1187	Epoch  8/20 | Batch   50/63 | Loss: -1.6752 | Real: -0.3499 | Fake: 1.3253
+2701.6s	1188	Epoch  8/20 | Batch   60/63 | Loss: 0.0681 | Real: -0.3399 | Fake: -0.4080
+2702.2s	1189	Epoch  8/20 | Batch   63/63 | Loss: -1.7000 | Real: -0.3762 | Fake: 1.3238
+2702.2s	1190	✔ Epoch 8 complete | Avg Loss: -1.2557 | Avg Real: -0.2763 | Avg Fake: 0.9795
+2702.2s	1191	
+2704.5s	1192	Epoch  9/20 | Batch   10/63 | Loss: -1.7201 | Real: -0.3875 | Fake: 1.3326
+2706.7s	1193	Epoch  9/20 | Batch   20/63 | Loss: -1.7527 | Real: -0.4079 | Fake: 1.3449
+2708.9s	1194	Epoch  9/20 | Batch   30/63 | Loss: -0.7498 | Real: -0.4742 | Fake: 0.2756
+2711.1s	1195	Epoch  9/20 | Batch   40/63 | Loss: -1.8851 | Real: -0.4945 | Fake: 1.3906
+2713.4s	1196	Epoch  9/20 | Batch   50/63 | Loss: -1.8555 | Real: -0.5185 | Fake: 1.3370
+2715.6s	1197	Epoch  9/20 | Batch   60/63 | Loss: -1.8789 | Real: -0.5224 | Fake: 1.3565
+2716.2s	1198	Epoch  9/20 | Batch   63/63 | Loss: -1.9120 | Real: -0.5460 | Fake: 1.3659
+2716.2s	1199	✔ Epoch 9 complete | Avg Loss: -1.4252 | Avg Real: -0.4652 | Avg Fake: 0.9601
+2716.2s	1200	
+2718.4s	1201	Epoch 10/20 | Batch   10/63 | Loss: -1.9409 | Real: -0.5723 | Fake: 1.3686
+2720.6s	1202	Epoch 10/20 | Batch   20/63 | Loss: -0.9593 | Real: -0.6174 | Fake: 0.3419
+2722.9s	1203	Epoch 10/20 | Batch   30/63 | Loss: -1.9882 | Real: -0.6058 | Fake: 1.3824
+2725.1s	1204	Epoch 10/20 | Batch   40/63 | Loss: -2.0936 | Real: -0.6907 | Fake: 1.4029
+2727.4s	1205	Epoch 10/20 | Batch   50/63 | Loss: -0.2393 | Real: -0.6805 | Fake: -0.4413
+2729.6s	1206	Epoch 10/20 | Batch   60/63 | Loss: -0.8509 | Real: -0.6398 | Fake: 0.2111
+2730.1s	1207	Epoch 10/20 | Batch   63/63 | Loss: -0.9768 | Real: -0.6785 | Fake: 0.2983
+2730.1s	1208	✔ Epoch 10 complete | Avg Loss: -1.5549 | Avg Real: -0.6295 | Avg Fake: 0.9254
+2730.1s	1209	
+2732.3s	1210	Epoch 11/20 | Batch   10/63 | Loss: -2.1128 | Real: -0.6824 | Fake: 1.4303
+2734.6s	1211	Epoch 11/20 | Batch   20/63 | Loss: -2.2343 | Real: -0.7396 | Fake: 1.4947
+2736.8s	1212	Epoch 11/20 | Batch   30/63 | Loss: -0.7301 | Real: -0.7616 | Fake: -0.0315
+2739.0s	1213	Epoch 11/20 | Batch   40/63 | Loss: -2.3370 | Real: -0.8155 | Fake: 1.5215
+2741.3s	1214	Epoch 11/20 | Batch   50/63 | Loss: -0.7916 | Real: -0.8336 | Fake: -0.0419
+2743.5s	1215	Epoch 11/20 | Batch   60/63 | Loss: -2.3291 | Real: -0.8158 | Fake: 1.5133
+2744.1s	1216	Epoch 11/20 | Batch   63/63 | Loss: -2.3425 | Real: -0.8375 | Fake: 1.5050
+2744.1s	1217	✔ Epoch 11 complete | Avg Loss: -1.8318 | Avg Real: -0.7573 | Avg Fake: 1.0744
+2744.1s	1218	
+2746.3s	1219	Epoch 12/20 | Batch   10/63 | Loss: -2.2907 | Real: -0.7887 | Fake: 1.5020
+2748.5s	1220	Epoch 12/20 | Batch   20/63 | Loss: -2.3688 | Real: -0.8051 | Fake: 1.5637
+2750.7s	1221	Epoch 12/20 | Batch   30/63 | Loss: -2.3888 | Real: -0.8228 | Fake: 1.5660
+2753.0s	1222	Epoch 12/20 | Batch   40/63 | Loss: -2.4287 | Real: -0.8467 | Fake: 1.5819
+2755.2s	1223	Epoch 12/20 | Batch   50/63 | Loss: -1.1668 | Real: -0.8182 | Fake: 0.3486
+2757.4s	1224	Epoch 12/20 | Batch   60/63 | Loss: -2.4922 | Real: -0.8393 | Fake: 1.6529
+2758.0s	1225	Epoch 12/20 | Batch   63/63 | Loss: -0.2423 | Real: -0.8226 | Fake: -0.5803
+2758.0s	1226	✔ Epoch 12 complete | Avg Loss: -1.8089 | Avg Real: -0.8075 | Avg Fake: 1.0013
+2758.0s	1227	
+2760.2s	1228	Epoch 13/20 | Batch   10/63 | Loss: -2.5024 | Real: -0.8562 | Fake: 1.6462
+2762.4s	1229	Epoch 13/20 | Batch   20/63 | Loss: -1.2952 | Real: -0.8432 | Fake: 0.4520
+2764.7s	1230	Epoch 13/20 | Batch   30/63 | Loss: -1.2897 | Real: -0.8706 | Fake: 0.4191
+2766.9s	1231	Epoch 13/20 | Batch   40/63 | Loss: -2.4365 | Real: -0.8949 | Fake: 1.5416
+2769.1s	1232	Epoch 13/20 | Batch   50/63 | Loss: -2.5752 | Real: -0.8607 | Fake: 1.7145
+2771.3s	1233	Epoch 13/20 | Batch   60/63 | Loss: -2.6332 | Real: -0.8953 | Fake: 1.7379
+2771.9s	1234	Epoch 13/20 | Batch   63/63 | Loss: -2.6084 | Real: -0.8981 | Fake: 1.7103
+2771.9s	1235	✔ Epoch 13 complete | Avg Loss: -2.1413 | Avg Real: -0.8682 | Avg Fake: 1.2731
+2771.9s	1236	
+2774.2s	1237	Epoch 14/20 | Batch   10/63 | Loss: -1.4551 | Real: -0.9058 | Fake: 0.5492
+2776.4s	1238	Epoch 14/20 | Batch   20/63 | Loss: -2.5799 | Real: -0.8942 | Fake: 1.6858
+2778.6s	1239	Epoch 14/20 | Batch   30/63 | Loss: -2.5910 | Real: -0.8693 | Fake: 1.7217
+2780.8s	1240	Epoch 14/20 | Batch   40/63 | Loss: -2.6154 | Real: -0.8454 | Fake: 1.7701
+2783.1s	1241	Epoch 14/20 | Batch   50/63 | Loss: -0.4961 | Real: -0.9271 | Fake: -0.4311
+2785.3s	1242	Epoch 14/20 | Batch   60/63 | Loss: -0.2607 | Real: -0.9370 | Fake: -0.6763
+2785.9s	1243	Epoch 14/20 | Batch   63/63 | Loss: -0.6641 | Real: -0.8497 | Fake: -0.1856
+2785.9s	1244	✔ Epoch 14 complete | Avg Loss: -2.0416 | Avg Real: -0.8898 | Avg Fake: 1.1519
+2785.9s	1245	
+2788.2s	1246	Epoch 15/20 | Batch   10/63 | Loss: -1.6849 | Real: -0.8872 | Fake: 0.7977
+2790.4s	1247	Epoch 15/20 | Batch   20/63 | Loss: -0.7668 | Real: -0.9099 | Fake: -0.1431
+2792.6s	1248	Epoch 15/20 | Batch   30/63 | Loss: -1.8423 | Real: -0.8973 | Fake: 0.9450
+2794.9s	1249	Epoch 15/20 | Batch   40/63 | Loss: -1.1567 | Real: -0.9311 | Fake: 0.2256
+2797.1s	1250	Epoch 15/20 | Batch   50/63 | Loss: -2.7776 | Real: -0.9265 | Fake: 1.8511
+2799.3s	1251	Epoch 15/20 | Batch   60/63 | Loss: -2.0446 | Real: -0.9273 | Fake: 1.1174
+2799.9s	1252	Epoch 15/20 | Batch   63/63 | Loss: -2.1479 | Real: -0.9222 | Fake: 1.2257
+2799.9s	1253	✔ Epoch 15 complete | Avg Loss: -2.2327 | Avg Real: -0.9056 | Avg Fake: 1.3271
+2799.9s	1254	
+2802.1s	1255	Epoch 16/20 | Batch   10/63 | Loss: -2.5427 | Real: -0.9346 | Fake: 1.6081
+2804.4s	1256	Epoch 16/20 | Batch   20/63 | Loss: -2.8173 | Real: -0.9553 | Fake: 1.8620
+2806.6s	1257	Epoch 16/20 | Batch   30/63 | Loss: -2.8385 | Real: -0.9674 | Fake: 1.8711
+2808.8s	1258	Epoch 16/20 | Batch   40/63 | Loss: -2.8332 | Real: -0.9819 | Fake: 1.8512
+2811.0s	1259	Epoch 16/20 | Batch   50/63 | Loss: -1.5408 | Real: -1.0373 | Fake: 0.5035
+2813.3s	1260	Epoch 16/20 | Batch   60/63 | Loss: -2.9213 | Real: -1.0498 | Fake: 1.8715
+2813.9s	1261	Epoch 16/20 | Batch   63/63 | Loss: -1.9756 | Real: -1.0530 | Fake: 0.9226
+2813.9s	1262	✔ Epoch 16 complete | Avg Loss: -2.3984 | Avg Real: -0.9861 | Avg Fake: 1.4123
+2813.9s	1263	
+2816.1s	1264	Epoch 17/20 | Batch   10/63 | Loss: -1.6535 | Real: -0.9882 | Fake: 0.6653
+2818.4s	1265	Epoch 17/20 | Batch   20/63 | Loss: -2.9234 | Real: -1.0073 | Fake: 1.9161
+2820.6s	1266	Epoch 17/20 | Batch   30/63 | Loss: -2.8363 | Real: -1.0050 | Fake: 1.8313
+2822.8s	1267	Epoch 17/20 | Batch   40/63 | Loss: -1.6685 | Real: -1.0075 | Fake: 0.6610
+2825.0s	1268	Epoch 17/20 | Batch   50/63 | Loss: -2.9497 | Real: -1.0199 | Fake: 1.9298
+2827.2s	1269	Epoch 17/20 | Batch   60/63 | Loss: -1.3831 | Real: -0.9743 | Fake: 0.4087
+2827.8s	1270	Epoch 17/20 | Batch   63/63 | Loss: -2.9387 | Real: -1.0021 | Fake: 1.9366
+2827.8s	1271	✔ Epoch 17 complete | Avg Loss: -2.3189 | Avg Real: -1.0167 | Avg Fake: 1.3022
+2827.8s	1272	
+2830.0s	1273	Epoch 18/20 | Batch   10/63 | Loss: -2.9576 | Real: -0.9966 | Fake: 1.9609
+2832.2s	1274	Epoch 18/20 | Batch   20/63 | Loss: -3.0060 | Real: -1.0322 | Fake: 1.9738
+2834.5s	1275	Epoch 18/20 | Batch   30/63 | Loss: -1.8596 | Real: -1.0753 | Fake: 0.7843
+2836.7s	1276	Epoch 18/20 | Batch   40/63 | Loss: -3.0105 | Real: -1.0613 | Fake: 1.9492
+2838.9s	1277	Epoch 18/20 | Batch   50/63 | Loss: -2.9400 | Real: -0.9964 | Fake: 1.9436
+2841.1s	1278	Epoch 18/20 | Batch   60/63 | Loss: -2.9131 | Real: -0.9784 | Fake: 1.9347
+2841.7s	1279	Epoch 18/20 | Batch   63/63 | Loss: -2.1634 | Real: -1.0711 | Fake: 1.0923
+2841.7s	1280	✔ Epoch 18 complete | Avg Loss: -2.5746 | Avg Real: -1.0275 | Avg Fake: 1.5470
+2841.7s	1281	
+2844.0s	1282	Epoch 19/20 | Batch   10/63 | Loss: -2.8876 | Real: -0.9323 | Fake: 1.9553
+2846.3s	1283	Epoch 19/20 | Batch   20/63 | Loss: -3.0152 | Real: -1.0443 | Fake: 1.9709
+2848.6s	1284	Epoch 19/20 | Batch   30/63 | Loss: -3.0281 | Real: -1.0657 | Fake: 1.9623
+2850.8s	1285	Epoch 19/20 | Batch   40/63 | Loss: -2.6185 | Real: -1.0975 | Fake: 1.5211
+2853.0s	1286	Epoch 19/20 | Batch   50/63 | Loss: -2.9988 | Real: -1.0819 | Fake: 1.9169
+2855.3s	1287	Epoch 19/20 | Batch   60/63 | Loss: -3.0571 | Real: -1.0912 | Fake: 1.9659
+2855.8s	1288	Epoch 19/20 | Batch   63/63 | Loss: -3.0885 | Real: -1.0944 | Fake: 1.9941
+2855.8s	1289	✔ Epoch 19 complete | Avg Loss: -2.6674 | Avg Real: -1.0557 | Avg Fake: 1.6118
+2855.8s	1290	
+2858.1s	1291	Epoch 20/20 | Batch   10/63 | Loss: -3.0338 | Real: -1.0713 | Fake: 1.9624
+2860.3s	1292	Epoch 20/20 | Batch   20/63 | Loss: -3.0549 | Real: -1.0707 | Fake: 1.9842
+2862.5s	1293	Epoch 20/20 | Batch   30/63 | Loss: -3.0395 | Real: -1.0984 | Fake: 1.9411
+2864.8s	1294	Epoch 20/20 | Batch   40/63 | Loss: -3.1179 | Real: -1.1209 | Fake: 1.9970
+2867.0s	1295	Epoch 20/20 | Batch   50/63 | Loss: -1.5406 | Real: -1.0992 | Fake: 0.4413
+2869.2s	1296	Epoch 20/20 | Batch   60/63 | Loss: -1.6046 | Real: -1.1118 | Fake: 0.4928
+2869.8s	1297	Epoch 20/20 | Batch   63/63 | Loss: -2.2897 | Real: -1.1205 | Fake: 1.1692
+2869.8s	1298	✔ Epoch 20 complete | Avg Loss: -2.6659 | Avg Real: -1.0959 | Avg Fake: 1.5700
+2869.8s	1299	
+2869.8s	1300	Model saved to /kaggle/working//plots/doge_addresses/model.pt
+2871.5s	1301	
+2871.5s	1302	Evaluating on test set...
+2894.6s	1303	Sample 0: Predicted y = 37171022c2bbcc888c8b888ccc8bbbcc8cccbbbbcccccccbcccccaccccc2ccc8
+2916.4s	1304	Sample 1: Predicted y = 11107qfcccccb88ccbcc4ccc8c88c8bcbbbbbbccccccbbbccccccaccccc2cccc
+2938.7s	1305	Sample 2: Predicted y = a11710bb2ccc88b88b8888888b8bb8cc8cbbbbbccbccbbcccccccaccccc2ccc8
+2960.4s	1306	Sample 3: Predicted y = 1117r2ccbbbcb888b88bc81cc88bb4c8bc8b4cb8b8bbcbccccccc8cccccccccc
+2982.2s	1307	Sample 4: Predicted y = cc1br2c3cccbcccc8bcccb8bccccbb2cccbcccb8ccbbbccbccccccccccccccc8
+3004.2s	1308	Sample 5: Predicted y = ac7710cccccbcc8bcbc8b4b84c4cbb8ccb8ccbccccccbbbbcccccccccccccccc
+3025.9s	1309	Sample 6: Predicted y = 11qrc22ccc2cc884cc8488888b4c4ccbbbbc8ccccccccccbccbcc8ccccccccc8
+3047.7s	1310	Sample 7: Predicted y = 1171r2fcccccb84cccc4cccccbb4ccccc4ccbbbcc8ccccbbccccccccccccccc8
+3070.1s	1311	Sample 8: Predicted y = b1bGb02ccccccb4cc8848bcb888ccc8bbcccccbcccbccccccbcbc2cccccccccc
+3092.4s	1312	Sample 9: Predicted y = 1rr2G0bcccbcbb88bbbcc48bcc8bbbbb8b4b8b8ccbccbccccccccaccccc2ccc8
+3114.7s	1313	Sample 10: Predicted y = f71ra32cccbcbbccbb8bbc4c4cbbcb8b8cc8cbc8bcccbbccccccc8cccccccccc
+3136.6s	1314	Sample 11: Predicted y = 17rr1bbccbcbc28b8bb88bbcbbccb8cbbbcbcc4bbbbccccccbcccaccccc2ccc8
+3158.9s	1315	Sample 12: Predicted y = cb7rr2cccbccccc8b8cc488bc4bbc8b8bcbb4cb8cccbcbccccccc8cccccccccc
+3181.3s	1316	Sample 13: Predicted y = 171D7c2c2cbc88bbc8888bbb4bbcbbc8bc8ccbb8ccbccbcbcccccccccccccccc
+3203.6s	1317	Sample 14: Predicted y = 12D1r0fccccb2bcb8888b4bc888bbbcc888bbbbccbcccbccccccc8cccccccccc
+3225.9s	1318	Sample 15: Predicted y = 77D122ccbccccc8bbc2cc8bb2ccc8bccb88bccccccbbbbbccccccaccccc2cccc
+3248.1s	1319	Sample 16: Predicted y = sb1d1c2ccc97cccb87ccc8bbbb48b88cc8bccbbbcccccccbcbcccaccacc2c8bc
+3270.1s	1320	Sample 17: Predicted y = r1a71128cbcc4b88c88c888bb88bc8cc48bbc8bcccbccbccccccc8ccccccccc8
+3292.1s	1321	Sample 18: Predicted y = 11a7cccccbbcbbbbb8c8bc8cc8bc4b8bbbbbccc8ccbcbccccccccaccccc2ccc8
+3313.9s	1322	Sample 19: Predicted y = f77810b2cccb8bcbc888b8bb4bbc8bccbbbccbbcccbccccbccccccccccccccc8
+3316.2s	1323	
+3316.2s	1324	Results for doge_addresses:
+3316.2s	1325	  Avg Real Energy: -1.3980 ± 0.2113
+3316.2s	1326	  Avg Random Energy: 2.7654 ± 0.5378
+3316.2s	1327	  Avg Filled Energy: -1.9105 ± 0.1204
+3316.2s	1328	  Avg Recovery Accuracy: 6.48%
+3316.2s	1329	Plots and metrics saved to /kaggle/working//plots/doge_addresses
+3316.2s	1330	
+3316.2s	1331	============================================================
+3316.2s	1332	Processing dataset: eth_addresses
+3316.2s	1333	============================================================
+3316.7s	1334	Vocabulary size: 25
+3316.7s	1335	Grid size: 12×12
+3316.7s	1336	Training samples: 8000
+3316.7s	1337	Test samples: 2000
+3316.7s	1338	
+3316.7s	1339	Training...
+3319.0s	1340	Epoch  1/20 | Batch   10/63 | Loss: -0.0061 | Real: -0.4313 | Fake: -0.4252
+3321.3s	1341	Epoch  1/20 | Batch   20/63 | Loss: -0.0059 | Real: -0.4379 | Fake: -0.4320
+3323.6s	1342	Epoch  1/20 | Batch   30/63 | Loss: -0.0349 | Real: -0.4441 | Fake: -0.4092
+3325.9s	1343	Epoch  1/20 | Batch   40/63 | Loss: -0.0543 | Real: -0.4514 | Fake: -0.3972
+3328.1s	1344	Epoch  1/20 | Batch   50/63 | Loss: -0.0619 | Real: -0.4569 | Fake: -0.3950
+3330.4s	1345	Epoch  1/20 | Batch   60/63 | Loss: -0.0788 | Real: -0.4618 | Fake: -0.3829
+3330.9s	1346	Epoch  1/20 | Batch   63/63 | Loss: -0.0672 | Real: -0.4655 | Fake: -0.3984
+3330.9s	1347	✔ Epoch 1 complete | Avg Loss: -0.0380 | Avg Real: -0.4462 | Avg Fake: -0.4082
+3330.9s	1348	
+3333.3s	1349	Epoch  2/20 | Batch   10/63 | Loss: -0.1113 | Real: -0.4730 | Fake: -0.3617
+3335.5s	1350	Epoch  2/20 | Batch   20/63 | Loss: -0.1125 | Real: -0.4797 | Fake: -0.3671
+3337.8s	1351	Epoch  2/20 | Batch   30/63 | Loss: -0.0924 | Real: -0.4880 | Fake: -0.3955
+3340.0s	1352	Epoch  2/20 | Batch   40/63 | Loss: -0.0765 | Real: -0.4921 | Fake: -0.4155
+3342.2s	1353	Epoch  2/20 | Batch   50/63 | Loss: -0.0941 | Real: -0.4906 | Fake: -0.3964
+3344.5s	1354	Epoch  2/20 | Batch   60/63 | Loss: -0.1516 | Real: -0.4943 | Fake: -0.3427
+3345.1s	1355	Epoch  2/20 | Batch   63/63 | Loss: -0.1972 | Real: -0.4978 | Fake: -0.3006
+3345.1s	1356	✔ Epoch 2 complete | Avg Loss: -0.1143 | Avg Real: -0.4851 | Avg Fake: -0.3708
+3345.1s	1357	
+3347.3s	1358	Epoch  3/20 | Batch   10/63 | Loss: -0.1102 | Real: -0.4786 | Fake: -0.3684
+3349.6s	1359	Epoch  3/20 | Batch   20/63 | Loss: -0.2136 | Real: -0.4684 | Fake: -0.2548
+3351.8s	1360	Epoch  3/20 | Batch   30/63 | Loss: -0.2443 | Real: -0.5010 | Fake: -0.2568
+3354.2s	1361	Epoch  3/20 | Batch   40/63 | Loss: -0.2701 | Real: -0.4970 | Fake: -0.2269
+3356.4s	1362	Epoch  3/20 | Batch   50/63 | Loss: -0.1437 | Real: -0.4998 | Fake: -0.3561
+3358.6s	1363	Epoch  3/20 | Batch   60/63 | Loss: -0.1829 | Real: -0.4892 | Fake: -0.3064
+3359.1s	1364	Epoch  3/20 | Batch   63/63 | Loss: -0.3222 | Real: -0.4909 | Fake: -0.1687
+3359.1s	1365	✔ Epoch 3 complete | Avg Loss: -0.1884 | Avg Real: -0.4899 | Avg Fake: -0.3015
+3359.1s	1366	
+3361.4s	1367	Epoch  4/20 | Batch   10/63 | Loss: -0.3326 | Real: -0.5032 | Fake: -0.1706
+3363.7s	1368	Epoch  4/20 | Batch   20/63 | Loss: -0.2701 | Real: -0.4936 | Fake: -0.2235
+3365.9s	1369	Epoch  4/20 | Batch   30/63 | Loss: -0.1920 | Real: -0.4878 | Fake: -0.2959
+3368.1s	1370	Epoch  4/20 | Batch   40/63 | Loss: -0.4072 | Real: -0.4839 | Fake: -0.0767
+3370.4s	1371	Epoch  4/20 | Batch   50/63 | Loss: -0.3817 | Real: -0.4594 | Fake: -0.0778
+3372.7s	1372	Epoch  4/20 | Batch   60/63 | Loss: -0.2201 | Real: -0.4365 | Fake: -0.2164
+3373.3s	1373	Epoch  4/20 | Batch   63/63 | Loss: -0.2945 | Real: -0.4334 | Fake: -0.1389
+3373.3s	1374	✔ Epoch 4 complete | Avg Loss: -0.3123 | Avg Real: -0.4793 | Avg Fake: -0.1670
+3373.3s	1375	
+3375.5s	1376	Epoch  5/20 | Batch   10/63 | Loss: -0.3189 | Real: -0.4813 | Fake: -0.1624
+3377.7s	1377	Epoch  5/20 | Batch   20/63 | Loss: -0.5236 | Real: -0.4396 | Fake: 0.0841
+3380.0s	1378	Epoch  5/20 | Batch   30/63 | Loss: -0.3577 | Real: -0.4747 | Fake: -0.1170
+3382.3s	1379	Epoch  5/20 | Batch   40/63 | Loss: -0.4374 | Real: -0.4516 | Fake: -0.0143
+3384.7s	1380	Epoch  5/20 | Batch   50/63 | Loss: -0.7431 | Real: -0.4684 | Fake: 0.2748
+3386.9s	1381	Epoch  5/20 | Batch   60/63 | Loss: -0.6472 | Real: -0.4730 | Fake: 0.1742
+3387.5s	1382	Epoch  5/20 | Batch   63/63 | Loss: -0.7797 | Real: -0.4625 | Fake: 0.3172
+3387.5s	1383	✔ Epoch 5 complete | Avg Loss: -0.5201 | Avg Real: -0.4603 | Avg Fake: 0.0598
+3387.5s	1384	
+3389.7s	1385	Epoch  6/20 | Batch   10/63 | Loss: -0.7174 | Real: -0.4455 | Fake: 0.2719
+3392.0s	1386	Epoch  6/20 | Batch   20/63 | Loss: -0.8004 | Real: -0.4555 | Fake: 0.3450
+3394.3s	1387	Epoch  6/20 | Batch   30/63 | Loss: -0.6261 | Real: -0.4542 | Fake: 0.1719
+3396.5s	1388	Epoch  6/20 | Batch   40/63 | Loss: -0.6993 | Real: -0.4894 | Fake: 0.2099
+3398.8s	1389	Epoch  6/20 | Batch   50/63 | Loss: -1.0185 | Real: -0.4670 | Fake: 0.5515
+3401.0s	1390	Epoch  6/20 | Batch   60/63 | Loss: -1.1476 | Real: -0.4846 | Fake: 0.6630
+3401.6s	1391	Epoch  6/20 | Batch   63/63 | Loss: -1.0373 | Real: -0.4991 | Fake: 0.5382
+3401.6s	1392	✔ Epoch 6 complete | Avg Loss: -0.8253 | Avg Real: -0.4661 | Avg Fake: 0.3592
+3401.6s	1393	
+3404.0s	1394	Epoch  7/20 | Batch   10/63 | Loss: -0.9453 | Real: -0.5272 | Fake: 0.4181
+3406.2s	1395	Epoch  7/20 | Batch   20/63 | Loss: -0.8516 | Real: -0.5707 | Fake: 0.2809
+3408.5s	1396	Epoch  7/20 | Batch   30/63 | Loss: -1.4108 | Real: -0.6028 | Fake: 0.8080
+3410.8s	1397	Epoch  7/20 | Batch   40/63 | Loss: -1.5476 | Real: -0.6183 | Fake: 0.9294
+3413.1s	1398	Epoch  7/20 | Batch   50/63 | Loss: -1.3804 | Real: -0.6270 | Fake: 0.7534
+3415.5s	1399	Epoch  7/20 | Batch   60/63 | Loss: -1.5758 | Real: -0.6324 | Fake: 0.9434
+3416.0s	1400	Epoch  7/20 | Batch   63/63 | Loss: -1.1836 | Real: -0.6347 | Fake: 0.5488
+3416.0s	1401	✔ Epoch 7 complete | Avg Loss: -1.2938 | Avg Real: -0.5888 | Avg Fake: 0.7050
+3416.0s	1402	
+3418.2s	1403	Epoch  8/20 | Batch   10/63 | Loss: -1.5374 | Real: -0.6711 | Fake: 0.8663
+3420.5s	1404	Epoch  8/20 | Batch   20/63 | Loss: -1.7430 | Real: -0.6630 | Fake: 1.0799
+3422.7s	1405	Epoch  8/20 | Batch   30/63 | Loss: -1.5630 | Real: -0.7169 | Fake: 0.8461
+3425.0s	1406	Epoch  8/20 | Batch   40/63 | Loss: -1.2886 | Real: -0.7535 | Fake: 0.5351
+3427.2s	1407	Epoch  8/20 | Batch   50/63 | Loss: -1.8517 | Real: -0.7479 | Fake: 1.1038
+3429.5s	1408	Epoch  8/20 | Batch   60/63 | Loss: -1.5726 | Real: -0.8184 | Fake: 0.7542
+3430.0s	1409	Epoch  8/20 | Batch   63/63 | Loss: -1.6621 | Real: -0.8050 | Fake: 0.8571
+3430.0s	1410	✔ Epoch 8 complete | Avg Loss: -1.6304 | Avg Real: -0.7199 | Avg Fake: 0.9105
+3430.0s	1411	
+3432.3s	1412	Epoch  9/20 | Batch   10/63 | Loss: -1.8249 | Real: -0.8300 | Fake: 0.9948
+3434.6s	1413	Epoch  9/20 | Batch   20/63 | Loss: -1.9638 | Real: -0.8623 | Fake: 1.1015
+3436.9s	1414	Epoch  9/20 | Batch   30/63 | Loss: -2.0397 | Real: -0.8971 | Fake: 1.1426
+3439.1s	1415	Epoch  9/20 | Batch   40/63 | Loss: -2.0794 | Real: -0.9151 | Fake: 1.1644
+3441.4s	1416	Epoch  9/20 | Batch   50/63 | Loss: -1.9555 | Real: -0.9269 | Fake: 1.0285
+3443.7s	1417	Epoch  9/20 | Batch   60/63 | Loss: -2.2060 | Real: -0.9588 | Fake: 1.2472
+3444.3s	1418	Epoch  9/20 | Batch   63/63 | Loss: -2.2200 | Real: -0.9944 | Fake: 1.2256
+3444.3s	1419	✔ Epoch 9 complete | Avg Loss: -1.9399 | Avg Real: -0.8827 | Avg Fake: 1.0572
+3444.3s	1420	
+3446.6s	1421	Epoch 10/20 | Batch   10/63 | Loss: -2.1864 | Real: -0.9772 | Fake: 1.2092
+3448.8s	1422	Epoch 10/20 | Batch   20/63 | Loss: -2.1892 | Real: -1.0240 | Fake: 1.1652
+3451.1s	1423	Epoch 10/20 | Batch   30/63 | Loss: -2.2609 | Real: -1.0218 | Fake: 1.2391
+3453.4s	1424	Epoch 10/20 | Batch   40/63 | Loss: -1.8262 | Real: -1.0699 | Fake: 0.7563
+3455.6s	1425	Epoch 10/20 | Batch   50/63 | Loss: -2.2822 | Real: -1.0822 | Fake: 1.2000
+3457.9s	1426	Epoch 10/20 | Batch   60/63 | Loss: -2.3322 | Real: -1.0758 | Fake: 1.2564
+3458.4s	1427	Epoch 10/20 | Batch   63/63 | Loss: -2.3533 | Real: -1.0960 | Fake: 1.2573
+3458.4s	1428	✔ Epoch 10 complete | Avg Loss: -2.1710 | Avg Real: -1.0386 | Avg Fake: 1.1323
+3458.4s	1429	
+3460.7s	1430	Epoch 11/20 | Batch   10/63 | Loss: -2.4230 | Real: -1.1361 | Fake: 1.2868
+3463.0s	1431	Epoch 11/20 | Batch   20/63 | Loss: -2.4659 | Real: -1.1787 | Fake: 1.2872
+3465.2s	1432	Epoch 11/20 | Batch   30/63 | Loss: -2.4961 | Real: -1.2147 | Fake: 1.2814
+3467.5s	1433	Epoch 11/20 | Batch   40/63 | Loss: -2.4966 | Real: -1.2336 | Fake: 1.2630
+3469.8s	1434	Epoch 11/20 | Batch   50/63 | Loss: -2.6207 | Real: -1.2790 | Fake: 1.3417
+3472.0s	1435	Epoch 11/20 | Batch   60/63 | Loss: -2.0631 | Real: -1.3213 | Fake: 0.7418
+3472.7s	1436	Epoch 11/20 | Batch   63/63 | Loss: -2.1098 | Real: -1.3077 | Fake: 0.8021
+3472.7s	1437	✔ Epoch 11 complete | Avg Loss: -2.4309 | Avg Real: -1.2160 | Avg Fake: 1.2149
+3472.7s	1438	
+3475.0s	1439	Epoch 12/20 | Batch   10/63 | Loss: -2.4744 | Real: -1.3361 | Fake: 1.1383
+3477.4s	1440	Epoch 12/20 | Batch   20/63 | Loss: -2.4490 | Real: -1.3561 | Fake: 1.0928
+3479.5s	1441	Epoch 12/20 | Batch   30/63 | Loss: -2.7657 | Real: -1.3609 | Fake: 1.4048
+3481.8s	1442	Epoch 12/20 | Batch   40/63 | Loss: -2.3639 | Real: -1.3995 | Fake: 0.9644
+3484.1s	1443	Epoch 12/20 | Batch   50/63 | Loss: -2.7026 | Real: -1.3959 | Fake: 1.3067
+3486.4s	1444	Epoch 12/20 | Batch   60/63 | Loss: -2.8576 | Real: -1.4164 | Fake: 1.4412
+3486.9s	1445	Epoch 12/20 | Batch   63/63 | Loss: -2.8944 | Real: -1.4471 | Fake: 1.4473
+3486.9s	1446	✔ Epoch 12 complete | Avg Loss: -2.6363 | Avg Real: -1.3714 | Avg Fake: 1.2649
+3486.9s	1447	
+3489.2s	1448	Epoch 13/20 | Batch   10/63 | Loss: -2.4212 | Real: -1.4304 | Fake: 0.9908
+3491.4s	1449	Epoch 13/20 | Batch   20/63 | Loss: -2.8243 | Real: -1.4659 | Fake: 1.3584
+3493.7s	1450	Epoch 13/20 | Batch   30/63 | Loss: -2.9084 | Real: -1.4775 | Fake: 1.4309
+3496.0s	1451	Epoch 13/20 | Batch   40/63 | Loss: -2.8970 | Real: -1.5215 | Fake: 1.3755
+3498.3s	1452	Epoch 13/20 | Batch   50/63 | Loss: -2.9929 | Real: -1.5251 | Fake: 1.4678
+3500.5s	1453	Epoch 13/20 | Batch   60/63 | Loss: -2.9614 | Real: -1.5569 | Fake: 1.4045
+3501.1s	1454	Epoch 13/20 | Batch   63/63 | Loss: -3.0527 | Real: -1.5578 | Fake: 1.4949
+3501.1s	1455	✔ Epoch 13 complete | Avg Loss: -2.8778 | Avg Real: -1.4942 | Avg Fake: 1.3836
+3501.1s	1456	
+3503.4s	1457	Epoch 14/20 | Batch   10/63 | Loss: -2.9891 | Real: -1.5736 | Fake: 1.4155
+3505.6s	1458	Epoch 14/20 | Batch   20/63 | Loss: -3.0084 | Real: -1.5906 | Fake: 1.4177
+3508.0s	1459	Epoch 14/20 | Batch   30/63 | Loss: -3.0240 | Real: -1.6061 | Fake: 1.4179
+3510.2s	1460	Epoch 14/20 | Batch   40/63 | Loss: -3.0703 | Real: -1.6166 | Fake: 1.4537
+3512.5s	1461	Epoch 14/20 | Batch   50/63 | Loss: -3.1318 | Real: -1.6406 | Fake: 1.4912
+3514.8s	1462	Epoch 14/20 | Batch   60/63 | Loss: -3.0993 | Real: -1.6646 | Fake: 1.4347
+3515.3s	1463	Epoch 14/20 | Batch   63/63 | Loss: -3.2108 | Real: -1.6684 | Fake: 1.5424
+3515.3s	1464	✔ Epoch 14 complete | Avg Loss: -3.0470 | Avg Real: -1.6095 | Avg Fake: 1.4375
+3515.3s	1465	
+3517.6s	1466	Epoch 15/20 | Batch   10/63 | Loss: -3.1407 | Real: -1.6788 | Fake: 1.4619
+3519.8s	1467	Epoch 15/20 | Batch   20/63 | Loss: -3.1015 | Real: -1.6980 | Fake: 1.4034
+3522.1s	1468	Epoch 15/20 | Batch   30/63 | Loss: -3.1900 | Real: -1.6957 | Fake: 1.4943
+3524.4s	1469	Epoch 15/20 | Batch   40/63 | Loss: -3.2819 | Real: -1.7264 | Fake: 1.5555
+3526.6s	1470	Epoch 15/20 | Batch   50/63 | Loss: -3.2051 | Real: -1.7462 | Fake: 1.4589
+3528.8s	1471	Epoch 15/20 | Batch   60/63 | Loss: -3.3019 | Real: -1.7601 | Fake: 1.5417
+3529.4s	1472	Epoch 15/20 | Batch   63/63 | Loss: -2.4896 | Real: -1.7530 | Fake: 0.7366
+3529.4s	1473	✔ Epoch 15 complete | Avg Loss: -3.1808 | Avg Real: -1.7144 | Avg Fake: 1.4664
+3529.4s	1474	
+3531.7s	1475	Epoch 16/20 | Batch   10/63 | Loss: -3.2640 | Real: -1.7539 | Fake: 1.5101
+3534.0s	1476	Epoch 16/20 | Batch   20/63 | Loss: -3.2752 | Real: -1.7692 | Fake: 1.5060
+3536.3s	1477	Epoch 16/20 | Batch   30/63 | Loss: -3.3194 | Real: -1.7916 | Fake: 1.5279
+3538.6s	1478	Epoch 16/20 | Batch   40/63 | Loss: -3.3565 | Real: -1.7941 | Fake: 1.5624
+3540.9s	1479	Epoch 16/20 | Batch   50/63 | Loss: -3.3957 | Real: -1.8138 | Fake: 1.5819
+3543.2s	1480	Epoch 16/20 | Batch   60/63 | Loss: -3.3949 | Real: -1.8102 | Fake: 1.5847
+3543.8s	1481	Epoch 16/20 | Batch   63/63 | Loss: -3.3216 | Real: -1.8292 | Fake: 1.4924
+3543.8s	1482	✔ Epoch 16 complete | Avg Loss: -3.2587 | Avg Real: -1.7853 | Avg Fake: 1.4733
+3543.8s	1483	
+3546.0s	1484	Epoch 17/20 | Batch   10/63 | Loss: -3.3582 | Real: -1.8227 | Fake: 1.5355
+3548.3s	1485	Epoch 17/20 | Batch   20/63 | Loss: -3.2189 | Real: -1.8259 | Fake: 1.3930
+3550.5s	1486	Epoch 17/20 | Batch   30/63 | Loss: -3.3615 | Real: -1.8284 | Fake: 1.5332
+3552.8s	1487	Epoch 17/20 | Batch   40/63 | Loss: -3.3949 | Real: -1.8329 | Fake: 1.5620
+3555.1s	1488	Epoch 17/20 | Batch   50/63 | Loss: -3.4054 | Real: -1.8654 | Fake: 1.5400
+3557.3s	1489	Epoch 17/20 | Batch   60/63 | Loss: -3.4810 | Real: -1.8657 | Fake: 1.6153
+3557.9s	1490	Epoch 17/20 | Batch   63/63 | Loss: -3.4752 | Real: -1.8887 | Fake: 1.5866
+3557.9s	1491	✔ Epoch 17 complete | Avg Loss: -3.3515 | Avg Real: -1.8379 | Avg Fake: 1.5136
+3557.9s	1492	
+3560.2s	1493	Epoch 18/20 | Batch   10/63 | Loss: -3.4887 | Real: -1.8761 | Fake: 1.6126
+3562.5s	1494	Epoch 18/20 | Batch   20/63 | Loss: -3.4363 | Real: -1.9020 | Fake: 1.5344
+3564.8s	1495	Epoch 18/20 | Batch   30/63 | Loss: -3.5042 | Real: -1.9078 | Fake: 1.5965
+3567.1s	1496	Epoch 18/20 | Batch   40/63 | Loss: -3.5181 | Real: -1.9178 | Fake: 1.6003
+3569.5s	1497	Epoch 18/20 | Batch   50/63 | Loss: -3.4847 | Real: -1.9218 | Fake: 1.5629
+3571.7s	1498	Epoch 18/20 | Batch   60/63 | Loss: -3.5394 | Real: -1.9353 | Fake: 1.6040
+3572.3s	1499	Epoch 18/20 | Batch   63/63 | Loss: -3.5236 | Real: -1.9396 | Fake: 1.5840
+3572.3s	1500	✔ Epoch 18 complete | Avg Loss: -3.4580 | Avg Real: -1.9059 | Avg Fake: 1.5521
+3572.3s	1501	
+3574.6s	1502	Epoch 19/20 | Batch   10/63 | Loss: -3.5004 | Real: -1.9354 | Fake: 1.5650
+3576.9s	1503	Epoch 19/20 | Batch   20/63 | Loss: -3.5774 | Real: -1.9379 | Fake: 1.6395
+3579.1s	1504	Epoch 19/20 | Batch   30/63 | Loss: -3.4510 | Real: -1.9636 | Fake: 1.4874
+3581.4s	1505	Epoch 19/20 | Batch   40/63 | Loss: -3.5665 | Real: -1.9415 | Fake: 1.6250
+3583.7s	1506	Epoch 19/20 | Batch   50/63 | Loss: -3.6248 | Real: -1.9728 | Fake: 1.6520
+3585.9s	1507	Epoch 19/20 | Batch   60/63 | Loss: -3.5925 | Real: -1.9669 | Fake: 1.6257
+3586.5s	1508	Epoch 19/20 | Batch   63/63 | Loss: -3.6229 | Real: -1.9901 | Fake: 1.6328
+3586.5s	1509	✔ Epoch 19 complete | Avg Loss: -3.5281 | Avg Real: -1.9527 | Avg Fake: 1.5754
+3586.5s	1510	
+3588.8s	1511	Epoch 20/20 | Batch   10/63 | Loss: -3.5944 | Real: -1.9925 | Fake: 1.6019
+3591.0s	1512	Epoch 20/20 | Batch   20/63 | Loss: -3.6240 | Real: -1.9829 | Fake: 1.6412
+3593.4s	1513	Epoch 20/20 | Batch   30/63 | Loss: -3.6031 | Real: -2.0153 | Fake: 1.5878
+3595.7s	1514	Epoch 20/20 | Batch   40/63 | Loss: -3.5907 | Real: -2.0136 | Fake: 1.5771
+3597.9s	1515	Epoch 20/20 | Batch   50/63 | Loss: -3.6493 | Real: -2.0234 | Fake: 1.6259
+3600.3s	1516	Epoch 20/20 | Batch   60/63 | Loss: -3.6808 | Real: -2.0361 | Fake: 1.6447
+3601.0s	1517	Epoch 20/20 | Batch   63/63 | Loss: -3.6381 | Real: -1.9950 | Fake: 1.6431
+3601.0s	1518	✔ Epoch 20 complete | Avg Loss: -3.6096 | Avg Real: -2.0066 | Avg Fake: 1.6030
+3601.0s	1519	
+3601.0s	1520	Model saved to /kaggle/working//plots/eth_addresses/model.pt
+3602.8s	1521	
+3602.8s	1522	Evaluating on test set...
+3612.4s	1523	Sample 0: Predicted y = 58757547f6f6c6776c95af5caf7af5a985ca9a897f976dafa9a79b797af7f79b
+3621.0s	1524	Sample 1: Predicted y = 96173797da1fa97678a9a9af9797859a9a9a79767da9a9afb767783a8a9b7bf7
+3629.5s	1525	Sample 2: Predicted y = 85855f4858967857858589a9878d7d585a9a78568db58eaf8588784b978579b5
+3638.3s	1526	Sample 3: Predicted y = 1785853a5858797858a9a58597678e9a9a58767af6a9a9b71567af3a929b7178
+3646.9s	1527	Sample 4: Predicted y = 978585485858797858b685858a8586585858af78588585858787855858585858
+3655.5s	1528	Sample 5: Predicted y = 1567659a9a9a717671a9a9af1767853a9a9a56785da9afaf1785783a9a9b7b58
+3664.2s	1529	Sample 6: Predicted y = b5ad854679767a9a9ac6776758a9afa78573858af5585878785858a58585b585
+3673.1s	1530	Sample 7: Predicted y = b5e5654b9aea787171aea9af1767853a9a9a767678a9afaf1717853a9af77b5b
+3681.7s	1531	Sample 8: Predicted y = 97679b479af7f673c578a978a76d68bf9a85767af685ad7887af5858578558f5
+3690.6s	1532	Sample 9: Predicted y = 158d75415ac67a517897a9a5a9a585767a589a9858976785a9a585b978587afb
+3699.3s	1533	Sample 10: Predicted y = 56538548af5f57ad6d8a9adf86787158a985a767858a9a58717858a9a585b5b5
+3708.0s	1534	Sample 11: Predicted y = 15e87141978577f785985858585858858586878585785868787858b5cb97b9b7
+3716.6s	1535	Sample 12: Predicted y = 5385854479afaf6878853af59ad78548af58a7a8788a85857bf785ae7858bf58
+3725.3s	1536	Sample 13: Predicted y = 85d68576977853af5fa976859af785979858af7858798587f785c63c585b7858
+3733.8s	1537	Sample 14: Predicted y = 95d685f79778a3af5f5879af9a9785858a9aa9767d58a9a997678d4b9a5f7e7b
+3742.4s	1538	Sample 15: Predicted y = 9785759ae8a176773aa9aa971785af3a787978586785858c8585785858f5585f
+3750.9s	1539	Sample 16: Predicted y = 1587159a585a7a585da9a5af67a5783afaf5778786af5858785858b58585b585
+3759.6s	1540	Sample 17: Predicted y = 1578573a9a6f578587afa93a78785f85faf6878585585faf787878a5cbf5b9b7
+3768.3s	1541	Sample 18: Predicted y = b7858548585878585815858585858558785858585885858585858f5858595858
+3777.0s	1542	Sample 19: Predicted y = 1756754f69c667857d9afaaf78573aa9afa56778af3af5877685cbaf785bbf58
+3779.3s	1543	
+3779.3s	1544	Results for eth_addresses:
+3779.3s	1545	  Avg Real Energy: -2.2535 ± 0.3180
+3779.3s	1546	  Avg Random Energy: -0.6851 ± 0.3499
+3779.3s	1547	  Avg Filled Energy: -3.6231 ± 0.0447
+3779.3s	1548	  Avg Recovery Accuracy: 6.64%
+3779.3s	1549	Plots and metrics saved to /kaggle/working//plots/eth_addresses
+3779.3s	1550	
+3779.3s	1551	============================================================
+3779.3s	1552	Processing dataset: ltc_addresses
+3779.3s	1553	============================================================
+3779.8s	1554	Vocabulary size: 36
+3779.8s	1555	Grid size: 12×12
+3779.8s	1556	Training samples: 8000
+3779.8s	1557	Test samples: 2000
+3779.8s	1558	
+3779.8s	1559	Training...
+3782.1s	1560	Epoch  1/20 | Batch   10/63 | Loss: -0.0119 | Real: -0.4452 | Fake: -0.4333
+3784.4s	1561	Epoch  1/20 | Batch   20/63 | Loss: -0.0213 | Real: -0.4494 | Fake: -0.4281
+3786.7s	1562	Epoch  1/20 | Batch   30/63 | Loss: -0.0455 | Real: -0.4605 | Fake: -0.4150
+3789.0s	1563	Epoch  1/20 | Batch   40/63 | Loss: -0.0431 | Real: -0.4726 | Fake: -0.4295
+3791.3s	1564	Epoch  1/20 | Batch   50/63 | Loss: -0.0093 | Real: -0.4876 | Fake: -0.4782
+3793.6s	1565	Epoch  1/20 | Batch   60/63 | Loss: -0.0388 | Real: -0.4967 | Fake: -0.4578
+3794.2s	1566	Epoch  1/20 | Batch   63/63 | Loss: -0.0377 | Real: -0.4961 | Fake: -0.4584
+3794.2s	1567	✔ Epoch 1 complete | Avg Loss: -0.0362 | Avg Real: -0.4653 | Avg Fake: -0.4291
+3794.2s	1568	
+3796.5s	1569	Epoch  2/20 | Batch   10/63 | Loss: -0.0882 | Real: -0.5101 | Fake: -0.4219
+3798.8s	1570	Epoch  2/20 | Batch   20/63 | Loss: -0.0368 | Real: -0.5217 | Fake: -0.4850
+3801.1s	1571	Epoch  2/20 | Batch   30/63 | Loss: -0.0976 | Real: -0.5292 | Fake: -0.4316
+3803.4s	1572	Epoch  2/20 | Batch   40/63 | Loss: -0.1237 | Real: -0.5389 | Fake: -0.4152
+3805.6s	1573	Epoch  2/20 | Batch   50/63 | Loss: 0.0026 | Real: -0.5609 | Fake: -0.5635
+3808.0s	1574	Epoch  2/20 | Batch   60/63 | Loss: -0.0678 | Real: -0.5611 | Fake: -0.4934
+3808.5s	1575	Epoch  2/20 | Batch   63/63 | Loss: -0.1176 | Real: -0.5697 | Fake: -0.4521
+3808.5s	1576	✔ Epoch 2 complete | Avg Loss: -0.0982 | Avg Real: -0.5344 | Avg Fake: -0.4362
+3808.5s	1577	
+3810.8s	1578	Epoch  3/20 | Batch   10/63 | Loss: -0.0507 | Real: -0.5682 | Fake: -0.5175
+3813.1s	1579	Epoch  3/20 | Batch   20/63 | Loss: -0.0353 | Real: -0.5827 | Fake: -0.5474
+3815.4s	1580	Epoch  3/20 | Batch   30/63 | Loss: -0.1827 | Real: -0.5973 | Fake: -0.4146
+3817.6s	1581	Epoch  3/20 | Batch   40/63 | Loss: -0.1902 | Real: -0.6112 | Fake: -0.4210
+3819.9s	1582	Epoch  3/20 | Batch   50/63 | Loss: -0.3087 | Real: -0.6234 | Fake: -0.3147
+3822.2s	1583	Epoch  3/20 | Batch   60/63 | Loss: -0.3647 | Real: -0.6423 | Fake: -0.2776
+3822.8s	1584	Epoch  3/20 | Batch   63/63 | Loss: 0.0010 | Real: -0.6575 | Fake: -0.6585
+3822.8s	1585	✔ Epoch 3 complete | Avg Loss: -0.1963 | Avg Real: -0.5999 | Avg Fake: -0.4035
+3822.8s	1586	
+3825.1s	1587	Epoch  4/20 | Batch   10/63 | Loss: -0.3140 | Real: -0.6630 | Fake: -0.3490
+3827.4s	1588	Epoch  4/20 | Batch   20/63 | Loss: -0.0040 | Real: -0.6510 | Fake: -0.6470
+3829.7s	1589	Epoch  4/20 | Batch   30/63 | Loss: -0.4316 | Real: -0.6796 | Fake: -0.2479
+3831.9s	1590	Epoch  4/20 | Batch   40/63 | Loss: -0.4486 | Real: -0.7024 | Fake: -0.2538
+3834.2s	1591	Epoch  4/20 | Batch   50/63 | Loss: -0.0780 | Real: -0.6981 | Fake: -0.6200
+3836.5s	1592	Epoch  4/20 | Batch   60/63 | Loss: -0.5079 | Real: -0.7235 | Fake: -0.2156
+3837.1s	1593	Epoch  4/20 | Batch   63/63 | Loss: -0.4833 | Real: -0.7395 | Fake: -0.2562
+3837.1s	1594	✔ Epoch 4 complete | Avg Loss: -0.2865 | Avg Real: -0.6821 | Avg Fake: -0.3956
+3837.1s	1595	
+3839.5s	1596	Epoch  5/20 | Batch   10/63 | Loss: -0.4424 | Real: -0.7848 | Fake: -0.3424
+3841.7s	1597	Epoch  5/20 | Batch   20/63 | Loss: -0.0389 | Real: -0.8389 | Fake: -0.7999
+3844.0s	1598	Epoch  5/20 | Batch   30/63 | Loss: -0.7471 | Real: -0.8780 | Fake: -0.1309
+3846.3s	1599	Epoch  5/20 | Batch   40/63 | Loss: -0.6060 | Real: -0.9380 | Fake: -0.3320
+3848.6s	1600	Epoch  5/20 | Batch   50/63 | Loss: -0.9014 | Real: -0.9847 | Fake: -0.0832
+3850.9s	1601	Epoch  5/20 | Batch   60/63 | Loss: 0.0395 | Real: -1.0333 | Fake: -1.0728
+3851.5s	1602	Epoch  5/20 | Batch   63/63 | Loss: -0.9184 | Real: -1.0316 | Fake: -0.1132
+3851.5s	1603	✔ Epoch 5 complete | Avg Loss: -0.5128 | Avg Real: -0.8956 | Avg Fake: -0.3829
+3851.5s	1604	
+3853.8s	1605	Epoch  6/20 | Batch   10/63 | Loss: -0.5384 | Real: -1.0353 | Fake: -0.4969
+3856.1s	1606	Epoch  6/20 | Batch   20/63 | Loss: -1.0789 | Real: -1.1072 | Fake: -0.0283
+3858.4s	1607	Epoch  6/20 | Batch   30/63 | Loss: 0.0053 | Real: -1.1602 | Fake: -1.1655
+3860.6s	1608	Epoch  6/20 | Batch   40/63 | Loss: -1.2276 | Real: -1.2398 | Fake: -0.0122
+3863.0s	1609	Epoch  6/20 | Batch   50/63 | Loss: -1.2066 | Real: -1.2512 | Fake: -0.0446
+3865.2s	1610	Epoch  6/20 | Batch   60/63 | Loss: -1.2981 | Real: -1.3146 | Fake: -0.0165
+3865.8s	1611	Epoch  6/20 | Batch   63/63 | Loss: -0.1048 | Real: -1.3248 | Fake: -1.2200
+3865.8s	1612	✔ Epoch 6 complete | Avg Loss: -0.8423 | Avg Real: -1.1733 | Avg Fake: -0.3310
+3865.8s	1613	
+3868.1s	1614	Epoch  7/20 | Batch   10/63 | Loss: -0.1663 | Real: -1.3435 | Fake: -1.1771
+3870.4s	1615	Epoch  7/20 | Batch   20/63 | Loss: -1.3679 | Real: -1.3455 | Fake: 0.0224
+3872.7s	1616	Epoch  7/20 | Batch   30/63 | Loss: -0.0374 | Real: -1.4013 | Fake: -1.3639
+3874.9s	1617	Epoch  7/20 | Batch   40/63 | Loss: -1.4797 | Real: -1.4305 | Fake: 0.0491
+3877.2s	1618	Epoch  7/20 | Batch   50/63 | Loss: -0.2404 | Real: -1.4725 | Fake: -1.2321
+3879.5s	1619	Epoch  7/20 | Batch   60/63 | Loss: -1.4627 | Real: -1.4603 | Fake: 0.0024
+3880.1s	1620	Epoch  7/20 | Batch   63/63 | Loss: -1.5424 | Real: -1.4888 | Fake: 0.0536
+3880.1s	1621	✔ Epoch 7 complete | Avg Loss: -0.8711 | Avg Real: -1.3988 | Avg Fake: -0.5277
+3880.1s	1622	
+3882.4s	1623	Epoch  8/20 | Batch   10/63 | Loss: -1.5927 | Real: -1.5511 | Fake: 0.0415
+3884.7s	1624	Epoch  8/20 | Batch   20/63 | Loss: -1.1562 | Real: -1.5672 | Fake: -0.4110
+3887.0s	1625	Epoch  8/20 | Batch   30/63 | Loss: -0.4094 | Real: -1.5802 | Fake: -1.1708
+3889.3s	1626	Epoch  8/20 | Batch   40/63 | Loss: -1.3677 | Real: -1.6051 | Fake: -0.2374
+3891.6s	1627	Epoch  8/20 | Batch   50/63 | Loss: -1.6855 | Real: -1.6195 | Fake: 0.0660
+3893.9s	1628	Epoch  8/20 | Batch   60/63 | Loss: -1.6969 | Real: -1.6742 | Fake: 0.0228
+3894.5s	1629	Epoch  8/20 | Batch   63/63 | Loss: -0.7703 | Real: -1.6563 | Fake: -0.8860
+3894.5s	1630	✔ Epoch 8 complete | Avg Loss: -1.0647 | Avg Real: -1.5878 | Avg Fake: -0.5230
+3894.5s	1631	
+3896.8s	1632	Epoch  9/20 | Batch   10/63 | Loss: -0.5561 | Real: -1.6714 | Fake: -1.1153
+3899.1s	1633	Epoch  9/20 | Batch   20/63 | Loss: -0.1842 | Real: -1.6895 | Fake: -1.5053
+3901.5s	1634	Epoch  9/20 | Batch   30/63 | Loss: -1.8442 | Real: -1.7111 | Fake: 0.1331
+3903.8s	1635	Epoch  9/20 | Batch   40/63 | Loss: -1.8922 | Real: -1.7438 | Fake: 0.1484
+3906.1s	1636	Epoch  9/20 | Batch   50/63 | Loss: -0.9282 | Real: -1.7916 | Fake: -0.8634
+3908.4s	1637	Epoch  9/20 | Batch   60/63 | Loss: -1.9946 | Real: -1.8279 | Fake: 0.1666
+3909.0s	1638	Epoch  9/20 | Batch   63/63 | Loss: -1.9082 | Real: -1.8450 | Fake: 0.0632
+3909.0s	1639	✔ Epoch 9 complete | Avg Loss: -1.3473 | Avg Real: -1.7321 | Avg Fake: -0.3848
+3909.0s	1640	
+3911.2s	1641	Epoch 10/20 | Batch   10/63 | Loss: -0.2073 | Real: -1.8734 | Fake: -1.6661
+3913.6s	1642	Epoch 10/20 | Batch   20/63 | Loss: -2.0420 | Real: -1.8798 | Fake: 0.1622
+3915.9s	1643	Epoch 10/20 | Batch   30/63 | Loss: -0.7333 | Real: -1.8911 | Fake: -1.1577
+3918.1s	1644	Epoch 10/20 | Batch   40/63 | Loss: -2.1174 | Real: -1.9021 | Fake: 0.2152
+3920.4s	1645	Epoch 10/20 | Batch   50/63 | Loss: -2.0441 | Real: -1.9158 | Fake: 0.1283
+3922.8s	1646	Epoch 10/20 | Batch   60/63 | Loss: -1.3977 | Real: -1.8923 | Fake: -0.4946
+3923.3s	1647	Epoch 10/20 | Batch   63/63 | Loss: -2.1268 | Real: -1.9137 | Fake: 0.2131
+3923.3s	1648	✔ Epoch 10 complete | Avg Loss: -1.4168 | Avg Real: -1.8832 | Avg Fake: -0.4664
+3923.3s	1649	
+3925.6s	1650	Epoch 11/20 | Batch   10/63 | Loss: -0.4148 | Real: -1.9328 | Fake: -1.5180
+3927.9s	1651	Epoch 11/20 | Batch   20/63 | Loss: -2.2116 | Real: -1.9667 | Fake: 0.2449
+3930.2s	1652	Epoch 11/20 | Batch   30/63 | Loss: -1.1411 | Real: -1.9962 | Fake: -0.8551
+3932.6s	1653	Epoch 11/20 | Batch   40/63 | Loss: -2.3177 | Real: -2.0039 | Fake: 0.3138
+3934.9s	1654	Epoch 11/20 | Batch   50/63 | Loss: -2.2148 | Real: -1.9584 | Fake: 0.2565
+3937.1s	1655	Epoch 11/20 | Batch   60/63 | Loss: -0.9058 | Real: -1.9634 | Fake: -1.0576
+3937.7s	1656	Epoch 11/20 | Batch   63/63 | Loss: -1.6232 | Real: -1.9761 | Fake: -0.3528
+3937.7s	1657	✔ Epoch 11 complete | Avg Loss: -1.6507 | Avg Real: -1.9679 | Avg Fake: -0.3172
+3937.7s	1658	
+3940.0s	1659	Epoch 12/20 | Batch   10/63 | Loss: -1.1191 | Real: -1.9817 | Fake: -0.8626
+3942.3s	1660	Epoch 12/20 | Batch   20/63 | Loss: -2.1000 | Real: -1.9631 | Fake: 0.1369
+3944.6s	1661	Epoch 12/20 | Batch   30/63 | Loss: -0.7463 | Real: -1.9535 | Fake: -1.2072
+3946.8s	1662	Epoch 12/20 | Batch   40/63 | Loss: -2.3959 | Real: -1.9531 | Fake: 0.4428
+3949.1s	1663	Epoch 12/20 | Batch   50/63 | Loss: -1.4605 | Real: -1.9675 | Fake: -0.5069
+3951.3s	1664	Epoch 12/20 | Batch   60/63 | Loss: -1.4317 | Real: -1.9823 | Fake: -0.5505
+3951.9s	1665	Epoch 12/20 | Batch   63/63 | Loss: -2.4799 | Real: -1.9847 | Fake: 0.4952
+3951.9s	1666	✔ Epoch 12 complete | Avg Loss: -1.7153 | Avg Real: -1.9644 | Avg Fake: -0.2491
+3951.9s	1667	
+3954.2s	1668	Epoch 13/20 | Batch   10/63 | Loss: -2.4558 | Real: -1.9452 | Fake: 0.5106
+3956.4s	1669	Epoch 13/20 | Batch   20/63 | Loss: -0.6318 | Real: -1.9247 | Fake: -1.2929
+3958.6s	1670	Epoch 13/20 | Batch   30/63 | Loss: -1.4767 | Real: -1.9212 | Fake: -0.4445
+3960.9s	1671	Epoch 13/20 | Batch   40/63 | Loss: -2.5304 | Real: -1.9549 | Fake: 0.5756
+3963.2s	1672	Epoch 13/20 | Batch   50/63 | Loss: -0.6759 | Real: -1.9532 | Fake: -1.2773
+3965.4s	1673	Epoch 13/20 | Batch   60/63 | Loss: -2.5292 | Real: -1.9040 | Fake: 0.6252
+3966.0s	1674	Epoch 13/20 | Batch   63/63 | Loss: -0.4724 | Real: -1.8649 | Fake: -1.3924
+3966.0s	1675	✔ Epoch 13 complete | Avg Loss: -1.7104 | Avg Real: -1.9370 | Avg Fake: -0.2266
+3966.0s	1676	
+3968.2s	1677	Epoch 14/20 | Batch   10/63 | Loss: -1.2561 | Real: -1.9022 | Fake: -0.6461
+3970.5s	1678	Epoch 14/20 | Batch   20/63 | Loss: -1.6401 | Real: -1.9434 | Fake: -0.3033
+3972.8s	1679	Epoch 14/20 | Batch   30/63 | Loss: -2.6058 | Real: -1.9613 | Fake: 0.6445
+3975.0s	1680	Epoch 14/20 | Batch   40/63 | Loss: -1.9128 | Real: -1.9770 | Fake: -0.0642
+3977.2s	1681	Epoch 14/20 | Batch   50/63 | Loss: -2.7190 | Real: -1.9854 | Fake: 0.7336
+3979.4s	1682	Epoch 14/20 | Batch   60/63 | Loss: -1.8258 | Real: -1.9569 | Fake: -0.1312
+3980.0s	1683	Epoch 14/20 | Batch   63/63 | Loss: -0.7911 | Real: -1.9200 | Fake: -1.1289
+3980.0s	1684	✔ Epoch 14 complete | Avg Loss: -2.0544 | Avg Real: -1.9426 | Avg Fake: 0.1118
+3980.0s	1685	
+3982.2s	1686	Epoch 15/20 | Batch   10/63 | Loss: -2.6623 | Real: -1.9618 | Fake: 0.7005
+3984.5s	1687	Epoch 15/20 | Batch   20/63 | Loss: -2.7270 | Real: -1.9400 | Fake: 0.7870
+3986.8s	1688	Epoch 15/20 | Batch   30/63 | Loss: -0.7906 | Real: -1.8898 | Fake: -1.0992
+3989.0s	1689	Epoch 15/20 | Batch   40/63 | Loss: -2.7655 | Real: -1.9429 | Fake: 0.8226
+3991.3s	1690	Epoch 15/20 | Batch   50/63 | Loss: -2.7704 | Real: -1.9278 | Fake: 0.8426
+3993.7s	1691	Epoch 15/20 | Batch   60/63 | Loss: -0.9315 | Real: -1.9039 | Fake: -0.9724
+3994.1s	1692	Epoch 15/20 | Batch   63/63 | Loss: -1.1143 | Real: -1.8930 | Fake: -0.7787
+3994.1s	1693	✔ Epoch 15 complete | Avg Loss: -2.2535 | Avg Real: -1.9244 | Avg Fake: 0.3291
+3994.1s	1694	
+3996.4s	1695	Epoch 16/20 | Batch   10/63 | Loss: -2.8019 | Real: -1.9443 | Fake: 0.8576
+3998.6s	1696	Epoch 16/20 | Batch   20/63 | Loss: -2.8128 | Real: -1.9491 | Fake: 0.8638
+4000.9s	1697	Epoch 16/20 | Batch   30/63 | Loss: -2.8293 | Real: -1.9642 | Fake: 0.8651
+4003.2s	1698	Epoch 16/20 | Batch   40/63 | Loss: -1.1055 | Real: -1.9565 | Fake: -0.8510
+4005.4s	1699	Epoch 16/20 | Batch   50/63 | Loss: -2.3962 | Real: -1.9186 | Fake: 0.4776
+4007.6s	1700	Epoch 16/20 | Batch   60/63 | Loss: -2.8605 | Real: -1.8911 | Fake: 0.9694
+4008.2s	1701	Epoch 16/20 | Batch   63/63 | Loss: -2.3400 | Real: -1.8733 | Fake: 0.4668
+4008.2s	1702	✔ Epoch 16 complete | Avg Loss: -2.2924 | Avg Real: -1.9317 | Avg Fake: 0.3607
+4008.2s	1703	
+4010.5s	1704	Epoch 17/20 | Batch   10/63 | Loss: -2.9053 | Real: -1.8745 | Fake: 1.0307
+4012.7s	1705	Epoch 17/20 | Batch   20/63 | Loss: -2.8675 | Real: -1.8924 | Fake: 0.9752
+4015.0s	1706	Epoch 17/20 | Batch   30/63 | Loss: -2.9341 | Real: -1.8756 | Fake: 1.0585
+4017.2s	1707	Epoch 17/20 | Batch   40/63 | Loss: -2.9943 | Real: -1.9172 | Fake: 1.0771
+4019.5s	1708	Epoch 17/20 | Batch   50/63 | Loss: -2.1932 | Real: -1.9239 | Fake: 0.2693
+4021.7s	1709	Epoch 17/20 | Batch   60/63 | Loss: -3.0044 | Real: -1.8958 | Fake: 1.1085
+4022.3s	1710	Epoch 17/20 | Batch   63/63 | Loss: -2.9950 | Real: -1.8784 | Fake: 1.1166
+4022.3s	1711	✔ Epoch 17 complete | Avg Loss: -2.5015 | Avg Real: -1.8951 | Avg Fake: 0.6064
+4022.3s	1712	
+4024.7s	1713	Epoch 18/20 | Batch   10/63 | Loss: -3.0280 | Real: -1.8676 | Fake: 1.1604
+4026.9s	1714	Epoch 18/20 | Batch   20/63 | Loss: -3.0311 | Real: -1.8459 | Fake: 1.1852
+4029.2s	1715	Epoch 18/20 | Batch   30/63 | Loss: -2.8102 | Real: -1.7840 | Fake: 1.0262
+4031.4s	1716	Epoch 18/20 | Batch   40/63 | Loss: -2.8509 | Real: -1.8031 | Fake: 1.0478
+4033.8s	1717	Epoch 18/20 | Batch   50/63 | Loss: -2.1949 | Real: -1.8103 | Fake: 0.3845
+4036.0s	1718	Epoch 18/20 | Batch   60/63 | Loss: -3.0603 | Real: -1.8501 | Fake: 1.2102
+4036.5s	1719	Epoch 18/20 | Batch   63/63 | Loss: -3.0242 | Real: -1.8131 | Fake: 1.2111
+4036.5s	1720	✔ Epoch 18 complete | Avg Loss: -2.5942 | Avg Real: -1.8349 | Avg Fake: 0.7593
+4036.5s	1721	
+4038.8s	1722	Epoch 19/20 | Batch   10/63 | Loss: -3.0731 | Real: -1.8709 | Fake: 1.2022
+4041.0s	1723	Epoch 19/20 | Batch   20/63 | Loss: -2.4550 | Real: -1.9047 | Fake: 0.5503
+4043.3s	1724	Epoch 19/20 | Batch   30/63 | Loss: -3.0946 | Real: -1.9202 | Fake: 1.1744
+4045.6s	1725	Epoch 19/20 | Batch   40/63 | Loss: -3.0929 | Real: -1.8918 | Fake: 1.2011
+4047.8s	1726	Epoch 19/20 | Batch   50/63 | Loss: -1.3791 | Real: -1.9042 | Fake: -0.5251
+4050.1s	1727	Epoch 19/20 | Batch   60/63 | Loss: -2.7675 | Real: -1.9076 | Fake: 0.8598
+4050.7s	1728	Epoch 19/20 | Batch   63/63 | Loss: -3.1247 | Real: -1.9041 | Fake: 1.2206
+4050.7s	1729	✔ Epoch 19 complete | Avg Loss: -2.6812 | Avg Real: -1.8928 | Avg Fake: 0.7884
+4050.7s	1730	
+4053.0s	1731	Epoch 20/20 | Batch   10/63 | Loss: -1.5531 | Real: -1.8949 | Fake: -0.3418
+4055.3s	1732	Epoch 20/20 | Batch   20/63 | Loss: -1.6159 | Real: -1.8701 | Fake: -0.2542
+4057.6s	1733	Epoch 20/20 | Batch   30/63 | Loss: -3.0352 | Real: -1.8577 | Fake: 1.1775
+4059.8s	1734	Epoch 20/20 | Batch   40/63 | Loss: -3.1208 | Real: -1.8300 | Fake: 1.2907
+4062.1s	1735	Epoch 20/20 | Batch   50/63 | Loss: -2.9144 | Real: -1.8269 | Fake: 1.0874
+4064.4s	1736	Epoch 20/20 | Batch   60/63 | Loss: -3.1224 | Real: -1.7548 | Fake: 1.3676
+4065.0s	1737	Epoch 20/20 | Batch   63/63 | Loss: -3.0835 | Real: -1.7633 | Fake: 1.3202
+4065.0s	1738	✔ Epoch 20 complete | Avg Loss: -2.5804 | Avg Real: -1.8486 | Avg Fake: 0.7318
+4065.0s	1739	
+4065.0s	1740	Model saved to /kaggle/working//plots/ltc_addresses/model.pt
+4066.6s	1741	
+4066.6s	1742	Evaluating on test set...
+4080.6s	1743	Sample 0: Predicted y = 1b1111b1b17b1b1b11bb1b1b111b111b1b1bb11bb11b1b111111bcb1cbbbfb1f
+4093.6s	1744	Sample 1: Predicted y = 1111a8b1187b11b963b196171b907ab86c66176405b7907a7666606e072007e0
+4106.6s	1745	Sample 2: Predicted y = 23119187cc890667660a076767640a0740796e7666907d9770670a64a00a090a
+4119.4s	1746	Sample 3: Predicted y = 111111b11bb111bb11b11b11bb1b11b111b1b11b1bb1b1111111cbb1b1b1b1b1
+4132.3s	1747	Sample 4: Predicted y = 1111114b18b1118b1b1b1111b11b1bb11b11111b1bb1b1111111cbb1b1b1fb1b
+4145.0s	1748	Sample 5: Predicted y = 111181b8187811097f1b767ef6696417079866664772709697967097970a666e
+4157.9s	1749	Sample 6: Predicted y = 31113407187b6ec6572066977f707909796667647207606e642307906e0a640b
+4170.7s	1750	Sample 7: Predicted y = 6211317b187f57c32187875165957f766e7ea7074797966666727092057e17e6
+4183.5s	1751	Sample 8: Predicted y = 1111109818777c7f666e79902667576620962076705766066407a07076a06640
+4196.6s	1752	Sample 9: Predicted y = 111111b1181bb1bc81111b1bb8b1b11bb1b111bbb11b11b1b1b78cbb1f7bff7e
+4209.7s	1753	Sample 10: Predicted y = 111111fc18b7fb1881fb18751b16ea1bf727119064b1f69f189707b1870a176e
+4222.4s	1754	Sample 11: Predicted y = 111164591bb1b1b1577ffbb1ff75701776663667576097e626727097097e6663
+4235.3s	1755	Sample 12: Predicted y = b111167098b17691576207f6076a9056507546666372709487667e09070a666e
+4248.2s	1756	Sample 13: Predicted y = 111132891872b189171b66e6f19817157757976f8566627609576096e7907066
+4261.0s	1757	Sample 14: Predicted y = 11116190986707f97f66266e70705765666764970497070a7966606e707006ee
+4273.9s	1758	Sample 15: Predicted y = 1111114b98b11b91b1b111b111b1b14bbc1111b1b15b1b1bb1b1b11b8bbbf1ff
+4286.9s	1759	Sample 16: Predicted y = 111164e9889811bf57593166f7c720e6665775766e66627207570366e66e7070
+4299.7s	1760	Sample 17: Predicted y = 1111719b18e111c6b1c9b98186647c797066a757079766666e727090797e7e66
+4312.8s	1761	Sample 18: Predicted y = 111171b8987eb67b20f17207174766b7f6476475749076669667076797ee067e
+4325.7s	1762	Sample 19: Predicted y = 111168b1b170cb1fb1e1b117b111b11b1bb1b1b1b18b1bb1b1b1b1ab1b8b7fff
+4328.0s	1763	
+4328.0s	1764	Results for ltc_addresses:
+4328.0s	1765	  Avg Real Energy: -1.8744 ± 0.0698
+4328.0s	1766	  Avg Random Energy: 0.8359 ± 0.5498
+4328.0s	1767	  Avg Filled Energy: -2.6956 ± 0.0468
+4328.0s	1768	  Avg Recovery Accuracy: 5.70%
+4328.0s	1769	Plots and metrics saved to /kaggle/working//plots/ltc_addresses
+4328.0s	1770	
+4328.0s	1771	============================================================
+4328.0s	1772	Processing dataset: sol_addresses
+4328.0s	1773	============================================================
+4328.6s	1774	Vocabulary size: 61
+4328.6s	1775	Grid size: 12×12
+4328.6s	1776	Training samples: 8000
+4328.6s	1777	Test samples: 2000
+4328.6s	1778	
+4328.6s	1779	Training...
+4331.0s	1780	Epoch  1/20 | Batch   10/63 | Loss: 0.0081 | Real: 0.4959 | Fake: 0.4877
+4333.3s	1781	Epoch  1/20 | Batch   20/63 | Loss: -0.0126 | Real: 0.4845 | Fake: 0.4971
+4335.6s	1782	Epoch  1/20 | Batch   30/63 | Loss: -0.0346 | Real: 0.4732 | Fake: 0.5077
+4337.9s	1783	Epoch  1/20 | Batch   40/63 | Loss: -0.0266 | Real: 0.4590 | Fake: 0.4856
+4340.1s	1784	Epoch  1/20 | Batch   50/63 | Loss: -0.0392 | Real: 0.4484 | Fake: 0.4877
+4342.5s	1785	Epoch  1/20 | Batch   60/63 | Loss: -0.0332 | Real: 0.4356 | Fake: 0.4688
+4343.1s	1786	Epoch  1/20 | Batch   63/63 | Loss: -0.0640 | Real: 0.4292 | Fake: 0.4932
+4343.1s	1787	✔ Epoch 1 complete | Avg Loss: -0.0214 | Avg Real: 0.4702 | Avg Fake: 0.4916
+4343.1s	1788	
+4345.4s	1789	Epoch  2/20 | Batch   10/63 | Loss: -0.0385 | Real: 0.4244 | Fake: 0.4630
+4347.9s	1790	Epoch  2/20 | Batch   20/63 | Loss: -0.0508 | Real: 0.4198 | Fake: 0.4706
+4350.4s	1791	Epoch  2/20 | Batch   30/63 | Loss: -0.1000 | Real: 0.4082 | Fake: 0.5081
+4353.0s	1792	Epoch  2/20 | Batch   40/63 | Loss: -0.0979 | Real: 0.3983 | Fake: 0.4962
+4355.5s	1793	Epoch  2/20 | Batch   50/63 | Loss: -0.1278 | Real: 0.3908 | Fake: 0.5186
+4358.0s	1794	Epoch  2/20 | Batch   60/63 | Loss: -0.1311 | Real: 0.3878 | Fake: 0.5189
+4358.6s	1795	Epoch  2/20 | Batch   63/63 | Loss: -0.0203 | Real: 0.3897 | Fake: 0.4100
+4358.6s	1796	✔ Epoch 2 complete | Avg Loss: -0.0790 | Avg Real: 0.4074 | Avg Fake: 0.4864
+4358.6s	1797	
+4361.1s	1798	Epoch  3/20 | Batch   10/63 | Loss: -0.0132 | Real: 0.3796 | Fake: 0.3928
+4363.7s	1799	Epoch  3/20 | Batch   20/63 | Loss: -0.2493 | Real: 0.3803 | Fake: 0.6295
+4366.2s	1800	Epoch  3/20 | Batch   30/63 | Loss: -0.2716 | Real: 0.3925 | Fake: 0.6641
+4368.6s	1801	Epoch  3/20 | Batch   40/63 | Loss: -0.0726 | Real: 0.3850 | Fake: 0.4576
+4371.1s	1802	Epoch  3/20 | Batch   50/63 | Loss: -0.3080 | Real: 0.4051 | Fake: 0.7131
+4373.7s	1803	Epoch  3/20 | Batch   60/63 | Loss: -0.2937 | Real: 0.4050 | Fake: 0.6988
+4374.3s	1804	Epoch  3/20 | Batch   63/63 | Loss: -0.2913 | Real: 0.4115 | Fake: 0.7028
+4374.3s	1805	✔ Epoch 3 complete | Avg Loss: -0.1846 | Avg Real: 0.3906 | Avg Fake: 0.5752
+4374.3s	1806	
+4376.8s	1807	Epoch  4/20 | Batch   10/63 | Loss: -0.3115 | Real: 0.4147 | Fake: 0.7263
+4379.2s	1808	Epoch  4/20 | Batch   20/63 | Loss: -0.3951 | Real: 0.4319 | Fake: 0.8270
+4381.7s	1809	Epoch  4/20 | Batch   30/63 | Loss: -0.3727 | Real: 0.4342 | Fake: 0.8070
+4384.3s	1810	Epoch  4/20 | Batch   40/63 | Loss: -0.4196 | Real: 0.4775 | Fake: 0.8971
+4386.7s	1811	Epoch  4/20 | Batch   50/63 | Loss: -0.3480 | Real: 0.4531 | Fake: 0.8010
+4389.4s	1812	Epoch  4/20 | Batch   60/63 | Loss: -0.4834 | Real: 0.4540 | Fake: 0.9375
+4389.9s	1813	Epoch  4/20 | Batch   63/63 | Loss: -0.4381 | Real: 0.4467 | Fake: 0.8848
+4389.9s	1814	✔ Epoch 4 complete | Avg Loss: -0.2888 | Avg Real: 0.4399 | Avg Fake: 0.7287
+4389.9s	1815	
+4392.4s	1816	Epoch  5/20 | Batch   10/63 | Loss: -0.5329 | Real: 0.4628 | Fake: 0.9957
+4395.0s	1817	Epoch  5/20 | Batch   20/63 | Loss: -0.1626 | Real: 0.4845 | Fake: 0.6471
+4397.5s	1818	Epoch  5/20 | Batch   30/63 | Loss: -0.0671 | Real: 0.4656 | Fake: 0.5327
+4400.0s	1819	Epoch  5/20 | Batch   40/63 | Loss: -0.1427 | Real: 0.4869 | Fake: 0.6295
+4402.4s	1820	Epoch  5/20 | Batch   50/63 | Loss: -0.5781 | Real: 0.4712 | Fake: 1.0494
+4404.9s	1821	Epoch  5/20 | Batch   60/63 | Loss: -0.6560 | Real: 0.4686 | Fake: 1.1245
+4405.6s	1822	Epoch  5/20 | Batch   63/63 | Loss: -0.6901 | Real: 0.4401 | Fake: 1.1301
+4405.6s	1823	✔ Epoch 5 complete | Avg Loss: -0.4206 | Avg Real: 0.4682 | Avg Fake: 0.8888
+4405.6s	1824	
+4408.1s	1825	Epoch  6/20 | Batch   10/63 | Loss: -0.6955 | Real: 0.4359 | Fake: 1.1315
+4410.5s	1826	Epoch  6/20 | Batch   20/63 | Loss: -0.7358 | Real: 0.4213 | Fake: 1.1572
+4413.1s	1827	Epoch  6/20 | Batch   30/63 | Loss: 0.0300 | Real: 0.4187 | Fake: 0.3887
+4415.5s	1828	Epoch  6/20 | Batch   40/63 | Loss: -0.7432 | Real: 0.3972 | Fake: 1.1404
+4417.9s	1829	Epoch  6/20 | Batch   50/63 | Loss: -0.8381 | Real: 0.3647 | Fake: 1.2029
+4420.4s	1830	Epoch  6/20 | Batch   60/63 | Loss: -0.8355 | Real: 0.3449 | Fake: 1.1804
+4420.9s	1831	Epoch  6/20 | Batch   63/63 | Loss: -0.8976 | Real: 0.3104 | Fake: 1.2080
+4420.9s	1832	✔ Epoch 6 complete | Avg Loss: -0.5846 | Avg Real: 0.3950 | Avg Fake: 0.9796
+4420.9s	1833	
+4423.4s	1834	Epoch  7/20 | Batch   10/63 | Loss: -0.7579 | Real: 0.2913 | Fake: 1.0491
+4425.9s	1835	Epoch  7/20 | Batch   20/63 | Loss: -0.3151 | Real: 0.2352 | Fake: 0.5503
+4428.3s	1836	Epoch  7/20 | Batch   30/63 | Loss: -1.0175 | Real: 0.2096 | Fake: 1.2271
+4430.7s	1837	Epoch  7/20 | Batch   40/63 | Loss: -1.0843 | Real: 0.1729 | Fake: 1.2572
+4433.2s	1838	Epoch  7/20 | Batch   50/63 | Loss: -1.1642 | Real: 0.0909 | Fake: 1.2551
+4435.6s	1839	Epoch  7/20 | Batch   60/63 | Loss: -0.5561 | Real: 0.0180 | Fake: 0.5741
+4436.2s	1840	Epoch  7/20 | Batch   63/63 | Loss: -1.2115 | Real: 0.0338 | Fake: 1.2453
+4436.2s	1841	✔ Epoch 7 complete | Avg Loss: -0.8338 | Avg Real: 0.1815 | Avg Fake: 1.0153
+4436.2s	1842	
+4438.7s	1843	Epoch  8/20 | Batch   10/63 | Loss: -1.2240 | Real: -0.0199 | Fake: 1.2040
+4441.1s	1844	Epoch  8/20 | Batch   20/63 | Loss: -1.2515 | Real: -0.0714 | Fake: 1.1801
+4443.6s	1845	Epoch  8/20 | Batch   30/63 | Loss: -0.9760 | Real: -0.1401 | Fake: 0.8360
+4446.0s	1846	Epoch  8/20 | Batch   40/63 | Loss: -0.4903 | Real: -0.1980 | Fake: 0.2922
+4448.5s	1847	Epoch  8/20 | Batch   50/63 | Loss: -0.8418 | Real: -0.2111 | Fake: 0.6307
+4451.0s	1848	Epoch  8/20 | Batch   60/63 | Loss: -1.2168 | Real: -0.2505 | Fake: 0.9663
+4451.5s	1849	Epoch  8/20 | Batch   63/63 | Loss: -1.4796 | Real: -0.3188 | Fake: 1.1608
+4451.5s	1850	✔ Epoch 8 complete | Avg Loss: -1.1227 | Avg Real: -0.1396 | Avg Fake: 0.9831
+4451.5s	1851	
+4454.0s	1852	Epoch  9/20 | Batch   10/63 | Loss: -0.2381 | Real: -0.3185 | Fake: -0.0805
+4456.5s	1853	Epoch  9/20 | Batch   20/63 | Loss: -0.3630 | Real: -0.3580 | Fake: 0.0050
+4458.9s	1854	Epoch  9/20 | Batch   30/63 | Loss: -1.6976 | Real: -0.3734 | Fake: 1.3242
+4461.3s	1855	Epoch  9/20 | Batch   40/63 | Loss: -0.0715 | Real: -0.3347 | Fake: -0.2633
+4463.8s	1856	Epoch  9/20 | Batch   50/63 | Loss: -1.7216 | Real: -0.4482 | Fake: 1.2734
+4466.2s	1857	Epoch  9/20 | Batch   60/63 | Loss: -1.8139 | Real: -0.4406 | Fake: 1.3733
+4466.8s	1858	Epoch  9/20 | Batch   63/63 | Loss: -1.6609 | Real: -0.4629 | Fake: 1.1980
+4466.8s	1859	✔ Epoch 9 complete | Avg Loss: -1.3594 | Avg Real: -0.3777 | Avg Fake: 0.9817
+4466.8s	1860	
+4469.3s	1861	Epoch 10/20 | Batch   10/63 | Loss: -1.8516 | Real: -0.4555 | Fake: 1.3961
+4471.7s	1862	Epoch 10/20 | Batch   20/63 | Loss: -1.8301 | Real: -0.4475 | Fake: 1.3826
+4474.2s	1863	Epoch 10/20 | Batch   30/63 | Loss: -1.9041 | Real: -0.5023 | Fake: 1.4018
+4476.5s	1864	Epoch 10/20 | Batch   40/63 | Loss: -1.9652 | Real: -0.5507 | Fake: 1.4145
+4478.9s	1865	Epoch 10/20 | Batch   50/63 | Loss: -0.7200 | Real: -0.6051 | Fake: 0.1149
+4481.4s	1866	Epoch 10/20 | Batch   60/63 | Loss: -2.0191 | Real: -0.5967 | Fake: 1.4224
+4482.0s	1867	Epoch 10/20 | Batch   63/63 | Loss: -2.0262 | Real: -0.6075 | Fake: 1.4186
+4482.0s	1868	✔ Epoch 10 complete | Avg Loss: -1.4311 | Avg Real: -0.5162 | Avg Fake: 0.9148
+4482.0s	1869	
+4484.4s	1870	Epoch 11/20 | Batch   10/63 | Loss: -2.0682 | Real: -0.6247 | Fake: 1.4435
+4486.8s	1871	Epoch 11/20 | Batch   20/63 | Loss: -2.0698 | Real: -0.6124 | Fake: 1.4574
+4489.3s	1872	Epoch 11/20 | Batch   30/63 | Loss: -2.0808 | Real: -0.6589 | Fake: 1.4219
+4491.7s	1873	Epoch 11/20 | Batch   40/63 | Loss: -2.1608 | Real: -0.6710 | Fake: 1.4897
+4494.2s	1874	Epoch 11/20 | Batch   50/63 | Loss: -2.1964 | Real: -0.7128 | Fake: 1.4836
+4496.6s	1875	Epoch 11/20 | Batch   60/63 | Loss: -2.1956 | Real: -0.6823 | Fake: 1.5134
+4497.2s	1876	Epoch 11/20 | Batch   63/63 | Loss: -2.1240 | Real: -0.7180 | Fake: 1.4060
+4497.2s	1877	✔ Epoch 11 complete | Avg Loss: -1.7053 | Avg Real: -0.6706 | Avg Fake: 1.0346
+4497.2s	1878	
+4499.6s	1879	Epoch 12/20 | Batch   10/63 | Loss: -0.4704 | Real: -0.7141 | Fake: -0.2437
+4502.0s	1880	Epoch 12/20 | Batch   20/63 | Loss: -1.2508 | Real: -0.7511 | Fake: 0.4997
+4504.5s	1881	Epoch 12/20 | Batch   30/63 | Loss: -2.2856 | Real: -0.7480 | Fake: 1.5376
+4507.0s	1882	Epoch 12/20 | Batch   40/63 | Loss: -2.3168 | Real: -0.7553 | Fake: 1.5614
+4509.4s	1883	Epoch 12/20 | Batch   50/63 | Loss: -0.2664 | Real: -0.7750 | Fake: -0.5086
+4511.9s	1884	Epoch 12/20 | Batch   60/63 | Loss: -2.3603 | Real: -0.7753 | Fake: 1.5850
+4512.5s	1885	Epoch 12/20 | Batch   63/63 | Loss: -2.3738 | Real: -0.7967 | Fake: 1.5770
+4512.5s	1886	✔ Epoch 12 complete | Avg Loss: -1.8490 | Avg Real: -0.7574 | Avg Fake: 1.0915
+4512.5s	1887	
+4515.0s	1888	Epoch 13/20 | Batch   10/63 | Loss: -2.4459 | Real: -0.8429 | Fake: 1.6030
+4517.4s	1889	Epoch 13/20 | Batch   20/63 | Loss: -0.6111 | Real: -0.8239 | Fake: -0.2128
+4519.8s	1890	Epoch 13/20 | Batch   30/63 | Loss: -2.4028 | Real: -0.8213 | Fake: 1.5816
+4522.2s	1891	Epoch 13/20 | Batch   40/63 | Loss: -2.4322 | Real: -0.8687 | Fake: 1.5635
+4524.7s	1892	Epoch 13/20 | Batch   50/63 | Loss: -2.4347 | Real: -0.8692 | Fake: 1.5654
+4527.1s	1893	Epoch 13/20 | Batch   60/63 | Loss: -2.5376 | Real: -0.8895 | Fake: 1.6481
+4527.7s	1894	Epoch 13/20 | Batch   63/63 | Loss: -2.4698 | Real: -0.8577 | Fake: 1.6121
+4527.7s	1895	✔ Epoch 13 complete | Avg Loss: -1.9469 | Avg Real: -0.8424 | Avg Fake: 1.1045
+4527.7s	1896	
+4530.1s	1897	Epoch 14/20 | Batch   10/63 | Loss: -2.5392 | Real: -0.9047 | Fake: 1.6345
+4532.5s	1898	Epoch 14/20 | Batch   20/63 | Loss: -0.4283 | Real: -0.9037 | Fake: -0.4753
+4534.9s	1899	Epoch 14/20 | Batch   30/63 | Loss: -2.5465 | Real: -0.9215 | Fake: 1.6251
+4537.4s	1900	Epoch 14/20 | Batch   40/63 | Loss: -1.1312 | Real: -0.8991 | Fake: 0.2321
+4539.8s	1901	Epoch 14/20 | Batch   50/63 | Loss: -2.5959 | Real: -0.9264 | Fake: 1.6695
+4542.3s	1902	Epoch 14/20 | Batch   60/63 | Loss: -0.9301 | Real: -0.9426 | Fake: -0.0125
+4542.9s	1903	Epoch 14/20 | Batch   63/63 | Loss: -2.5619 | Real: -0.9092 | Fake: 1.6527
+4542.9s	1904	✔ Epoch 14 complete | Avg Loss: -1.9922 | Avg Real: -0.9067 | Avg Fake: 1.0855
+4542.9s	1905	
+4545.4s	1906	Epoch 15/20 | Batch   10/63 | Loss: -2.6727 | Real: -0.9806 | Fake: 1.6921
+4547.8s	1907	Epoch 15/20 | Batch   20/63 | Loss: -0.5632 | Real: -0.9966 | Fake: -0.4333
+4550.2s	1908	Epoch 15/20 | Batch   30/63 | Loss: -2.1440 | Real: -1.0157 | Fake: 1.1283
+4552.6s	1909	Epoch 15/20 | Batch   40/63 | Loss: -0.5058 | Real: -0.9082 | Fake: -0.4024
+4555.1s	1910	Epoch 15/20 | Batch   50/63 | Loss: -2.4960 | Real: -0.9069 | Fake: 1.5891
+4557.5s	1911	Epoch 15/20 | Batch   60/63 | Loss: -2.6897 | Real: -0.9607 | Fake: 1.7290
+4558.1s	1912	Epoch 15/20 | Batch   63/63 | Loss: -2.6421 | Real: -0.9376 | Fake: 1.7046
+4558.1s	1913	✔ Epoch 15 complete | Avg Loss: -2.1028 | Avg Real: -0.9614 | Avg Fake: 1.1415
+4558.1s	1914	
+4560.5s	1915	Epoch 16/20 | Batch   10/63 | Loss: -0.7717 | Real: -0.9912 | Fake: -0.2194
+4562.9s	1916	Epoch 16/20 | Batch   20/63 | Loss: -1.0704 | Real: -0.9975 | Fake: 0.0729
+4565.4s	1917	Epoch 16/20 | Batch   30/63 | Loss: -1.1133 | Real: -1.0346 | Fake: 0.0787
+4567.8s	1918	Epoch 16/20 | Batch   40/63 | Loss: -2.7650 | Real: -1.0398 | Fake: 1.7253
+4570.2s	1919	Epoch 16/20 | Batch   50/63 | Loss: -2.8009 | Real: -1.0446 | Fake: 1.7563
+4572.8s	1920	Epoch 16/20 | Batch   60/63 | Loss: -0.6837 | Real: -1.0590 | Fake: -0.3753
+4573.3s	1921	Epoch 16/20 | Batch   63/63 | Loss: -2.6366 | Real: -1.0672 | Fake: 1.5694
+4573.3s	1922	✔ Epoch 16 complete | Avg Loss: -2.2332 | Avg Real: -1.0253 | Avg Fake: 1.2079
+4573.3s	1923	
+4575.7s	1924	Epoch 17/20 | Batch   10/63 | Loss: -0.9732 | Real: -1.0657 | Fake: -0.0925
+4578.1s	1925	Epoch 17/20 | Batch   20/63 | Loss: -2.8305 | Real: -1.0634 | Fake: 1.7671
+4580.6s	1926	Epoch 17/20 | Batch   30/63 | Loss: -1.3913 | Real: -1.0369 | Fake: 0.3544
+4583.0s	1927	Epoch 17/20 | Batch   40/63 | Loss: -2.8862 | Real: -1.0987 | Fake: 1.7875
+4585.3s	1928	Epoch 17/20 | Batch   50/63 | Loss: -2.6829 | Real: -1.0609 | Fake: 1.6221
+4587.5s	1929	Epoch 17/20 | Batch   60/63 | Loss: -2.7985 | Real: -1.0404 | Fake: 1.7581
+4588.1s	1930	Epoch 17/20 | Batch   63/63 | Loss: -1.2499 | Real: -1.0899 | Fake: 0.1600
+4588.1s	1931	✔ Epoch 17 complete | Avg Loss: -2.1493 | Avg Real: -1.0682 | Avg Fake: 1.0811
+4588.1s	1932	
+4590.3s	1933	Epoch 18/20 | Batch   10/63 | Loss: -1.9420 | Real: -1.0561 | Fake: 0.8859
+4592.6s	1934	Epoch 18/20 | Batch   20/63 | Loss: -1.5466 | Real: -1.0601 | Fake: 0.4865
+4594.8s	1935	Epoch 18/20 | Batch   30/63 | Loss: -2.8560 | Real: -1.0580 | Fake: 1.7980
+4597.1s	1936	Epoch 18/20 | Batch   40/63 | Loss: -1.6784 | Real: -1.1552 | Fake: 0.5233
+4599.3s	1937	Epoch 18/20 | Batch   50/63 | Loss: -1.1079 | Real: -1.1252 | Fake: -0.0173
+4601.5s	1938	Epoch 18/20 | Batch   60/63 | Loss: -2.9657 | Real: -1.1409 | Fake: 1.8248
+4602.1s	1939	Epoch 18/20 | Batch   63/63 | Loss: -0.8519 | Real: -1.0895 | Fake: -0.2376
+4602.1s	1940	✔ Epoch 18 complete | Avg Loss: -2.2162 | Avg Real: -1.0910 | Avg Fake: 1.1252
+4602.1s	1941	
+4604.5s	1942	Epoch 19/20 | Batch   10/63 | Loss: -0.9256 | Real: -1.1345 | Fake: -0.2089
+4606.7s	1943	Epoch 19/20 | Batch   20/63 | Loss: -1.1893 | Real: -1.1684 | Fake: 0.0209
+4608.9s	1944	Epoch 19/20 | Batch   30/63 | Loss: -2.9457 | Real: -1.1734 | Fake: 1.7723
+4611.1s	1945	Epoch 19/20 | Batch   40/63 | Loss: -2.9917 | Real: -1.2007 | Fake: 1.7910
+4613.4s	1946	Epoch 19/20 | Batch   50/63 | Loss: -0.9969 | Real: -1.2265 | Fake: -0.2296
+4615.6s	1947	Epoch 19/20 | Batch   60/63 | Loss: -3.0290 | Real: -1.2111 | Fake: 1.8179
+4616.2s	1948	Epoch 19/20 | Batch   63/63 | Loss: -1.8828 | Real: -1.2003 | Fake: 0.6826
+4616.2s	1949	✔ Epoch 19 complete | Avg Loss: -2.4574 | Avg Real: -1.1693 | Avg Fake: 1.2881
+4616.2s	1950	
+4618.4s	1951	Epoch 20/20 | Batch   10/63 | Loss: -3.0800 | Real: -1.2536 | Fake: 1.8264
+4620.6s	1952	Epoch 20/20 | Batch   20/63 | Loss: -2.9917 | Real: -1.2484 | Fake: 1.7433
+4622.9s	1953	Epoch 20/20 | Batch   30/63 | Loss: -3.1155 | Real: -1.2754 | Fake: 1.8401
+4625.2s	1954	Epoch 20/20 | Batch   40/63 | Loss: -1.0865 | Real: -1.3005 | Fake: -0.2140
+4627.3s	1955	Epoch 20/20 | Batch   50/63 | Loss: -3.0488 | Real: -1.2718 | Fake: 1.7769
+4629.6s	1956	Epoch 20/20 | Batch   60/63 | Loss: -3.1583 | Real: -1.2964 | Fake: 1.8618
+4630.2s	1957	Epoch 20/20 | Batch   63/63 | Loss: -2.9555 | Real: -1.1904 | Fake: 1.7652
+4630.2s	1958	✔ Epoch 20 complete | Avg Loss: -2.5790 | Avg Real: -1.2406 | Avg Fake: 1.3383
+4630.2s	1959	
+4630.2s	1960	Model saved to /kaggle/working//plots/sol_addresses/model.pt
+4631.8s	1961	
+4631.8s	1962	Evaluating on test set...
+4655.1s	1963	Sample 0: Predicted y = 0000000000002002020202q2002000002q2022820022q2q22020002q200002q2
+4677.0s	1964	Sample 1: Predicted y = 20000000000002q02822002220q2qq2q200q0200qq0202202q22022022q2q2q0
+4699.0s	1965	Sample 2: Predicted y = 200008200002q202280202qq2q2q002q2q0000q0202020222202000202q02q20
+4720.9s	1966	Sample 3: Predicted y = 088808008200202202202qq202q02802q2222q22q22002q2202q000220002q00
+4742.9s	1967	Sample 4: Predicted y = 00200000282022q2022202q22q2q2q20q000q20q22q2020220202q202020q2q2
+4764.6s	1968	Sample 5: Predicted y = 0088080000002202002202q22q2qq82q2q0q20200020200002022202q2q02q20
+4786.7s	1969	Sample 6: Predicted y = 8200002280202q22802q22q2202q22202q2202q02q2q02222020002820q0q2q2
+4808.6s	1970	Sample 7: Predicted y = 008000qq0200qq2202q02q22020q0202q20220202q2q2q200202020202q22q20
+4830.4s	1971	Sample 8: Predicted y = 800000200000220022q0q0202002q2220202202q222q202202022b0202q02q20
+4852.2s	1972	Sample 9: Predicted y = 00000000000022020022q2q2q020200q2q200202q2q2q202202q23202200q2q0
+4874.5s	1973	Sample 10: Predicted y = 800000200002q2202q0202202q2qq22q200202q22qq2q2202202022202q22q2q
+4896.4s	1974	Sample 11: Predicted y = 0000000q00002022202020q2020q2002q2022020q72q2q2202q2002200q0q000
+4918.5s	1975	Sample 12: Predicted y = 280000200000022220q2q0220002q0220202282q002q20q202q2000220002q00
+4940.2s	1976	Sample 13: Predicted y = 8800002000002020000200qq2q20qq20282qq2q20002q2822202222202q0qq20
+4962.3s	1977	Sample 14: Predicted y = 0000000000222022002q22q0022q22q2202002q2q202q20220202220202qq2q2
+4984.3s	1978	Sample 15: Predicted y = 8000bb2000qq020qqqqq820qqq20202q00200q02q22qq2q0202000202020q2q2
+5006.7s	1979	Sample 16: Predicted y = 008b0008000020202022002220q2q02020q2q2022020q220220q022200q22q20
+5028.9s	1980	Sample 17: Predicted y = 0080000002002022202q2qq002qq82020qq22q2q022q00202020q2202020q2q2
+5051.3s	1981	Sample 18: Predicted y = 008008202800228200q2q2022q2q2020202qq2020202q2q2202q20202200q2q0
+5073.7s	1982	Sample 19: Predicted y = 0807002280002000222qq020qqq2q200qq0220022q200220q220q2022q202q20
+5076.1s	1983	
+5076.1s	1984	Results for sol_addresses:
+5076.1s	1985	  Avg Real Energy: -1.7165 ± 0.1522
+5076.1s	1986	  Avg Random Energy: 1.5235 ± 0.4057
+5076.1s	1987	  Avg Filled Energy: -2.7975 ± 0.1348
+5076.1s	1988	  Avg Recovery Accuracy: 5.62%
+5076.1s	1989	Plots and metrics saved to /kaggle/working//plots/sol_addresses
+5076.1s	1990	
+5076.1s	1991	============================================================
+5076.1s	1992	Processing dataset: trx_addresses
+5076.1s	1993	============================================================
+5076.7s	1994	Vocabulary size: 61
+5076.7s	1995	Grid size: 12×12
+5076.7s	1996	Training samples: 8000
+5076.7s	1997	Test samples: 2000
+5076.7s	1998	
+5076.7s	1999	Training...
+5078.9s	2000	Epoch  1/20 | Batch   10/63 | Loss: -0.0115 | Real: 0.7833 | Fake: 0.7948
+5081.2s	2001	Epoch  1/20 | Batch   20/63 | Loss: -0.0363 | Real: 0.7705 | Fake: 0.8068
+5083.7s	2002	Epoch  1/20 | Batch   30/63 | Loss: -0.0482 | Real: 0.7618 | Fake: 0.8099
+5086.0s	2003	Epoch  1/20 | Batch   40/63 | Loss: -0.0608 | Real: 0.7486 | Fake: 0.8094
+5088.2s	2004	Epoch  1/20 | Batch   50/63 | Loss: -0.0785 | Real: 0.7404 | Fake: 0.8189
+5090.5s	2005	Epoch  1/20 | Batch   60/63 | Loss: -0.0647 | Real: 0.7301 | Fake: 0.7948
+5091.1s	2006	Epoch  1/20 | Batch   63/63 | Loss: -0.0650 | Real: 0.7247 | Fake: 0.7897
+5091.1s	2007	✔ Epoch 1 complete | Avg Loss: -0.0413 | Avg Real: 0.7588 | Avg Fake: 0.8001
+5091.1s	2008	
+5093.4s	2009	Epoch  2/20 | Batch   10/63 | Loss: -0.1370 | Real: 0.7087 | Fake: 0.8456
+5095.7s	2010	Epoch  2/20 | Batch   20/63 | Loss: -0.1305 | Real: 0.7022 | Fake: 0.8327
+5098.0s	2011	Epoch  2/20 | Batch   30/63 | Loss: -0.1529 | Real: 0.6864 | Fake: 0.8392
+5100.3s	2012	Epoch  2/20 | Batch   40/63 | Loss: -0.2009 | Real: 0.6873 | Fake: 0.8883
+5102.5s	2013	Epoch  2/20 | Batch   50/63 | Loss: -0.1006 | Real: 0.6691 | Fake: 0.7697
+5104.8s	2014	Epoch  2/20 | Batch   60/63 | Loss: -0.0689 | Real: 0.6783 | Fake: 0.7472
+5105.3s	2015	Epoch  2/20 | Batch   63/63 | Loss: -0.2804 | Real: 0.6774 | Fake: 0.9578
+5105.3s	2016	✔ Epoch 2 complete | Avg Loss: -0.1607 | Avg Real: 0.6908 | Avg Fake: 0.8514
+5105.3s	2017	
+5107.6s	2018	Epoch  3/20 | Batch   10/63 | Loss: -0.1789 | Real: 0.6608 | Fake: 0.8397
+5109.9s	2019	Epoch  3/20 | Batch   20/63 | Loss: -0.3531 | Real: 0.6736 | Fake: 1.0267
+5112.2s	2020	Epoch  3/20 | Batch   30/63 | Loss: -0.4059 | Real: 0.6735 | Fake: 1.0794
+5114.6s	2021	Epoch  3/20 | Batch   40/63 | Loss: -0.4260 | Real: 0.6715 | Fake: 1.0975
+5116.7s	2022	Epoch  3/20 | Batch   50/63 | Loss: -0.3119 | Real: 0.6837 | Fake: 0.9955
+5119.0s	2023	Epoch  3/20 | Batch   60/63 | Loss: -0.4429 | Real: 0.6832 | Fake: 1.1261
+5119.6s	2024	Epoch  3/20 | Batch   63/63 | Loss: -0.2176 | Real: 0.6830 | Fake: 0.9006
+5119.6s	2025	✔ Epoch 3 complete | Avg Loss: -0.3274 | Avg Real: 0.6727 | Avg Fake: 1.0001
+5119.6s	2026	
+5121.9s	2027	Epoch  4/20 | Batch   10/63 | Loss: -0.4732 | Real: 0.6926 | Fake: 1.1658
+5124.2s	2028	Epoch  4/20 | Batch   20/63 | Loss: -0.5707 | Real: 0.7010 | Fake: 1.2718
+5126.5s	2029	Epoch  4/20 | Batch   30/63 | Loss: -0.5701 | Real: 0.6886 | Fake: 1.2587
+5128.8s	2030	Epoch  4/20 | Batch   40/63 | Loss: -0.2245 | Real: 0.6710 | Fake: 0.8955
+5131.1s	2031	Epoch  4/20 | Batch   50/63 | Loss: -0.2707 | Real: 0.6509 | Fake: 0.9216
+5133.4s	2032	Epoch  4/20 | Batch   60/63 | Loss: -0.6263 | Real: 0.6292 | Fake: 1.2555
+5134.0s	2033	Epoch  4/20 | Batch   63/63 | Loss: -0.3464 | Real: 0.6283 | Fake: 0.9746
+5134.0s	2034	✔ Epoch 4 complete | Avg Loss: -0.4754 | Avg Real: 0.6769 | Avg Fake: 1.1523
+5134.0s	2035	
+5136.3s	2036	Epoch  5/20 | Batch   10/63 | Loss: -0.7785 | Real: 0.6124 | Fake: 1.3909
+5138.5s	2037	Epoch  5/20 | Batch   20/63 | Loss: -0.8516 | Real: 0.5783 | Fake: 1.4299
+5140.8s	2038	Epoch  5/20 | Batch   30/63 | Loss: -0.6086 | Real: 0.5647 | Fake: 1.1733
+5143.1s	2039	Epoch  5/20 | Batch   40/63 | Loss: -0.0791 | Real: 0.5352 | Fake: 0.6143
+5145.6s	2040	Epoch  5/20 | Batch   50/63 | Loss: -0.9281 | Real: 0.4962 | Fake: 1.4243
+5147.8s	2041	Epoch  5/20 | Batch   60/63 | Loss: -0.0102 | Real: 0.4681 | Fake: 0.4782
+5148.4s	2042	Epoch  5/20 | Batch   63/63 | Loss: -0.7267 | Real: 0.4646 | Fake: 1.1912
+5148.4s	2043	✔ Epoch 5 complete | Avg Loss: -0.6323 | Avg Real: 0.5539 | Avg Fake: 1.1862
+5148.4s	2044	
+5150.7s	2045	Epoch  6/20 | Batch   10/63 | Loss: -1.0473 | Real: 0.4056 | Fake: 1.4529
+5153.0s	2046	Epoch  6/20 | Batch   20/63 | Loss: -0.7371 | Real: 0.4197 | Fake: 1.1568
+5155.3s	2047	Epoch  6/20 | Batch   30/63 | Loss: -0.8338 | Real: 0.3924 | Fake: 1.2262
+5157.5s	2048	Epoch  6/20 | Batch   40/63 | Loss: -0.2013 | Real: 0.3386 | Fake: 0.5399
+5159.8s	2049	Epoch  6/20 | Batch   50/63 | Loss: -1.1626 | Real: 0.3151 | Fake: 1.4777
+5162.0s	2050	Epoch  6/20 | Batch   60/63 | Loss: -0.7751 | Real: 0.2517 | Fake: 1.0269
+5162.6s	2051	Epoch  6/20 | Batch   63/63 | Loss: -1.2351 | Real: 0.2547 | Fake: 1.4897
+5162.6s	2052	✔ Epoch 6 complete | Avg Loss: -0.8500 | Avg Real: 0.3559 | Avg Fake: 1.2059
+5162.6s	2053	
+5165.0s	2054	Epoch  7/20 | Batch   10/63 | Loss: -1.3081 | Real: 0.2122 | Fake: 1.5203
+5167.3s	2055	Epoch  7/20 | Batch   20/63 | Loss: -0.4715 | Real: 0.2460 | Fake: 0.7176
+5169.5s	2056	Epoch  7/20 | Batch   30/63 | Loss: -1.3382 | Real: 0.1759 | Fake: 1.5141
+5171.8s	2057	Epoch  7/20 | Batch   40/63 | Loss: -1.3207 | Real: 0.1438 | Fake: 1.4645
+5174.1s	2058	Epoch  7/20 | Batch   50/63 | Loss: -1.3560 | Real: 0.0908 | Fake: 1.4468
+5176.5s	2059	Epoch  7/20 | Batch   60/63 | Loss: -1.4300 | Real: 0.0505 | Fake: 1.4805
+5177.0s	2060	Epoch  7/20 | Batch   63/63 | Loss: -1.3788 | Real: 0.0526 | Fake: 1.4313
+5177.0s	2061	✔ Epoch 7 complete | Avg Loss: -1.0494 | Avg Real: 0.1699 | Avg Fake: 1.2193
+5177.0s	2062	
+5179.3s	2063	Epoch  8/20 | Batch   10/63 | Loss: -1.1244 | Real: 0.0251 | Fake: 1.1495
+5181.6s	2064	Epoch  8/20 | Batch   20/63 | Loss: -1.5416 | Real: -0.0182 | Fake: 1.5234
+5183.9s	2065	Epoch  8/20 | Batch   30/63 | Loss: -0.7689 | Real: -0.0289 | Fake: 0.7400
+5186.2s	2066	Epoch  8/20 | Batch   40/63 | Loss: -1.5817 | Real: -0.0826 | Fake: 1.4991
+5188.4s	2067	Epoch  8/20 | Batch   50/63 | Loss: -0.4613 | Real: -0.0914 | Fake: 0.3700
+5190.6s	2068	Epoch  8/20 | Batch   60/63 | Loss: -1.6210 | Real: -0.1086 | Fake: 1.5124
+5191.2s	2069	Epoch  8/20 | Batch   63/63 | Loss: -1.6546 | Real: -0.1625 | Fake: 1.4921
+5191.2s	2070	✔ Epoch 8 complete | Avg Loss: -1.1600 | Avg Real: -0.0533 | Avg Fake: 1.1067
+5191.2s	2071	
+5193.5s	2072	Epoch  9/20 | Batch   10/63 | Loss: -1.6355 | Real: -0.1336 | Fake: 1.5019
+5195.8s	2073	Epoch  9/20 | Batch   20/63 | Loss: -1.1653 | Real: -0.2022 | Fake: 0.9631
+5198.1s	2074	Epoch  9/20 | Batch   30/63 | Loss: -1.7424 | Real: -0.2339 | Fake: 1.5085
+5200.3s	2075	Epoch  9/20 | Batch   40/63 | Loss: -1.7904 | Real: -0.2841 | Fake: 1.5063
+5202.6s	2076	Epoch  9/20 | Batch   50/63 | Loss: -1.2030 | Real: -0.3109 | Fake: 0.8921
+5204.9s	2077	Epoch  9/20 | Batch   60/63 | Loss: -0.0122 | Real: -0.3678 | Fake: -0.3556
+5205.4s	2078	Epoch  9/20 | Batch   63/63 | Loss: -1.4696 | Real: -0.4112 | Fake: 1.0584
+5205.4s	2079	✔ Epoch 9 complete | Avg Loss: -1.3194 | Avg Real: -0.2544 | Avg Fake: 1.0650
+5205.4s	2080	
+5207.8s	2081	Epoch 10/20 | Batch   10/63 | Loss: -0.1241 | Real: -0.3945 | Fake: -0.2704
+5210.0s	2082	Epoch 10/20 | Batch   20/63 | Loss: -1.9345 | Real: -0.4169 | Fake: 1.5177
+5212.3s	2083	Epoch 10/20 | Batch   30/63 | Loss: -0.2003 | Real: -0.4515 | Fake: -0.2512
+5214.6s	2084	Epoch 10/20 | Batch   40/63 | Loss: -1.9964 | Real: -0.4892 | Fake: 1.5071
+5216.9s	2085	Epoch 10/20 | Batch   50/63 | Loss: -2.0157 | Real: -0.5698 | Fake: 1.4460
+5219.2s	2086	Epoch 10/20 | Batch   60/63 | Loss: -1.9928 | Real: -0.5764 | Fake: 1.4164
+5219.7s	2087	Epoch 10/20 | Batch   63/63 | Loss: -2.0371 | Real: -0.6358 | Fake: 1.4012
+5219.7s	2088	✔ Epoch 10 complete | Avg Loss: -1.5279 | Avg Real: -0.4708 | Avg Fake: 1.0571
+5219.7s	2089	
+5222.0s	2090	Epoch 11/20 | Batch   10/63 | Loss: -2.0512 | Real: -0.6498 | Fake: 1.4014
+5224.3s	2091	Epoch 11/20 | Batch   20/63 | Loss: -1.6652 | Real: -0.6550 | Fake: 1.0101
+5226.5s	2092	Epoch 11/20 | Batch   30/63 | Loss: -0.8474 | Real: -0.6334 | Fake: 0.2140
+5228.7s	2093	Epoch 11/20 | Batch   40/63 | Loss: -1.2093 | Real: -0.7228 | Fake: 0.4865
+5231.0s	2094	Epoch 11/20 | Batch   50/63 | Loss: -2.1357 | Real: -0.7121 | Fake: 1.4236
+5233.3s	2095	Epoch 11/20 | Batch   60/63 | Loss: -2.1301 | Real: -0.6945 | Fake: 1.4357
+5233.8s	2096	Epoch 11/20 | Batch   63/63 | Loss: -2.2951 | Real: -0.7369 | Fake: 1.5582
+5233.8s	2097	✔ Epoch 11 complete | Avg Loss: -1.8097 | Avg Real: -0.6651 | Avg Fake: 1.1446
+5233.8s	2098	
+5236.1s	2099	Epoch 12/20 | Batch   10/63 | Loss: -2.1274 | Real: -0.7522 | Fake: 1.3752
+5238.5s	2100	Epoch 12/20 | Batch   20/63 | Loss: -2.3380 | Real: -0.7388 | Fake: 1.5992
+5240.7s	2101	Epoch 12/20 | Batch   30/63 | Loss: -0.2883 | Real: -0.7946 | Fake: -0.5063
+5243.0s	2102	Epoch 12/20 | Batch   40/63 | Loss: -2.2518 | Real: -0.8105 | Fake: 1.4413
+5245.3s	2103	Epoch 12/20 | Batch   50/63 | Loss: -2.4604 | Real: -0.8308 | Fake: 1.6296
+5247.5s	2104	Epoch 12/20 | Batch   60/63 | Loss: -1.9088 | Real: -0.7865 | Fake: 1.1223
+5248.0s	2105	Epoch 12/20 | Batch   63/63 | Loss: -2.0316 | Real: -0.8064 | Fake: 1.2252
+5248.0s	2106	✔ Epoch 12 complete | Avg Loss: -1.8832 | Avg Real: -0.7856 | Avg Fake: 1.0976
+5248.0s	2107	
+5250.3s	2108	Epoch 13/20 | Batch   10/63 | Loss: -2.3964 | Real: -0.8161 | Fake: 1.5803
+5252.6s	2109	Epoch 13/20 | Batch   20/63 | Loss: -2.4741 | Real: -0.8454 | Fake: 1.6286
+5254.8s	2110	Epoch 13/20 | Batch   30/63 | Loss: -0.7865 | Real: -0.8607 | Fake: -0.0741
+5257.1s	2111	Epoch 13/20 | Batch   40/63 | Loss: -2.3148 | Real: -0.8964 | Fake: 1.4184
+5259.3s	2112	Epoch 13/20 | Batch   50/63 | Loss: -2.4338 | Real: -0.8948 | Fake: 1.5390
+5261.6s	2113	Epoch 13/20 | Batch   60/63 | Loss: -2.3409 | Real: -0.8828 | Fake: 1.4580
+5262.1s	2114	Epoch 13/20 | Batch   63/63 | Loss: -2.6045 | Real: -0.9147 | Fake: 1.6898
+5262.1s	2115	✔ Epoch 13 complete | Avg Loss: -2.0109 | Avg Real: -0.8637 | Avg Fake: 1.1472
+5262.1s	2116	
+5264.4s	2117	Epoch 14/20 | Batch   10/63 | Loss: -0.2025 | Real: -0.9009 | Fake: -0.6984
+5266.7s	2118	Epoch 14/20 | Batch   20/63 | Loss: -2.4481 | Real: -0.8866 | Fake: 1.5615
+5269.0s	2119	Epoch 14/20 | Batch   30/63 | Loss: -1.8917 | Real: -0.9198 | Fake: 0.9718
+5271.2s	2120	Epoch 14/20 | Batch   40/63 | Loss: -2.5802 | Real: -0.9368 | Fake: 1.6434
+5273.5s	2121	Epoch 14/20 | Batch   50/63 | Loss: -2.5460 | Real: -0.9220 | Fake: 1.6240
+5275.7s	2122	Epoch 14/20 | Batch   60/63 | Loss: -2.2284 | Real: -0.9160 | Fake: 1.3124
+5276.3s	2123	Epoch 14/20 | Batch   63/63 | Loss: -1.2906 | Real: -0.9408 | Fake: 0.3498
+5276.3s	2124	✔ Epoch 14 complete | Avg Loss: -2.0606 | Avg Real: -0.9039 | Avg Fake: 1.1567
+5276.3s	2125	
+5278.6s	2126	Epoch 15/20 | Batch   10/63 | Loss: -0.3890 | Real: -0.8704 | Fake: -0.4814
+5280.8s	2127	Epoch 15/20 | Batch   20/63 | Loss: -2.6029 | Real: -0.9276 | Fake: 1.6753
+5283.1s	2128	Epoch 15/20 | Batch   30/63 | Loss: -2.7013 | Real: -0.9581 | Fake: 1.7432
+5285.3s	2129	Epoch 15/20 | Batch   40/63 | Loss: -1.5551 | Real: -0.9597 | Fake: 0.5954
+5287.6s	2130	Epoch 15/20 | Batch   50/63 | Loss: -2.6920 | Real: -0.9448 | Fake: 1.7473
+5289.9s	2131	Epoch 15/20 | Batch   60/63 | Loss: -0.5075 | Real: -0.9756 | Fake: -0.4681
+5290.5s	2132	Epoch 15/20 | Batch   63/63 | Loss: -2.1231 | Real: -0.9733 | Fake: 1.1499
+5290.5s	2133	✔ Epoch 15 complete | Avg Loss: -2.2672 | Avg Real: -0.9378 | Avg Fake: 1.3294
+5290.5s	2134	
+5292.8s	2135	Epoch 16/20 | Batch   10/63 | Loss: -2.7402 | Real: -0.9376 | Fake: 1.8026
+5295.1s	2136	Epoch 16/20 | Batch   20/63 | Loss: -2.7705 | Real: -0.9780 | Fake: 1.7925
+5297.4s	2137	Epoch 16/20 | Batch   30/63 | Loss: -2.7856 | Real: -0.9675 | Fake: 1.8180
+5299.8s	2138	Epoch 16/20 | Batch   40/63 | Loss: -2.7896 | Real: -0.9673 | Fake: 1.8223
+5302.0s	2139	Epoch 16/20 | Batch   50/63 | Loss: -2.7914 | Real: -1.0028 | Fake: 1.7886
+5304.3s	2140	Epoch 16/20 | Batch   60/63 | Loss: -2.1297 | Real: -0.9998 | Fake: 1.1299
+5304.9s	2141	Epoch 16/20 | Batch   63/63 | Loss: -2.8349 | Real: -0.9923 | Fake: 1.8427
+5304.9s	2142	✔ Epoch 16 complete | Avg Loss: -2.3605 | Avg Real: -0.9885 | Avg Fake: 1.3720
+5304.9s	2143	
+5307.1s	2144	Epoch 17/20 | Batch   10/63 | Loss: -2.6476 | Real: -0.9844 | Fake: 1.6633
+5309.3s	2145	Epoch 17/20 | Batch   20/63 | Loss: -0.2664 | Real: -1.0268 | Fake: -0.7604
+5311.6s	2146	Epoch 17/20 | Batch   30/63 | Loss: -2.8517 | Real: -1.0355 | Fake: 1.8162
+5313.9s	2147	Epoch 17/20 | Batch   40/63 | Loss: -2.8959 | Real: -1.0118 | Fake: 1.8841
+5316.2s	2148	Epoch 17/20 | Batch   50/63 | Loss: -2.9216 | Real: -1.0313 | Fake: 1.8903
+5318.5s	2149	Epoch 17/20 | Batch   60/63 | Loss: -2.8839 | Real: -0.9674 | Fake: 1.9165
+5319.1s	2150	Epoch 17/20 | Batch   63/63 | Loss: -2.8162 | Real: -0.9133 | Fake: 1.9029
+5319.1s	2151	✔ Epoch 17 complete | Avg Loss: -2.3923 | Avg Real: -1.0060 | Avg Fake: 1.3863
+5319.1s	2152	
+5321.4s	2153	Epoch 18/20 | Batch   10/63 | Loss: -2.8156 | Real: -1.0048 | Fake: 1.8108
+5323.7s	2154	Epoch 18/20 | Batch   20/63 | Loss: -2.9118 | Real: -0.9613 | Fake: 1.9505
+5325.9s	2155	Epoch 18/20 | Batch   30/63 | Loss: -2.6974 | Real: -0.9724 | Fake: 1.7250
+5328.1s	2156	Epoch 18/20 | Batch   40/63 | Loss: -2.9566 | Real: -1.0218 | Fake: 1.9347
+5330.5s	2157	Epoch 18/20 | Batch   50/63 | Loss: -2.0563 | Real: -1.0198 | Fake: 1.0365
+5332.6s	2158	Epoch 18/20 | Batch   60/63 | Loss: -1.7141 | Real: -1.0474 | Fake: 0.6667
+5333.2s	2159	Epoch 18/20 | Batch   63/63 | Loss: -2.9101 | Real: -1.0142 | Fake: 1.8959
+5333.2s	2160	✔ Epoch 18 complete | Avg Loss: -2.4270 | Avg Real: -1.0055 | Avg Fake: 1.4215
+5333.2s	2161	
+5335.5s	2162	Epoch 19/20 | Batch   10/63 | Loss: -2.3155 | Real: -1.0392 | Fake: 1.2763
+5337.7s	2163	Epoch 19/20 | Batch   20/63 | Loss: -3.0414 | Real: -1.0576 | Fake: 1.9839
+5339.9s	2164	Epoch 19/20 | Batch   30/63 | Loss: -3.0258 | Real: -1.0753 | Fake: 1.9505
+5342.2s	2165	Epoch 19/20 | Batch   40/63 | Loss: -3.0455 | Real: -1.0701 | Fake: 1.9755
+5344.5s	2166	Epoch 19/20 | Batch   50/63 | Loss: -3.0821 | Real: -1.0832 | Fake: 1.9988
+5346.8s	2167	Epoch 19/20 | Batch   60/63 | Loss: -3.1086 | Real: -1.0940 | Fake: 2.0145
+5347.4s	2168	Epoch 19/20 | Batch   63/63 | Loss: -3.0388 | Real: -1.0726 | Fake: 1.9662
+5347.4s	2169	✔ Epoch 19 complete | Avg Loss: -2.6711 | Avg Real: -1.0700 | Avg Fake: 1.6011
+5347.4s	2170	
+5349.6s	2171	Epoch 20/20 | Batch   10/63 | Loss: -3.0214 | Real: -1.0446 | Fake: 1.9768
+5351.9s	2172	Epoch 20/20 | Batch   20/63 | Loss: -3.0810 | Real: -1.1218 | Fake: 1.9592
+5354.3s	2173	Epoch 20/20 | Batch   30/63 | Loss: -3.0601 | Real: -1.0085 | Fake: 2.0516
+5356.5s	2174	Epoch 20/20 | Batch   40/63 | Loss: -3.1105 | Real: -1.0630 | Fake: 2.0475
+5358.8s	2175	Epoch 20/20 | Batch   50/63 | Loss: -1.2343 | Real: -1.0333 | Fake: 0.2011
+5361.3s	2176	Epoch 20/20 | Batch   60/63 | Loss: -3.1198 | Real: -1.0621 | Fake: 2.0578
+5361.8s	2177	Epoch 20/20 | Batch   63/63 | Loss: -3.1446 | Real: -1.0989 | Fake: 2.0457
+5361.8s	2178	✔ Epoch 20 complete | Avg Loss: -2.6100 | Avg Real: -1.0690 | Avg Fake: 1.5410
+5361.8s	2179	
+5361.8s	2180	Model saved to /kaggle/working//plots/trx_addresses/model.pt
+5363.5s	2181	
+5363.5s	2182	Evaluating on test set...
+5386.8s	2183	Sample 0: Predicted y = Me1e5eZ3e7eec7eaa28ae77eM7a722Z2aeee2e7e52eeaeuma2eaZ2a992a95999
+5409.0s	2184	Sample 1: Predicted y = 777ureeeeeZea177ac31e9e55aPc721aaqaeefZ2aea2Ee3ee3eea29aa9292299
+5430.9s	2185	Sample 2: Predicted y = 7eee1eeeeeee57e7a27eaaceaaa27c7a775faeacD2eaefm2eee2Zo9a22a92999
+5453.3s	2186	Sample 3: Predicted y = reFMDkZefZ1Za5825ea7a53a2a25e2ef77ae22aZa7G5dxeeqfde22Z222992999
+5475.4s	2187	Sample 4: Predicted y = MeuPeeZa1Zeece7e7eed27eae2af7e27uy7eaeZ7aa4eaaefa3ee222aa2992299
+5497.6s	2188	Sample 5: Predicted y = 77e1eeeeee7e5eee22c7c722y2ac52Zc7myfyeaZ729eafafu3f292Z2a2922299
+5519.7s	2189	Sample 6: Predicted y = 7ee5f11eeZce5755e7Ge77a7P222e5Za777eeaaaeee2eeee99eea29929225999
+5541.9s	2190	Sample 7: Predicted y = ceeeeeeeeee1eea7755e7aeaaeaaaaaammeeeaZeeeeeaa2eaff992e929922999
+5564.0s	2191	Sample 8: Predicted y = M7eebeZeee37a25e5a127a5778251P75u5u22x29Z215Z2ayp2R922Z9299a5959
+5586.0s	2192	Sample 9: Predicted y = Ze1e7eyeeeee722ee77cyy27a7Z7a7b7fafe2cPfeeceu7eep2Z292Z902925999
+5607.8s	2193	Sample 10: Predicted y = Me111eZaee2ec27aa2c2a2xMM82eZ2e99a5e2a92u2ee92m2a97aZ8a99a225999
+5629.6s	2194	Sample 11: Predicted y = MmPeeeZeZeee57aaea1ee9225222772212ae5e5ueeGeem2ey7eZ52Z22a929999
+5651.3s	2195	Sample 12: Predicted y = 5rmeeeeeZee77a2a577772ac7727ee88271eM8acPfZcifu2am2aZaa2Z2a95099
+5673.9s	2196	Sample 13: Predicted y = Mee1eeZeee7eca227ee7a7aaa5a2ee5uycceaZ7eee2aeeee3ffa922a22922999
+5695.8s	2197	Sample 14: Predicted y = Mee71eZeeeeeaa2c22ac272277125a1ae5ufee2mce4779Z2afaaae2292229999
+5717.7s	2198	Sample 15: Predicted y = a1ee0ceeeee552ce5ZG2ee7ay7152ZZ4e5Ma522axeM2q5Z7iaqfa9ZaZ2292099
+5739.4s	2199	Sample 16: Predicted y = 7ececZeeeee75ee2e7eae727eaa5775e777eeee7eeaa7eeeeeeea22a29222999
+5761.4s	2200	Sample 17: Predicted y = MeeeeeZe7eeeaa77a7ueea7a2ae1ea5aaeee1eeeaeeeeeeeaee2922229929999
+5783.1s	2201	Sample 18: Predicted y = memPeeZeaZeaa2aa58Ge2798x517M2ZaeeaGaea2Zcee2ey9a992a2e9a9295999
+5804.9s	2202	Sample 19: Predicted y = 7eeeeeeeeeeea57e757aae7ea2ae77b7eeeeeeaa7eeeaefea2e222e992995999
+5807.2s	2203	
+5807.2s	2204	Results for trx_addresses:
+5807.2s	2205	  Avg Real Energy: -1.2889 ± 0.2143
+5807.2s	2206	  Avg Random Energy: 1.9797 ± 0.5038
+5807.2s	2207	  Avg Filled Energy: -1.5386 ± 0.0938
+5807.2s	2208	  Avg Recovery Accuracy: 5.23%
+5807.2s	2209	Plots and metrics saved to /kaggle/working//plots/trx_addresses
+5807.2s	2210	
+5807.2s	2211	============================================================
+5807.2s	2212	Processing dataset: xrp_addresses
+5807.2s	2213	============================================================
+5807.8s	2214	Vocabulary size: 61
+5807.8s	2215	Grid size: 12×12
+5807.8s	2216	Training samples: 8000
+5807.8s	2217	Test samples: 2000
+5807.8s	2218	
+5807.8s	2219	Training...
+5810.1s	2220	Epoch  1/20 | Batch   10/63 | Loss: -0.0047 | Real: -0.3314 | Fake: -0.3266
+5812.5s	2221	Epoch  1/20 | Batch   20/63 | Loss: -0.0063 | Real: -0.3506 | Fake: -0.3442
+5814.9s	2222	Epoch  1/20 | Batch   30/63 | Loss: -0.0543 | Real: -0.3691 | Fake: -0.3148
+5817.3s	2223	Epoch  1/20 | Batch   40/63 | Loss: -0.0636 | Real: -0.3843 | Fake: -0.3206
+5819.6s	2224	Epoch  1/20 | Batch   50/63 | Loss: -0.0868 | Real: -0.3978 | Fake: -0.3110
+5822.0s	2225	Epoch  1/20 | Batch   60/63 | Loss: -0.0731 | Real: -0.4114 | Fake: -0.3383
+5822.6s	2226	Epoch  1/20 | Batch   63/63 | Loss: -0.1138 | Real: -0.4169 | Fake: -0.3031
+5822.6s	2227	✔ Epoch 1 complete | Avg Loss: -0.0527 | Avg Real: -0.3687 | Avg Fake: -0.3161
+5822.6s	2228	
+5825.0s	2229	Epoch  2/20 | Batch   10/63 | Loss: -0.1260 | Real: -0.4292 | Fake: -0.3032
+5827.3s	2230	Epoch  2/20 | Batch   20/63 | Loss: -0.1135 | Real: -0.4466 | Fake: -0.3331
+5829.7s	2231	Epoch  2/20 | Batch   30/63 | Loss: -0.1812 | Real: -0.4591 | Fake: -0.2779
+5832.1s	2232	Epoch  2/20 | Batch   40/63 | Loss: -0.1645 | Real: -0.4724 | Fake: -0.3079
+5834.4s	2233	Epoch  2/20 | Batch   50/63 | Loss: -0.1885 | Real: -0.4729 | Fake: -0.2844
+5837.0s	2234	Epoch  2/20 | Batch   60/63 | Loss: -0.2150 | Real: -0.4864 | Fake: -0.2714
+5837.5s	2235	Epoch  2/20 | Batch   63/63 | Loss: -0.2005 | Real: -0.4910 | Fake: -0.2904
+5837.5s	2236	✔ Epoch 2 complete | Avg Loss: -0.1458 | Avg Real: -0.4573 | Avg Fake: -0.3114
+5837.5s	2237	
+5839.8s	2238	Epoch  3/20 | Batch   10/63 | Loss: -0.2440 | Real: -0.5034 | Fake: -0.2594
+5842.1s	2239	Epoch  3/20 | Batch   20/63 | Loss: -0.2316 | Real: -0.5164 | Fake: -0.2848
+5844.5s	2240	Epoch  3/20 | Batch   30/63 | Loss: -0.1836 | Real: -0.5125 | Fake: -0.3289
+5846.8s	2241	Epoch  3/20 | Batch   40/63 | Loss: -0.2925 | Real: -0.5229 | Fake: -0.2304
+5849.1s	2242	Epoch  3/20 | Batch   50/63 | Loss: -0.2697 | Real: -0.5393 | Fake: -0.2697
+5851.5s	2243	Epoch  3/20 | Batch   60/63 | Loss: -0.3115 | Real: -0.5241 | Fake: -0.2126
+5852.1s	2244	Epoch  3/20 | Batch   63/63 | Loss: -0.2427 | Real: -0.5222 | Fake: -0.2795
+5852.1s	2245	✔ Epoch 3 complete | Avg Loss: -0.2376 | Avg Real: -0.5179 | Avg Fake: -0.2803
+5852.1s	2246	
+5854.5s	2247	Epoch  4/20 | Batch   10/63 | Loss: -0.3239 | Real: -0.5400 | Fake: -0.2161
+5856.9s	2248	Epoch  4/20 | Batch   20/63 | Loss: -0.3806 | Real: -0.5341 | Fake: -0.1534
+5859.2s	2249	Epoch  4/20 | Batch   30/63 | Loss: -0.3921 | Real: -0.5184 | Fake: -0.1263
+5861.6s	2250	Epoch  4/20 | Batch   40/63 | Loss: -0.1584 | Real: -0.5519 | Fake: -0.3935
+5864.0s	2251	Epoch  4/20 | Batch   50/63 | Loss: -0.4800 | Real: -0.5479 | Fake: -0.0679
+5866.3s	2252	Epoch  4/20 | Batch   60/63 | Loss: -0.4019 | Real: -0.5670 | Fake: -0.1650
+5866.8s	2253	Epoch  4/20 | Batch   63/63 | Loss: -0.5540 | Real: -0.5692 | Fake: -0.0152
+5866.8s	2254	✔ Epoch 4 complete | Avg Loss: -0.3565 | Avg Real: -0.5433 | Avg Fake: -0.1868
+5866.8s	2255	
+5869.4s	2256	Epoch  5/20 | Batch   10/63 | Loss: -0.4041 | Real: -0.5697 | Fake: -0.1656
+5871.7s	2257	Epoch  5/20 | Batch   20/63 | Loss: -0.3401 | Real: -0.5854 | Fake: -0.2453
+5874.1s	2258	Epoch  5/20 | Batch   30/63 | Loss: -0.5789 | Real: -0.5970 | Fake: -0.0182
+5876.5s	2259	Epoch  5/20 | Batch   40/63 | Loss: -0.7440 | Real: -0.6222 | Fake: 0.1218
+5879.0s	2260	Epoch  5/20 | Batch   50/63 | Loss: -0.0094 | Real: -0.6511 | Fake: -0.6417
+5881.3s	2261	Epoch  5/20 | Batch   60/63 | Loss: -0.8566 | Real: -0.6781 | Fake: 0.1785
+5881.9s	2262	Epoch  5/20 | Batch   63/63 | Loss: -0.8583 | Real: -0.7054 | Fake: 0.1529
+5881.9s	2263	✔ Epoch 5 complete | Avg Loss: -0.5452 | Avg Real: -0.6106 | Avg Fake: -0.0654
+5881.9s	2264	
+5884.3s	2265	Epoch  6/20 | Batch   10/63 | Loss: -0.3008 | Real: -0.7656 | Fake: -0.4648
+5886.7s	2266	Epoch  6/20 | Batch   20/63 | Loss: -0.9889 | Real: -0.7857 | Fake: 0.2032
+5889.0s	2267	Epoch  6/20 | Batch   30/63 | Loss: -1.0496 | Real: -0.8358 | Fake: 0.2139
+5891.4s	2268	Epoch  6/20 | Batch   40/63 | Loss: -0.5215 | Real: -0.8539 | Fake: -0.3324
+5893.8s	2269	Epoch  6/20 | Batch   50/63 | Loss: -1.1544 | Real: -0.9045 | Fake: 0.2498
+5896.1s	2270	Epoch  6/20 | Batch   60/63 | Loss: -0.3445 | Real: -0.9339 | Fake: -0.5893
+5896.7s	2271	Epoch  6/20 | Batch   63/63 | Loss: -1.1577 | Real: -0.9061 | Fake: 0.2516
+5896.7s	2272	✔ Epoch 6 complete | Avg Loss: -0.7420 | Avg Real: -0.8355 | Avg Fake: -0.0935
+5896.7s	2273	
+5899.0s	2274	Epoch  7/20 | Batch   10/63 | Loss: -1.1305 | Real: -0.9221 | Fake: 0.2084
+5901.4s	2275	Epoch  7/20 | Batch   20/63 | Loss: -1.1639 | Real: -0.9977 | Fake: 0.1662
+5903.8s	2276	Epoch  7/20 | Batch   30/63 | Loss: -1.3390 | Real: -1.0592 | Fake: 0.2798
+5906.1s	2277	Epoch  7/20 | Batch   40/63 | Loss: -1.3199 | Real: -1.0887 | Fake: 0.2312
+5908.5s	2278	Epoch  7/20 | Batch   50/63 | Loss: -0.2502 | Real: -1.1630 | Fake: -0.9128
+5910.8s	2279	Epoch  7/20 | Batch   60/63 | Loss: -1.4534 | Real: -1.1720 | Fake: 0.2813
+5911.4s	2280	Epoch  7/20 | Batch   63/63 | Loss: -1.0386 | Real: -1.2032 | Fake: -0.1645
+5911.4s	2281	✔ Epoch 7 complete | Avg Loss: -1.0252 | Avg Real: -1.0558 | Avg Fake: -0.0306
+5911.4s	2282	
+5913.7s	2283	Epoch  8/20 | Batch   10/63 | Loss: -1.5396 | Real: -1.2317 | Fake: 0.3079
+5916.1s	2284	Epoch  8/20 | Batch   20/63 | Loss: -1.5554 | Real: -1.2993 | Fake: 0.2562
+5918.4s	2285	Epoch  8/20 | Batch   30/63 | Loss: -1.6086 | Real: -1.3153 | Fake: 0.2933
+5920.7s	2286	Epoch  8/20 | Batch   40/63 | Loss: -1.6640 | Real: -1.3504 | Fake: 0.3135
+5923.1s	2287	Epoch  8/20 | Batch   50/63 | Loss: -0.8210 | Real: -1.4096 | Fake: -0.5885
+5925.4s	2288	Epoch  8/20 | Batch   60/63 | Loss: -1.7284 | Real: -1.4155 | Fake: 0.3129
+5925.9s	2289	Epoch  8/20 | Batch   63/63 | Loss: -1.4968 | Real: -1.4069 | Fake: 0.0899
+5925.9s	2290	✔ Epoch 8 complete | Avg Loss: -1.1711 | Avg Real: -1.3244 | Avg Fake: -0.1533
+5925.9s	2291	
+5928.3s	2292	Epoch  9/20 | Batch   10/63 | Loss: -1.7486 | Real: -1.4275 | Fake: 0.3211
+5930.7s	2293	Epoch  9/20 | Batch   20/63 | Loss: -0.9290 | Real: -1.4605 | Fake: -0.5315
+5933.2s	2294	Epoch  9/20 | Batch   30/63 | Loss: -0.9459 | Real: -1.5141 | Fake: -0.5682
+5935.5s	2295	Epoch  9/20 | Batch   40/63 | Loss: -1.7930 | Real: -1.4760 | Fake: 0.3169
+5937.8s	2296	Epoch  9/20 | Batch   50/63 | Loss: -0.3805 | Real: -1.5675 | Fake: -1.1870
+5940.1s	2297	Epoch  9/20 | Batch   60/63 | Loss: -0.3729 | Real: -1.6090 | Fake: -1.2361
+5940.7s	2298	Epoch  9/20 | Batch   63/63 | Loss: -1.9539 | Real: -1.6039 | Fake: 0.3499
+5940.7s	2299	✔ Epoch 9 complete | Avg Loss: -1.4090 | Avg Real: -1.4959 | Avg Fake: -0.0869
+5940.7s	2300	
+5943.0s	2301	Epoch 10/20 | Batch   10/63 | Loss: -1.9276 | Real: -1.5863 | Fake: 0.3413
+5945.4s	2302	Epoch 10/20 | Batch   20/63 | Loss: -0.7705 | Real: -1.6459 | Fake: -0.8754
+5947.8s	2303	Epoch 10/20 | Batch   30/63 | Loss: -0.8979 | Real: -1.6626 | Fake: -0.7646
+5950.2s	2304	Epoch 10/20 | Batch   40/63 | Loss: -1.5357 | Real: -1.6405 | Fake: -0.1048
+5952.5s	2305	Epoch 10/20 | Batch   50/63 | Loss: -2.0141 | Real: -1.6588 | Fake: 0.3553
+5954.9s	2306	Epoch 10/20 | Batch   60/63 | Loss: -0.2956 | Real: -1.6876 | Fake: -1.3920
+5955.5s	2307	Epoch 10/20 | Batch   63/63 | Loss: -0.5206 | Real: -1.6916 | Fake: -1.1710
+5955.5s	2308	✔ Epoch 10 complete | Avg Loss: -1.4677 | Avg Real: -1.6446 | Avg Fake: -0.1769
+5955.5s	2309	
+5957.9s	2310	Epoch 11/20 | Batch   10/63 | Loss: -1.0887 | Real: -1.7225 | Fake: -0.6337
+5960.2s	2311	Epoch 11/20 | Batch   20/63 | Loss: -1.9946 | Real: -1.7201 | Fake: 0.2746
+5962.5s	2312	Epoch 11/20 | Batch   30/63 | Loss: -1.7591 | Real: -1.7149 | Fake: 0.0441
+5965.1s	2313	Epoch 11/20 | Batch   40/63 | Loss: -2.2298 | Real: -1.7629 | Fake: 0.4669
+5967.4s	2314	Epoch 11/20 | Batch   50/63 | Loss: -2.2447 | Real: -1.7730 | Fake: 0.4717
+5969.6s	2315	Epoch 11/20 | Batch   60/63 | Loss: -2.1942 | Real: -1.7231 | Fake: 0.4711
+5970.2s	2316	Epoch 11/20 | Batch   63/63 | Loss: -2.2318 | Real: -1.7615 | Fake: 0.4702
+5970.2s	2317	✔ Epoch 11 complete | Avg Loss: -1.7207 | Avg Real: -1.7394 | Avg Fake: -0.0188
+5970.2s	2318	
+5972.5s	2319	Epoch 12/20 | Batch   10/63 | Loss: -2.2784 | Real: -1.7889 | Fake: 0.4895
+5975.0s	2320	Epoch 12/20 | Batch   20/63 | Loss: -2.2952 | Real: -1.7985 | Fake: 0.4967
+5977.2s	2321	Epoch 12/20 | Batch   30/63 | Loss: -2.1949 | Real: -1.8293 | Fake: 0.3656
+5979.5s	2322	Epoch 12/20 | Batch   40/63 | Loss: -1.6920 | Real: -1.8434 | Fake: -0.1514
+5981.9s	2323	Epoch 12/20 | Batch   50/63 | Loss: -2.3760 | Real: -1.8547 | Fake: 0.5213
+5984.3s	2324	Epoch 12/20 | Batch   60/63 | Loss: -2.3163 | Real: -1.8733 | Fake: 0.4430
+5984.9s	2325	Epoch 12/20 | Batch   63/63 | Loss: -0.1172 | Real: -1.8656 | Fake: -1.7484
+5984.9s	2326	✔ Epoch 12 complete | Avg Loss: -1.8238 | Avg Real: -1.8247 | Avg Fake: -0.0009
+5984.9s	2327	
+5987.3s	2328	Epoch 13/20 | Batch   10/63 | Loss: -2.4204 | Real: -1.8605 | Fake: 0.5599
+5989.6s	2329	Epoch 13/20 | Batch   20/63 | Loss: -2.4149 | Real: -1.8715 | Fake: 0.5433
+5992.0s	2330	Epoch 13/20 | Batch   30/63 | Loss: -2.4568 | Real: -1.8619 | Fake: 0.5948
+5994.5s	2331	Epoch 13/20 | Batch   40/63 | Loss: -2.4820 | Real: -1.8749 | Fake: 0.6072
+5996.9s	2332	Epoch 13/20 | Batch   50/63 | Loss: -2.5175 | Real: -1.8800 | Fake: 0.6375
+5999.2s	2333	Epoch 13/20 | Batch   60/63 | Loss: -2.0869 | Real: -1.8957 | Fake: 0.1912
+5999.8s	2334	Epoch 13/20 | Batch   63/63 | Loss: -0.3375 | Real: -1.8768 | Fake: -1.5394
+5999.8s	2335	✔ Epoch 13 complete | Avg Loss: -2.0223 | Avg Real: -1.8739 | Avg Fake: 0.1485
+5999.8s	2336	
+6002.2s	2337	Epoch 14/20 | Batch   10/63 | Loss: -2.2796 | Real: -1.8704 | Fake: 0.4092
+6004.6s	2338	Epoch 14/20 | Batch   20/63 | Loss: -2.5401 | Real: -1.8593 | Fake: 0.6809
+6007.0s	2339	Epoch 14/20 | Batch   30/63 | Loss: -0.5922 | Real: -1.8575 | Fake: -1.2654
+6009.4s	2340	Epoch 14/20 | Batch   40/63 | Loss: -2.5509 | Real: -1.8821 | Fake: 0.6688
+6011.8s	2341	Epoch 14/20 | Batch   50/63 | Loss: -0.0560 | Real: -1.8785 | Fake: -1.8225
+6014.2s	2342	Epoch 14/20 | Batch   60/63 | Loss: -2.5800 | Real: -1.8741 | Fake: 0.7059
+6014.9s	2343	Epoch 14/20 | Batch   63/63 | Loss: -2.6152 | Real: -1.8905 | Fake: 0.7247
+6014.9s	2344	✔ Epoch 14 complete | Avg Loss: -2.0420 | Avg Real: -1.8743 | Avg Fake: 0.1676
+6014.9s	2345	
+6017.3s	2346	Epoch 15/20 | Batch   10/63 | Loss: -1.8376 | Real: -1.9021 | Fake: -0.0645
+6019.6s	2347	Epoch 15/20 | Batch   20/63 | Loss: -2.6310 | Real: -1.9049 | Fake: 0.7261
+6021.9s	2348	Epoch 15/20 | Batch   30/63 | Loss: -2.6538 | Real: -1.9057 | Fake: 0.7481
+6024.3s	2349	Epoch 15/20 | Batch   40/63 | Loss: -0.5059 | Real: -1.8767 | Fake: -1.3708
+6026.6s	2350	Epoch 15/20 | Batch   50/63 | Loss: -2.6759 | Real: -1.8973 | Fake: 0.7786
+6029.1s	2351	Epoch 15/20 | Batch   60/63 | Loss: -2.7008 | Real: -1.9203 | Fake: 0.7805
+6029.6s	2352	Epoch 15/20 | Batch   63/63 | Loss: -2.7048 | Real: -1.9239 | Fake: 0.7809
+6029.6s	2353	✔ Epoch 15 complete | Avg Loss: -2.2023 | Avg Real: -1.9017 | Avg Fake: 0.3006
+6029.6s	2354	
+6032.1s	2355	Epoch 16/20 | Batch   10/63 | Loss: -2.7088 | Real: -1.9303 | Fake: 0.7785
+6034.5s	2356	Epoch 16/20 | Batch   20/63 | Loss: -0.6083 | Real: -1.9327 | Fake: -1.3244
+6036.8s	2357	Epoch 16/20 | Batch   30/63 | Loss: -2.7698 | Real: -1.9195 | Fake: 0.8503
+6039.1s	2358	Epoch 16/20 | Batch   40/63 | Loss: -2.3485 | Real: -1.9251 | Fake: 0.4234
+6041.5s	2359	Epoch 16/20 | Batch   50/63 | Loss: -2.8159 | Real: -1.9307 | Fake: 0.8852
+6043.9s	2360	Epoch 16/20 | Batch   60/63 | Loss: -0.7470 | Real: -1.9022 | Fake: -1.1553
+6044.5s	2361	Epoch 16/20 | Batch   63/63 | Loss: -2.6338 | Real: -1.9040 | Fake: 0.7298
+6044.5s	2362	✔ Epoch 16 complete | Avg Loss: -2.3297 | Avg Real: -1.9244 | Avg Fake: 0.4053
+6044.5s	2363	
+6046.9s	2364	Epoch 17/20 | Batch   10/63 | Loss: -2.8221 | Real: -1.9074 | Fake: 0.9147
+6049.3s	2365	Epoch 17/20 | Batch   20/63 | Loss: -2.5512 | Real: -1.9085 | Fake: 0.6427
+6051.7s	2366	Epoch 17/20 | Batch   30/63 | Loss: -2.8155 | Real: -1.9050 | Fake: 0.9105
+6054.1s	2367	Epoch 17/20 | Batch   40/63 | Loss: -2.8682 | Real: -1.9103 | Fake: 0.9579
+6056.4s	2368	Epoch 17/20 | Batch   50/63 | Loss: -2.8509 | Real: -1.8927 | Fake: 0.9582
+6058.8s	2369	Epoch 17/20 | Batch   60/63 | Loss: -2.8791 | Real: -1.9094 | Fake: 0.9697
+6059.6s	2370	Epoch 17/20 | Batch   63/63 | Loss: -1.9679 | Real: -1.9083 | Fake: 0.0596
+6059.6s	2371	✔ Epoch 17 complete | Avg Loss: -2.2780 | Avg Real: -1.9044 | Avg Fake: 0.3737
+6059.6s	2372	
+6061.9s	2373	Epoch 18/20 | Batch   10/63 | Loss: -2.8623 | Real: -1.9196 | Fake: 0.9427
+6064.3s	2374	Epoch 18/20 | Batch   20/63 | Loss: -2.8994 | Real: -1.9186 | Fake: 0.9808
+6066.7s	2375	Epoch 18/20 | Batch   30/63 | Loss: -2.8948 | Real: -1.9131 | Fake: 0.9817
+6069.1s	2376	Epoch 18/20 | Batch   40/63 | Loss: -2.8430 | Real: -1.9091 | Fake: 0.9339
+6071.4s	2377	Epoch 18/20 | Batch   50/63 | Loss: -2.9084 | Real: -1.9065 | Fake: 1.0019
+6073.8s	2378	Epoch 18/20 | Batch   60/63 | Loss: -2.8885 | Real: -1.8693 | Fake: 1.0192
+6074.5s	2379	Epoch 18/20 | Batch   63/63 | Loss: -2.9245 | Real: -1.9039 | Fake: 1.0206
+6074.5s	2380	✔ Epoch 18 complete | Avg Loss: -2.3543 | Avg Real: -1.9094 | Avg Fake: 0.4450
+6074.5s	2381	
+6076.8s	2382	Epoch 19/20 | Batch   10/63 | Loss: -2.8871 | Real: -1.8818 | Fake: 1.0053
+6079.1s	2383	Epoch 19/20 | Batch   20/63 | Loss: -2.9045 | Real: -1.9147 | Fake: 0.9899
+6081.5s	2384	Epoch 19/20 | Batch   30/63 | Loss: -2.9740 | Real: -1.9351 | Fake: 1.0389
+6083.9s	2385	Epoch 19/20 | Batch   40/63 | Loss: -2.9912 | Real: -1.9479 | Fake: 1.0433
+6086.3s	2386	Epoch 19/20 | Batch   50/63 | Loss: -1.0308 | Real: -1.9436 | Fake: -0.9127
+6088.6s	2387	Epoch 19/20 | Batch   60/63 | Loss: -0.4079 | Real: -1.9322 | Fake: -1.5243
+6089.2s	2388	Epoch 19/20 | Batch   63/63 | Loss: -3.0123 | Real: -1.9384 | Fake: 1.0738
+6089.2s	2389	✔ Epoch 19 complete | Avg Loss: -2.4668 | Avg Real: -1.9216 | Avg Fake: 0.5452
+6089.2s	2390	
+6091.7s	2391	Epoch 20/20 | Batch   10/63 | Loss: -3.0142 | Real: -1.9431 | Fake: 1.0711
+6094.1s	2392	Epoch 20/20 | Batch   20/63 | Loss: -3.0383 | Real: -1.9513 | Fake: 1.0870
+6096.4s	2393	Epoch 20/20 | Batch   30/63 | Loss: -1.2042 | Real: -1.9625 | Fake: -0.7583
+6098.6s	2394	Epoch 20/20 | Batch   40/63 | Loss: -2.9870 | Real: -1.9339 | Fake: 1.0531
+6101.0s	2395	Epoch 20/20 | Batch   50/63 | Loss: -3.0393 | Real: -1.9531 | Fake: 1.0862
+6103.3s	2396	Epoch 20/20 | Batch   60/63 | Loss: -2.8463 | Real: -1.9414 | Fake: 0.9050
+6104.0s	2397	Epoch 20/20 | Batch   63/63 | Loss: -0.6263 | Real: -1.9404 | Fake: -1.3141
+6104.0s	2398	✔ Epoch 20 complete | Avg Loss: -2.5620 | Avg Real: -1.9472 | Avg Fake: 0.6147
+6104.0s	2399	
+6104.0s	2400	Model saved to /kaggle/working//plots/xrp_addresses/model.pt
+6105.6s	2401	
+6105.6s	2402	Evaluating on test set...
+6128.8s	2403	Sample 0: Predicted y = 62aaad623aa423234b26474d76373123beb4704b4f725dc4e7debd9722366266
+6150.5s	2404	Sample 1: Predicted y = 33aaa2602386343332b23224a8237662277d2668217742266806742eb2222327
+6172.9s	2405	Sample 2: Predicted y = 3333eba28aa334f47222840466c474237404707c747ec4e10877748e2e522337
+6194.7s	2406	Sample 3: Predicted y = c2a6aa68333a33034d8264736828d4747636774b4b7ec840dedc928427420de5
+6216.9s	2407	Sample 4: Predicted y = 338aa233e88674d74204d3635d8eb45d22d464765dr0722b6eddd49233422620
+6238.8s	2408	Sample 5: Predicted y = 3333aa630a8325d324c4348723036fadc23862e7eb72772de722649727226262
+6261.0s	2409	Sample 6: Predicted y = 333a2aaaa4a362233462a82633726d772d636263b4723b046784f423f436be50
+6283.2s	2410	Sample 7: Predicted y = 62be6a62b2333b23b4b2476427721b27227d7476dcc482346f4b4b9dc02332e6
+6305.6s	2411	Sample 8: Predicted y = 6e5bea32306343462473f064b0d8347282b767404fc482507ebf4d9f23426650
+6327.5s	2412	Sample 9: Predicted y = aaa326aa33a3226a313674646388742dede584033b74d070081bebeb484622e1
+6349.8s	2413	Sample 10: Predicted y = 6e684a3a16238484fd7edc3fed35d45d7ed4b4fb4fd40dc44b6ebd7f2436e550
+6371.5s	2414	Sample 11: Predicted y = 3333a4a8803662226d3432737826d4092724c27274ed727d8ed7216233362627
+6393.6s	2415	Sample 12: Predicted y = 6335ad230433b6c034646a2de34d639df32666f27eb4edc480dc4b9f3423e506
+6415.1s	2416	Sample 13: Predicted y = 3e33aa6a83332aca248262378662647288682822742747670872ebdeb2362327
+6437.3s	2417	Sample 14: Predicted y = 372baa682a8632d33472662622626492ae74278684dc4dc4648474749f355fef
+6459.2s	2418	Sample 15: Predicted y = 3a643aaa64065d330d5632eddc2f2bd740dae5d6c4908232dccb4f3eb34608e0
+6481.2s	2419	Sample 16: Predicted y = 6eaeaa6a3a33b62f0464600c882ce1742723ed61b49dcc7262de9d2234336950
+6502.7s	2420	Sample 17: Predicted y = 6a32aa236033b68f3473656608232172d7268774742237310ceb416223462690
+6524.9s	2421	Sample 18: Predicted y = 6232aa3404333573827406268e8264ef27347404046c4f4d7404f4374536efeb
+6546.9s	2422	Sample 19: Predicted y = 36a3aa6236233d223462367226682d23232672727d727272e7272b9727266234
+6548.9s	2423	
+6548.9s	2424	Results for xrp_addresses:
+6548.9s	2425	  Avg Real Energy: -2.3721 ± 0.0348
+6548.9s	2426	  Avg Random Energy: 0.7015 ± 0.4033
+6548.9s	2427	  Avg Filled Energy: -2.6821 ± 0.0252
+6548.9s	2428	  Avg Recovery Accuracy: 7.03%
+6548.9s	2429	Plots and metrics saved to /kaggle/working//plots/xrp_addresses
+6548.9s	2430	
+6548.9s	2431	All datasets processed. Plots saved in /kaggle/working//plots
+6553.5s	2432	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+6553.5s	2433	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+6553.7s	2434	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+6553.7s	2435	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+6554.5s	2436	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+6555.2s	2437	[NbConvertApp] Writing 208852 bytes to __notebook__.ipynb
+6558.1s	2438	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+6559.2s	2439	[NbConvertApp] Writing 524528 bytes to __results__.html
