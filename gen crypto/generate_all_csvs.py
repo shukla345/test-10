@@ -22,7 +22,7 @@ from crypto_core import (
     xrp_b58check,
 )
 
-ROWS = 1_000
+ROWS = 10_000
 ED25519_MAX = 1 << 256
 
 
@@ -93,17 +93,17 @@ def crypto_core_b58check(version_byte: int, payload: bytes) -> str:
 
 
 JOBS = [
-    #("btc_addresses.csv", gen_btc, _N),
-    #("eth_addresses.csv", gen_eth, _N),
+    ("btc_addresses.csv", gen_btc, _N),
+    ("eth_addresses.csv", gen_eth, _N),
     ("xrp_addresses.csv", gen_xrp, _N),
-    #("bnb_addresses.csv", gen_bnb, _N),
-    #("sol_addresses.csv", gen_sol, ED25519_MAX),
-    #("doge_addresses.csv", gen_doge, _N),
-    #("ada_addresses.csv", gen_ada, ED25519_MAX),
-    #("trx_addresses.csv", gen_trx, _N),
-    #("avax_addresses.csv", gen_avax, _N),
-    #("ltc_addresses.csv", gen_ltc, _N),
-    #("bch_addresses.csv", gen_bch, _N),
+    ("bnb_addresses.csv", gen_bnb, _N),
+    ("sol_addresses.csv", gen_sol, ED25519_MAX),
+    ("doge_addresses.csv", gen_doge, _N),
+    ("ada_addresses.csv", gen_ada, ED25519_MAX),
+    ("trx_addresses.csv", gen_trx, _N),
+    ("avax_addresses.csv", gen_avax, _N),
+    ("ltc_addresses.csv", gen_ltc, _N),
+    ("bch_addresses.csv", gen_bch, _N),
 ]
 
 
